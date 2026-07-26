@@ -57,7 +57,7 @@ Progress is defined by each programme, from this menu: completing guided actions
 Falling behind is the expected case, designed for as carefully as the happy path.
 
 - Missing one day: tomorrow acknowledges it in one calm sentence and simply continues. No red. No broken-chain imagery. No guilt copy. (Evidence: a single missed repetition does not derail habit formation — Lally et al. 2010; how a lapse is framed decides whether it becomes collapse — see [Annex D §7](../02-research/annex-d-behavioural-evidence.md).)
-- Missing several days: a **recovery conversation**, not a penalty screen — "life happened; here's the shortest honest way back", offering: resume where you left off / a lightened re-entry week / restructure the remaining weeks / pause properly.
+- Missing several days: a **recovery conversation**, not a penalty screen — "life happened; here's the shortest honest way back", offering the canonical doors ([recovery-experience §3.2](../03-ux/recovery-experience.md)): pick up today (an authored, lightened re-entry day — the honest resume) / reshape the remaining week / pause properly.
 - Long absence: a genuine fresh-start re-entry (temporal-landmark framing) that treats the return as a strength, preserves what was completed, and never displays a failure ledger.
 - The word "streak" does not appear in the product. Continuity is shown as accumulated progress (what you've built), never as a fragile chain (what you might break).
 

@@ -63,7 +63,7 @@ Every programme day resolves to a **Guided Action**: instruction (what) → demo
 - **FR-34 (M)** Data export: user's challenge history, reviews, measurements and evidence in portable formats (JSON + human-readable).
 
 ### 6.5 Recovery, pause, lifecycle
-- **FR-40 (M)** Missed-day handling per [recovery-experience spec](../03-ux/recovery-experience.md): 1-day = calm continuation; 2–6 days = recovery conversation (resume / lightened re-entry / restructure / pause); 7+ = fresh-start re-entry preserving completed work.
+- **FR-40 (M)** Missed-day handling per [recovery-experience spec](../03-ux/recovery-experience.md) (canonical door set lives there, §3.2): 1-day = calm continuation; 2–6 days = recovery conversation (pick up today via an authored re-entry day / reshape the week / pause); 7+ = fresh-start re-entry preserving completed work.
 - **FR-41 (M)** Pause with honest semantics (schedule shifts; content preserved); resume ritual; restart (new challenge instance, history retained).
 - **FR-42 (M)** Weekly adaptation: programme-defined rules adjust the coming week from completion pattern + difficulty signals (see [adaptation model](programme-adaptation-model.md)); user always sees and can decline changes.
 - **FR-43 (M)** Challenge lifecycle per [challenge-lifecycle](challenge-lifecycle.md) state machine; all transitions auditable.

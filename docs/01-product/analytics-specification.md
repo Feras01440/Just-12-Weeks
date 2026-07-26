@@ -31,9 +31,10 @@ Retention default: **13 months** raw, then aggregate-only (covers one full annua
 | `action_completed` | Daily completion confirmed | day_index, interactions_count, offline (bool), duration_bucket | precise duration, activity substance | G2 monitoring; loop health; north-star numerator |
 | `action_skipped` | Explicit skip chosen | day_index, skip_reason_category (fixed list: time/energy/unsuitable/other) | free-text reason | Where programmes overreach; content iteration |
 | `contextual_question_answered` | Micro-question answered/skipped | question_id, answered (bool) | the answer | Purposeful-input audit — are questions earning their place |
-| `recovery_flow_entered` | Lapse state 2+ days triggers conversation | lapse_bucket (2–3/4–6/7+/pause-return), week | — | **Differentiator metric** (recovery return rate); R-05 |
-| `recovery_path_chosen` | User picks resume/lighten/restructure/pause | path | — | Which recovery designs work |
-| `returned_after_absence` | First action completion following lapse ≥ 2 days | days_absent_bucket | — | Recovery efficacy; success-metrics recovery rate |
+| `lapse_state_entered` | **Server-side timer** derives 2+ scheduled days missed — fires whether or not the app is ever reopened (lifecycle §2 states; state-machines §1 server timers are the guarantee layer) | lapse_bucket (2–3/4–6/7+), week | — | **Denominator of the true recovery return rate** (all lapse entrants, incl. never-returners — survivor-bias guard O-04) |
+| `recovery_flow_entered` | Lapse state 2+ days triggers conversation on next open | lapse_bucket (2–3/4–6/7+/pause-return), week | — | Conversation reach; feeds the companion metric (conversation completion ≥60% **of reachers** — never quoted without the true rate); R-05 |
+| `recovery_path_chosen` | User picks a recovery door (canonical set: recovery-experience §3.2) | path (reentry_day / reshape_week / third_authored_door / pause / fresh_start_week / restart_programme / different_programme) | — | Which recovery designs work |
+| `returned_after_absence` | First action completion following lapse ≥ 2 days | days_absent_bucket | — | **Numerator of the true recovery return rate**: counted against `lapse_state_entered` within 14 days of lapse start (success-metrics canonical definition) |
 | `weekly_review_completed` | Review flow finished | week, skipped_prompts_count, duration_bucket | reflection content | Review completion metric; prompt design |
 | `challenge_paused` | Pause confirmed | week, pause_reason_category (fixed list, optional) | free-text | Lifecycle health; pause-vs-abandon design |
 | `challenge_resumed` | Resume after pause | pause_duration_bucket | — | Pause design efficacy |

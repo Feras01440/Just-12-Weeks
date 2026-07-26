@@ -21,7 +21,7 @@ No conversation. One acknowledging sentence inside normal Today, then today's ac
 Replaces Today's hero. Three beats, one screen each at most:
 1. **Normalise, specifically.** "Four days away, week 5. This is the most common moment in any twelve weeks — the plan is built for it."
 2. **Show what stands.** What weeks 1–4 built, named concretely (capability language from the programme, not percentages). Nothing shown as lost, because nothing is.
-3. **Offer the paths** (max three + pause): **Pick up today** — an authored *re-entry day* (lightened version of the current week's core; adaptation model §5); **Reshape the week** — preview of a reflowed plan (consolidation inserted, R1); **Pause properly** (F14 — always dignified). One tap each; effects previewed in plain words.
+3. **Offer the paths** — *canonical door set; PRD FR-40, experience-principles §5 and the analytics `recovery_path_chosen` values defer to this list*. In v1: **two authored active doors + pause** — **Pick up today** — an authored *re-entry day* (lightened version of the current week's core; adaptation model §5; this *is* the resume door, delivered honestly for someone days away); **Reshape the week** — preview of a reflowed plan (consolidation inserted, R1); **Pause properly** (F14 — always dignified). The engine permits a third authored active door where a programme provides one (max three + pause). One tap each; effects previewed in plain words.
 Then: immediately into the chosen action. Recovery ends in *doing*, never in planning theatre.
 
 ### 3.3 Seven or more days (the fresh start — F13)
@@ -40,8 +40,12 @@ Programmes ship (authoring obligations, adaptation model §7): re-entry days per
 
 ## 6. Measures of success
 
-`recovery_flow_entered` → `returned_after_absence` conversion ≥35% (success-metrics: the differentiator metric); recovery-path distribution (which doors people take); week-4 survival lift vs lapse incidence; Stage 5 test: users in a simulated 4-day-lapse scenario describe the app's reaction as "understanding / practical" not "guilt-tripping / naggy" (word-choice card sort, all age cohorts).
+Primary — quoted in the canonical wording from [success-metrics](../01-product/success-metrics.md), never restated loosely: **true recovery return rate ≥ 20%** — of *all* users entering a lapse state (2+ missed scheduled days), whether or not they ever reopen the app, the share completing a programme action within 14 days of **lapse start**. The denominator begins at the lapse, not at the recovery screen, so the metric cannot be survivor-flattered by counting only people who came back far enough to see the flow.
+
+Secondary, named separately and **never quoted without the true rate**: **recovery-conversation completion ≥ 60% of reachers** — of users who *reach* the recovery conversation, the share completing a chosen path. This measures the conversation's UX quality; it is not evidence the recovery bet works, because its denominator already excludes everyone the lapse lost.
+
+Also read: recovery-path distribution (`recovery_path_chosen` — which doors people take); week-4 survival lift vs lapse incidence; Stage 5 word-sort: users in a simulated 4-day-lapse scenario describe the app's reaction as "understanding / practical" not "guilt-tripping / naggy" (all age cohorts).
 
 ## 7. Failure modes this design must avoid
 
-Recovery conversation appearing for *scheduled* gaps (rest days, user-shifted weeks — detection uses scheduled days only, lifecycle §3); the conversation becoming a lecture (three beats maximum, then action); lightened re-entry reading as demotion (variant dignity rules apply); pause pitched as the easy exit (it's one of four equal doors); over-celebration of the return (quiet warmth on day 1 back; the *milestone* is week's end).
+Recovery conversation appearing for *scheduled* gaps (rest days, user-shifted weeks — detection uses scheduled days only, lifecycle §3); the conversation becoming a lecture (three beats maximum, then action); lightened re-entry reading as demotion (variant dignity rules apply); pause pitched as the easy exit (it is an equal door, never the nudged one); over-celebration of the return (quiet warmth on day 1 back; the *milestone* is week's end).
