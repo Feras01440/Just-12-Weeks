@@ -1,429 +1,429 @@
 [
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "today",
     "variant": "light",
-    "file": "c/today--light.png"
+    "file": "b/today--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "today",
     "variant": "dark",
-    "file": "c/today--dark.png"
+    "file": "b/today--dark.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "today",
     "variant": "scale200",
-    "file": "c/today--scale200.png"
+    "file": "b/today--scale200.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "today",
     "variant": "tablet",
-    "file": "c/today--tablet.png"
+    "file": "b/today--tablet.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "today",
     "variant": "small",
-    "file": "c/today--small.png"
+    "file": "b/today--small.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "how",
     "variant": "light",
-    "file": "c/how--light.png"
+    "file": "b/how--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "easier",
     "variant": "light",
-    "file": "c/easier--light.png"
+    "file": "b/easier--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "active",
     "variant": "light",
-    "file": "c/active--light.png"
+    "file": "b/active--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "active",
     "variant": "dark",
-    "file": "c/active--dark.png"
+    "file": "b/active--dark.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "journey",
     "variant": "light",
-    "file": "c/journey--light.png"
+    "file": "b/journey--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "journey",
     "variant": "dark",
-    "file": "c/journey--dark.png"
+    "file": "b/journey--dark.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "missed-one",
     "variant": "light",
-    "file": "c/missed-one--light.png"
+    "file": "b/missed-one--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "missed-several",
     "variant": "light",
-    "file": "c/missed-several--light.png"
+    "file": "b/missed-several--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "long-absence",
     "variant": "light",
-    "file": "c/long-absence--light.png"
+    "file": "b/long-absence--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "long-absence",
     "variant": "scale200",
-    "file": "c/long-absence--scale200.png"
+    "file": "b/long-absence--scale200.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "week-transition",
     "variant": "light",
-    "file": "c/week-transition--light.png"
+    "file": "b/week-transition--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "week-transition",
     "variant": "dark",
-    "file": "c/week-transition--dark.png"
+    "file": "b/week-transition--dark.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "question",
     "variant": "light",
-    "file": "c/question--light.png"
+    "file": "b/question--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "week-12",
     "variant": "light",
-    "file": "c/week-12--light.png"
+    "file": "b/week-12--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "week-12",
     "variant": "dark",
-    "file": "c/week-12--dark.png"
+    "file": "b/week-12--dark.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "artefact",
     "variant": "light",
-    "file": "c/artefact--light.png"
+    "file": "b/artefact--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "subscription",
     "variant": "light",
-    "file": "c/subscription--light.png"
+    "file": "b/subscription--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "offline",
     "variant": "light",
-    "file": "c/offline--light.png"
+    "file": "b/offline--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "error",
     "variant": "light",
-    "file": "c/error--light.png"
+    "file": "b/error--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "loading",
     "variant": "light",
-    "file": "c/loading--light.png"
+    "file": "b/loading--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "empty",
     "variant": "light",
-    "file": "c/empty--light.png"
+    "file": "b/empty--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "expired",
     "variant": "light",
-    "file": "c/expired--light.png"
+    "file": "b/expired--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "restore",
     "variant": "light",
-    "file": "c/restore--light.png"
+    "file": "b/restore--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "first-launch",
     "variant": "light",
-    "file": "c/first-launch--light.png"
+    "file": "b/first-launch--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "first-launch",
     "variant": "dark",
-    "file": "c/first-launch--dark.png"
+    "file": "b/first-launch--dark.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "explanation",
     "variant": "light",
-    "file": "c/explanation--light.png"
+    "file": "b/explanation--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "explore",
     "variant": "light",
-    "file": "c/explore--light.png"
+    "file": "b/explore--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "suitability",
     "variant": "light",
-    "file": "c/suitability--light.png"
+    "file": "b/suitability--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "start-journey",
     "variant": "light",
-    "file": "c/start-journey--light.png"
+    "file": "b/start-journey--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "begin",
     "variant": "light",
-    "file": "c/begin--light.png"
+    "file": "b/begin--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "paused",
     "variant": "light",
-    "file": "c/paused--light.png"
+    "file": "b/paused--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "complete",
     "variant": "light",
-    "file": "c/complete--light.png"
+    "file": "b/complete--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "acknowledge",
     "variant": "light",
-    "file": "c/acknowledge--light.png"
+    "file": "b/acknowledge--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "programme-pause",
     "variant": "light",
-    "file": "c/programme-pause--light.png"
+    "file": "b/programme-pause--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "handover",
     "variant": "light",
-    "file": "c/handover--light.png"
+    "file": "b/handover--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "specimen",
     "variant": "light",
-    "file": "c/specimen--light.png"
+    "file": "b/specimen--light.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "specimen",
     "variant": "scale200",
-    "file": "c/specimen--scale200.png"
+    "file": "b/specimen--scale200.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "strength",
     "state": "journey",
     "variant": "reduced",
-    "file": "c/journey--reduced.png"
+    "file": "b/journey--reduced.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "writing",
     "state": "today",
     "variant": "light",
-    "file": "c/today--light--writing.png"
+    "file": "b/today--light--writing.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "writing",
     "state": "today",
     "variant": "dark",
-    "file": "c/today--dark--writing.png"
+    "file": "b/today--dark--writing.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "writing",
     "state": "today",
     "variant": "scale200",
-    "file": "c/today--scale200--writing.png"
+    "file": "b/today--scale200--writing.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "writing",
     "state": "today",
     "variant": "tablet",
-    "file": "c/today--tablet--writing.png"
+    "file": "b/today--tablet--writing.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "writing",
     "state": "today",
     "variant": "small",
-    "file": "c/today--small--writing.png"
+    "file": "b/today--small--writing.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "writing",
     "state": "how",
     "variant": "light",
-    "file": "c/how--light--writing.png"
+    "file": "b/how--light--writing.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "writing",
     "state": "active",
     "variant": "light",
-    "file": "c/active--light--writing.png"
+    "file": "b/active--light--writing.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "writing",
     "state": "active",
     "variant": "dark",
-    "file": "c/active--dark--writing.png"
+    "file": "b/active--dark--writing.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "writing",
     "state": "journey",
     "variant": "light",
-    "file": "c/journey--light--writing.png"
+    "file": "b/journey--light--writing.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "writing",
     "state": "journey",
     "variant": "dark",
-    "file": "c/journey--dark--writing.png"
+    "file": "b/journey--dark--writing.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "writing",
     "state": "long-absence",
     "variant": "light",
-    "file": "c/long-absence--light--writing.png"
+    "file": "b/long-absence--light--writing.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "writing",
     "state": "long-absence",
     "variant": "scale200",
-    "file": "c/long-absence--scale200--writing.png"
+    "file": "b/long-absence--scale200--writing.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "writing",
     "state": "week-12",
     "variant": "light",
-    "file": "c/week-12--light--writing.png"
+    "file": "b/week-12--light--writing.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "writing",
     "state": "week-12",
     "variant": "dark",
-    "file": "c/week-12--dark--writing.png"
+    "file": "b/week-12--dark--writing.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "writing",
     "state": "artefact",
     "variant": "light",
-    "file": "c/artefact--light--writing.png"
+    "file": "b/artefact--light--writing.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "writing",
     "state": "specimen",
     "variant": "light",
-    "file": "c/specimen--light--writing.png"
+    "file": "b/specimen--light--writing.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "writing",
     "state": "specimen",
     "variant": "scale200",
-    "file": "c/specimen--scale200--writing.png"
+    "file": "b/specimen--scale200--writing.png"
   },
   {
-    "dir": "c",
+    "dir": "b",
     "world": "writing",
     "state": "journey",
     "variant": "reduced",
-    "file": "c/journey--reduced--writing.png"
+    "file": "b/journey--reduced--writing.png"
   }
 ]

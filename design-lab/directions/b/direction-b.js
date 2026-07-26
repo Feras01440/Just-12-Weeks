@@ -2,9 +2,9 @@
 // Governing idea: a fine field instrument for a twelve-week undertaking —
 // one glance gives the reading, one control arms the work. Warm precision:
 // bone faces, engraved wide labels, mono readouts, one amber control that
-// means "armed". The instrument never judges; it re-zeros.
+// means "armed". The instrument never judges; it holds your place.
 
-import { html, raw, render, mmss, pad2, makeTicker, reducedMotion } from '../../shared/dom.js';
+import { html, raw, render, mmss, pad2, makeTicker, makeTimeout, reducedMotion } from '../../shared/dom.js';
 import { WORLDS } from '../../shared/fixtures.js';
 
 // Session + choice state shared across this direction's screens.
@@ -16,6 +16,9 @@ const up = (s) => String(s).toUpperCase();
 
 function totalSeconds(w) {
   return w.today.activity.segments.reduce((a, s) => a + s.mins, 0) * 60;
+}
+function totalMins(w) {
+  return w.today.activity.segments.reduce((a, s) => a + s.mins, 0);
 }
 function segAt(w, elapsed) {
   let acc = 0;
@@ -41,6 +44,11 @@ function minsFor(w, wi, di) {
 function specMinutes(w) {
   const m = w.programme.expectations[0].match(/\d+\s*[–—-]\s*\d+/);
   return m ? m[0].replace(/\s/g, '') : '';
+}
+// Position readout, in plain words — never a fraction, never jargon.
+function dayStatus(w) {
+  const p = w.position;
+  return `DAY ${p.dayOfProgramme} OF 84 · WEEK ${pad2(p.week)} OF 12`;
 }
 
 // ————— engraved fragments —————
@@ -78,6 +86,7 @@ function rows(items) {
     (it) => html`<button class="mb-row${it.back ? ' is-back' : ''}" data-go="${it.go}">
       <span class="mb-row-label">${it.back ? '← ' : ''}${it.label}</span>
       ${it.note ? html`<span class="mb-row-note${it.full ? ' is-full' : ''}">${it.note}</span>` : ''}
+      ${!it.back ? html`<span class="mb-row-chev" aria-hidden="true">›</span>` : ''}
     </button>`
   )}</div>`;
 }
@@ -89,11 +98,12 @@ function caution(label, text) {
   </div>`;
 }
 
-// bordered status plate (offline / fault / standby)
+// Bordered status plate (offline / restored). The live text is injected one
+// frame after insertion (see mount) so screen readers reliably announce it.
 function sysplate(label, text, opts = {}) {
   return html`<div class="mb-sys ${raw(opts.cls || '')}" role="${opts.role || 'status'}">
     <span class="mb-sys-label">${label}</span>
-    <p class="mb-sys-text">${text}</p>
+    <p class="mb-sys-text" data-live-text="${text}"></p>
   </div>`;
 }
 
@@ -101,7 +111,7 @@ function listRow(text) {
   return html`<div class="mb-li"><span class="mb-li-tick" aria-hidden="true"></span><span>${text}</span></div>`;
 }
 
-// ————— THE TRAVERSE RAIL (horizontal, SVG, decorative — data repeats as text) —————
+// ————— THE RAIL (horizontal, SVG, decorative — data repeats as text) —————
 // modes: 'zero' | 'open' (zero, detent 01 highlighted) | 'today' | 'advance' | 'complete'
 
 function railSVG(w, mode = 'today') {
@@ -131,7 +141,7 @@ function railSVG(w, mode = 'today') {
       : cur ? (mode === 'open' ? 'rt-maj is-open' : 'rt-maj is-cur')
       : 'rt-maj is-fut';
     parts.push(html`<rect class="${cls}" x="${(xx - 1.25).toFixed(2)}" y="12" width="2.5" height="12" />`);
-    parts.push(html`<text class="rn${cur ? ' is-cur' : ''}${!done && !cur ? ' is-fut' : ''}${mode === 'complete' ? ' is-comp' : ''}" x="${xx.toFixed(2)}" y="40" text-anchor="middle">${pad2(k)}</text>`);
+    parts.push(html`<text class="rn${cur ? ' is-cur' : ''}${mode === 'complete' ? ' is-comp' : ''}" x="${xx.toFixed(2)}" y="40" text-anchor="middle">${pad2(k)}</text>`);
   }
   const cx = (x(Math.min(Dnow, 84)) - L).toFixed(1);
   return html`<svg class="mb-rail" viewBox="0 0 372 46" aria-hidden="true" focusable="false">
@@ -144,19 +154,18 @@ function railSVG(w, mode = 'today') {
 }
 
 function foot(w, opts = {}) {
-  const p = w.position;
   const mode = opts.mode || 'today';
   const st =
     opts.status ??
     (mode === 'zero' || mode === 'open'
-      ? 'TRAVERSE 00/84 · WEEK 01/12'
+      ? 'DAY 1 OF 84 · WEEK 01 OF 12'
       : mode === 'complete'
-        ? 'TRAVERSE 84/84 · WEEK 12/12'
-        : `TRAVERSE ${pad2(p.dayOfProgramme)}/84 · WEEK ${pad2(p.week)}/12`);
+        ? 'DAY 84 OF 84 · WEEK 12 OF 12'
+        : dayStatus(w));
   const inner = html`<span class="mb-foot-status">${st}</span>${railSVG(w, mode)}`;
   return opts.link === false
     ? html`<div class="mb-foot">${inner}</div>`
-    : html`<button class="mb-foot" data-go="journey" aria-label="${st} — open the twelve-week traverse">${inner}</button>`;
+    : html`<button class="mb-foot" data-go="journey" aria-label="${st} — see the twelve weeks">${inner}</button>`;
 }
 
 // ————— SESSION BEZEL —————
@@ -192,32 +201,43 @@ function bezel(w, elapsed, hold) {
   </div>`;
 }
 
-function segRows(w, elapsed, plain = false) {
-  const list = plain
-    ? w.today.activity.segments.map((s) => ({ ...s, state: 'todo' }))
-    : segStates(w, elapsed);
-  return list.map(
+function segRows(w, elapsed) {
+  return segStates(w, elapsed).map(
     (s) => html`<li class="mb-seg is-${s.state}">
       <span class="mb-seg-tick" aria-hidden="true"></span>
       <span class="mb-seg-label">${s.label}</span>
-      <span class="mb-seg-val">${s.state === 'done' ? 'REC' : `${pad2(s.mins)}:00`}</span>
+      <span class="mb-seg-val">${s.state === 'done' ? 'DONE' : `${s.mins} MIN`}</span>
+    </li>`
+  );
+}
+
+// Session plan rows for the begin screen — engraved hairline leaders,
+// deliberately not a checklist.
+function planRows(w) {
+  return w.today.activity.segments.map(
+    (s) => html`<li class="mb-plan-row">
+      <span class="mb-plan-label">${s.label}</span>
+      <span class="mb-plan-lead" aria-hidden="true"></span>
+      <span class="mb-plan-val">${s.mins} MIN</span>
     </li>`
   );
 }
 
 // ————— vertical rail (journey) —————
+// Completed weeks collapse to one summary line — the instrument keeps a
+// place, not an audit trail. Only the current week shows its days.
 
 function logEntry(w, wi, di, d) {
   const id = `W${pad2(wi + 1)}·D${di + 1}`;
   const title = up(w.weeks[wi].title);
-  const mins = pad2(minsFor(w, wi, di));
+  const mins = minsFor(w, wi, di);
   let text;
   switch (d) {
-    case 'done': text = `${id} — ${title} — ${mins} MIN — RECORDED`; break;
-    case 'mended': text = `${id} — ${title} — ${mins} MIN — RECORDED · MENDED`; break;
+    case 'done': text = `${id} — ${title} — ${mins} MIN`; break;
+    case 'mended': text = `${id} — ${title} — ${mins} MIN · MENDED`; break;
     case 'missed': text = `${id} — NO READING —`; break;
-    case 'rest': text = `${id} — REST — AS PLANNED`; break;
-    case 'today': text = `${id} — ${up(w.position.weekTheme)} — READING OPEN`; break;
+    case 'rest': text = `${id} — REST`; break;
+    case 'today': text = `${id} — ${up(w.position.weekTheme)} — TODAY`; break;
     default: text = id; break;
   }
   return html`<li class="mb-log d-${d}"><i class="mb-log-tick" aria-hidden="true"></i><span>${text}</span></li>`;
@@ -235,19 +255,19 @@ function vweek(w, i) {
   if (past) {
     const rec = days.filter((d) => d === 'done' || d === 'mended').length;
     const rest = days.filter((d) => d === 'rest').length;
-    note = `${pad2(rec)} RECORDED${rest ? ` · ${pad2(rest)} REST` : ''}${days.includes('mended') ? ' · ONE MENDED' : ''}`;
+    note = `${rec} readings${rest ? ` · ${rest} rest` : ''}${days.includes('mended') ? ' · one mended' : ''}`;
   }
-  if (cur) note = `DAY ${p.day} OF 7 — UNDER WAY`;
-  const cls = past ? 'is-past' : cur ? 'is-cur' : next ? 'is-next' : 'is-sealed';
+  if (cur) note = `Day ${p.day} of 7`;
+  const cls = past ? 'is-past' : cur ? 'is-cur' : next ? 'is-next' : 'is-later';
   return html`<li class="mb-vweek ${cls}${i === 0 ? ' is-first' : ''}">
     <span class="mb-vgut" aria-hidden="true"><i class="mb-vdet"></i></span>
     <div class="mb-vbody">
       <div class="mb-vhead">
         <span class="mb-vnum">${pad2(n)}</span>
-        <span class="mb-vtitle">${past || cur || next ? wk.title : '— sealed —'}</span>
+        <span class="mb-vtitle">${past || cur || next ? wk.title : 'Not open yet'}</span>
         ${note ? html`<span class="mb-vnote">${note}</span>` : ''}
       </div>
-      ${past || cur ? html`<ul class="mb-vlog">${days.map((d, di) => logEntry(w, i, di, d))}</ul>` : ''}
+      ${cur ? html`<ul class="mb-vlog">${days.map((d, di) => logEntry(w, i, di, d))}</ul>` : ''}
       ${next ? html`<span class="mb-vopen">Opens when week ${pad2(p.week)} closes</span>` : ''}
     </div>
   </li>`;
@@ -262,10 +282,10 @@ const screens = {
         <p class="mb-eng mb-launch-over">A twelve-week instrument</p>
         <h1 class="mb-display">Twelve<br />Weeks</h1>
         <p class="mb-launch-line">One meaningful action a day — measured, recorded, kept — for one honest quarter of a year.</p>
-        ${foot(ctx.w, { mode: 'zero', status: 'TRAVERSE 00/84 · READY', link: false })}
+        ${foot(ctx.w, { mode: 'zero', status: 'DAY 1 OF 84 · READY', link: false })}
         ${arm('Begin', 'explanation')}
         ${rows([{ label: 'I’ve been here before', note: 'Restore', go: 'restore' }])}
-        <p class="mb-foot-status mb-launch-under">NO STREAKS · NO FEEDS · ONE READING A DAY</p>
+        <p class="mb-eng mb-launch-under">No streaks · no feeds · one reading a day</p>
       </div>
     `, 'mb-center'),
 
@@ -337,7 +357,7 @@ const screens = {
     const first = w.weeks[0];
     return shell(html`
       ${head(w, 'Day 01')}
-      <p class="mb-kicker">Traverse opens</p>
+      <p class="mb-kicker">The twelve weeks open</p>
       <h1 class="mb-title">Twelve weeks. Eighty-four days. One rail.</h1>
       ${foot(w, { mode: 'open', link: false })}
       <section class="mb-face">
@@ -345,7 +365,7 @@ const screens = {
         <h2 class="mb-face-title">${first.title}</h2>
         <p class="mb-face-line">${first.focus}</p>
       </section>
-      <p class="mb-meta">Detents 02–12 stay sealed until you reach them. That is deliberate — the instrument shows one week at a time.</p>
+      <p class="mb-meta">Detents 02–12 open as you reach them — one week at a time, on purpose.</p>
       ${arm('Take the first reading', 'today')}
     `);
   },
@@ -362,10 +382,10 @@ const screens = {
         <p class="mb-why">${t.why}</p>
         <div class="mb-face-foot">
           <span class="mb-eng">Duration</span>
-          <span class="mb-read">${mmss(t.duration * 60)}</span>
+          <span class="mb-read">${t.duration} MIN</span>
         </div>
       </section>
-      ${arm('Begin', 'begin', mmss(t.duration * 60))}
+      ${arm('Begin', 'begin', `${t.duration} min`)}
       ${rows([
         { label: 'Show me how', note: `${pad2(t.how.length)} steps`, go: 'how' },
         { label: 'Something gentler today', note: 'Counts in full', full: true, go: 'easier' },
@@ -408,7 +428,7 @@ const screens = {
         </div>`
       )}
       ${caution('Take care', t.safety)}
-      ${arm('Begin', 'begin', mmss(t.duration * 60))}
+      ${arm('Begin', 'begin', `${t.duration} min`)}
       ${rows([
         { label: 'What you’ll need', note: `${pad2(t.prep.length)} items`, go: 'prep' },
         { label: 'Back to today', go: 'today', back: true },
@@ -420,18 +440,18 @@ const screens = {
     const t = ctx.w.today;
     return shell(html`
       ${head(ctx.w)}
-      <p class="mb-kicker">Pre-flight — before you begin</p>
+      <p class="mb-kicker">Before you begin</p>
       <h1 class="mb-title">What you’ll need.</h1>
       <div role="group" aria-label="Preparation checklist" class="mb-checks">
         ${t.prep.map(
-          (p, i) => html`<button class="mb-check" data-check="${i}" aria-pressed="${String(mem.prepDone.has(i))}">
+          (p, i) => html`<button class="mb-check" data-check="${i}" aria-pressed="${mem.prepDone.has(i)}">
             <span class="mb-check-box" aria-hidden="true"></span>
             <span class="mb-check-label">${p}</span>
           </button>`
         )}
       </div>
       <p class="mb-meta">Ticking is optional — the list simply waits here every day.</p>
-      ${arm('Begin', 'begin', mmss(t.duration * 60))}
+      ${arm('Begin', 'begin', `${t.duration} min`)}
       ${rows([{ label: 'Back to the procedure', go: 'how', back: true }])}
     `);
   },
@@ -474,18 +494,18 @@ const screens = {
     const w = ctx.w;
     const t = w.today;
     return shell(html`
-      ${head(w, 'Arm')}
+      ${head(w, 'Ready')}
       <p class="mb-kicker">Session plan</p>
       <h1 class="mb-title">${t.shortTitle}.</h1>
       <section class="mb-face">
-        <ul class="mb-segs">${segRows(w, 0, true)}</ul>
+        <ul class="mb-plan">${planRows(w)}</ul>
         <div class="mb-face-foot">
           <span class="mb-eng">Total</span>
-          <span class="mb-read">${mmss(totalSeconds(w))}</span>
+          <span class="mb-read">${totalMins(w)} MIN</span>
         </div>
       </section>
       <p class="mb-meta">Pause any time. The bezel holds; holding is not failing.</p>
-      ${arm('Arm — begin now', 'active', mmss(totalSeconds(w)))}
+      ${arm('Begin now', 'active', `${totalMins(w)} min`)}
       ${rows([{ label: 'Back to today', go: 'today', back: true }])}
     `);
   },
@@ -508,7 +528,7 @@ const screens = {
       ${head(w, 'Hold')}
       ${bezel(w, mem.elapsed, true)}
       <p class="mb-bezel-seg is-hold">${w.today.activity.pauseNote}</p>
-      ${arm('Resume', 'active', mmss(Math.min(mem.elapsed, totalSeconds(w))))}
+      ${arm('Resume', 'active')}
       ${rows([
         { label: 'Save the rest for later today', go: 'today' },
         { label: 'End here — it still counts', go: 'complete' },
@@ -524,9 +544,9 @@ const screens = {
       ${head(w)}
       <p class="mb-kicker">Reading complete</p>
       <h1 class="mb-title">${t.shortTitle} — done.</h1>
-      <p class="mb-lede">${mmss(Math.max(mem.elapsed, 60))} of honest work. Press it into the log.</p>
+      <p class="mb-lede">That counts in full. Press it into the log.</p>
       <div class="mb-face mb-entryplate">
-        <span class="mb-entry-line">W${pad2(p.week)}·D${p.day} — ${up(t.shortTitle)} — ${mmss(Math.max(mem.elapsed, 60))}</span>
+        <span class="mb-entry-line">W${pad2(p.week)}·D${p.day} — ${up(t.shortTitle)}</span>
         <span class="mb-stamp" id="mb-stamp" aria-hidden="true">Recorded</span>
       </div>
       ${arm(`Record day ${p.dayOfProgramme}`, '__record')}
@@ -541,12 +561,15 @@ const screens = {
       <p class="mb-kicker">One question — then the day is filed</p>
       <h1 class="mb-title">${q.prompt}</h1>
       <p class="mb-meta">${q.why}</p>
-      <div role="group" aria-label="${q.prompt}" class="mb-options">
-        ${q.options.map(
-          (o, i) => html`<button class="mb-option" data-choice="${i}" aria-pressed="false">
-            <span class="mb-option-title">${o}</span>
-          </button>`
-        )}
+      <div class="mb-dialwrap">
+        <div class="mb-dial" role="group" aria-label="${q.prompt}">
+          ${q.options.map(
+            (o, i) => html`<button class="mb-dial-opt" data-choice="${i}">
+              <span class="mb-dial-socket" aria-hidden="true"></span>
+              <span class="mb-dial-body"><span class="mb-dial-title">${o}</span></span>
+            </button>`
+          )}
+        </div>
       </div>
       ${rows([{ label: 'Skip — no answer today', go: 'acknowledge' }])}
     `);
@@ -559,13 +582,13 @@ const screens = {
     const ackLine = w.today.question.acknowledgements[mem.choice] ?? '';
     return shell(html`
       ${head(w)}
-      <div class="mb-face mb-entryplate">
-        <span class="mb-entry-line">W${pad2(p.week)}·D${p.day} — ${up(w.today.shortTitle)} — ${mmss(Math.max(mem.elapsed, 60))}</span>
-        <span class="mb-stamp is-set" aria-hidden="true">Recorded</span>
-      </div>
       <h1 class="mb-title mb-ack-head">${a.headline}</h1>
       <p>${a.line}</p>
       <p class="mb-meta">${ackLine}</p>
+      <div class="mb-face mb-entryplate">
+        <span class="mb-entry-line">W${pad2(p.week)}·D${p.day} — ${up(w.today.shortTitle)}</span>
+        <span class="mb-stamp is-set" aria-hidden="true">Recorded</span>
+      </div>
       ${foot(w, { mode: 'advance', status: up(a.weekLine) })}
       ${arm('Close the instrument for today', 'journey')}
     `);
@@ -573,12 +596,11 @@ const screens = {
 
   journey: (ctx) => {
     const w = ctx.w;
-    const p = w.position;
     return shell(html`
-      ${head(w, 'The traverse')}
+      ${head(w, 'The twelve weeks')}
       <div class="mb-jhead">
-        <h1 class="mb-title">The traverse.</h1>
-        <span class="mb-foot-status">TRAVERSE ${pad2(p.dayOfProgramme)}/84 · WEEK ${pad2(p.week)}/12</span>
+        <h1 class="mb-title">The twelve weeks.</h1>
+        <span class="mb-foot-status">${dayStatus(w)}</span>
       </div>
       <ol class="mb-vrail">${w.weeks.map((wk, i) => vweek(w, i))}</ol>
       ${arm('Back to today’s reading', 'today')}
@@ -607,7 +629,7 @@ const screens = {
         <p>${w.today.milestone}</p>
       </div>
       ${arm(`Begin week ${pad2(p.week + 1)}`, 'today')}
-      <p class="mb-foot-status mb-adv-meta">DETENTS 01–${pad2(p.week)} RECORDED · ${pad2(12 - p.week)} REMAIN</p>
+      <p class="mb-foot-status mb-adv-meta">DETENTS 01–${pad2(p.week)} DONE · ${pad2(12 - p.week)} TO COME</p>
     `);
   },
 
@@ -635,7 +657,7 @@ const screens = {
     const p = w.position;
     return shell(html`
       ${head(w)}
-      <p class="mb-kicker">Re-zero — your place is kept</p>
+      <p class="mb-kicker">Your place is kept</p>
       <h1 class="mb-title">${r.headline}</h1>
       <p>${r.line}</p>
       <div class="mb-options">
@@ -647,7 +669,7 @@ const screens = {
           </button>`
         )}
       </div>
-      <p class="mb-foot-status">WEEKS 01–${pad2(p.week - 1)} — RECORDED · NOTHING LOST</p>
+      <p class="mb-foot-status">WEEKS 01–${pad2(p.week - 1)} KEPT · NOTHING LOST</p>
     `);
   },
 
@@ -655,15 +677,15 @@ const screens = {
     const w = ctx.w;
     const r = w.recovery.longAbsence;
     return shell(html`
-      ${head(w, 'Recalibrate')}
-      <p class="mb-kicker">Recalibration</p>
+      ${head(w, 'Welcome back')}
+      <p class="mb-kicker">Where you left off</p>
       <h1 class="mb-title">${r.headline}</h1>
       <p>${r.line}</p>
       <div class="mb-dialwrap">
         <span class="mb-eng mb-dial-label" id="mb-dial-label">Capacity — ${r.capacityPrompt}</span>
         <div class="mb-dial" role="group" aria-labelledby="mb-dial-label">
           ${r.capacities.map(
-            (c, i) => html`<button class="mb-dial-opt" data-cap="${i}" aria-pressed="false">
+            (c, i) => html`<button class="mb-dial-opt" data-cap="${i}">
               <span class="mb-dial-socket" aria-hidden="true"></span>
               <span class="mb-dial-body">
                 <span class="mb-dial-key">${['Low', 'Steady', 'Full'][i]}</span>
@@ -678,7 +700,7 @@ const screens = {
         <span class="mb-eng">Re-lay the rail</span>
         <p>${r.reschedule}</p>
       </div>
-      ${rows([{ label: 'Pause the programme instead', note: 'Standby', go: 'programme-pause' }])}
+      ${rows([{ label: 'Pause the programme instead', note: 'Your place stays', go: 'programme-pause' }])}
     `);
   },
 
@@ -686,8 +708,8 @@ const screens = {
     const w = ctx.w;
     const r = w.recovery.pause;
     return shell(html`
-      ${head(w, 'Standby')}
-      ${sysplate('Standby', 'The instrument waits without counting. Your place, record and milestones are kept exactly as they are.')}
+      ${head(w, 'Paused')}
+      <p class="mb-kicker">Paused, on purpose</p>
       <h1 class="mb-title">${r.headline}</h1>
       <p>${r.line}</p>
       <p class="mb-meta">${r.detail}</p>
@@ -715,15 +737,15 @@ const screens = {
       <div class="mb-ghostline" aria-hidden="true"></div>
       <div class="mb-ghostline w60" aria-hidden="true"></div>
       <div class="mb-ghostline tall" aria-hidden="true"></div>
-      <p class="visually-hidden" role="status">Loading today’s reading</p>
+      <p class="visually-hidden" role="status" data-live-text="Loading today’s reading"></p>
     `, 'mb-loading'),
 
   error: (ctx) =>
     shell(html`
       ${head(ctx.w, 'Fault')}
-      ${sysplate('Fault — our side', ctx.w.system.error, { role: 'alert', cls: 'is-warn' })}
+      <p class="mb-kicker mb-kicker-warn">Fault — our side</p>
       <h1 class="mb-title">The instrument is fine. Our line isn’t.</h1>
-      <p class="mb-meta">Nothing you recorded is affected — the log lives on this phone.</p>
+      <p role="alert" data-live-text="${ctx.w.system.error}"></p>
       ${arm('Try again', 'today')}
       ${rows([{ label: 'Carry on offline', note: 'Everything works', go: 'offline' }])}
     `),
@@ -734,11 +756,11 @@ const screens = {
     return shell(html`
       ${head(w)}
       <p class="mb-kicker">Next detent</p>
-      <h1 class="mb-title">Detent ${pad2(p.week + 1)} is sealed.</h1>
+      <h1 class="mb-title">Detent ${pad2(p.week + 1)} isn’t open yet.</h1>
       <div class="mb-sealedrow" aria-hidden="true">
         <span class="mb-sealed-box"></span>
         <span class="mb-sealed-num">W${pad2(p.week + 1)}</span>
-        <span class="mb-eng">Sealed</span>
+        <span class="mb-eng">Not open yet</span>
       </div>
       <p>${w.system.empty}</p>
       ${arm('Back to this week', 'today')}
@@ -751,7 +773,7 @@ const screens = {
     return shell(html`
       ${head(w, 'W12·D7')}
       <div class="mb-advance">
-        <p class="mb-kicker mb-kicker-done">Traverse complete</p>
+        <p class="mb-kicker mb-kicker-done">Twelve weeks, complete</p>
         <div class="mb-adv-nums is-done" aria-hidden="true"><span>12<i>/12</i></span></div>
         <h1 class="mb-title">${c.headline}</h1>
         <p class="mb-adv-focus">${c.line}</p>
@@ -778,7 +800,7 @@ const screens = {
             </div>`
           )}
         </div>
-        <span class="mb-foot-status">RECORDED OVER 84 DAYS · W01–W12 · COMPLETE</span>
+        <span class="mb-foot-status">84 DAYS · WEEKS 01–12 · COMPLETE</span>
       </section>
       <p class="mb-meta">${c.artefact.note}</p>
       ${arm('What comes next', 'handover')}
@@ -849,10 +871,11 @@ const screens = {
         </div>
       </section>
       ${arm(e.action, 'subscription')}
-      ${rows([
-        { label: e.secondary, note: 'Always available', go: 'artefact' },
-        { label: 'Read my record', go: 'journey' },
-      ])}
+      <button class="mb-option is-solo" data-go="artefact">
+        <span class="mb-option-title">${e.secondary}</span>
+        <span class="mb-option-sub">Always available — no membership needed.</span>
+      </button>
+      ${rows([{ label: 'Read my record', go: 'journey' }])}
     `);
   },
 
@@ -863,10 +886,7 @@ const screens = {
       <h1 class="mb-title">${r.headline}</h1>
       <p>${r.line}</p>
       ${mem.restored
-        ? html`<div class="mb-sys is-done" role="status">
-            <span class="mb-sys-label">Restored</span>
-            <p class="mb-sys-text">${r.done}</p>
-          </div>
+        ? html`${sysplate('Restored', r.done, { cls: 'is-done' })}
           ${arm('Open today’s reading', 'today')}`
         : arm(r.action, '__restore')}
       ${rows([{ label: 'Start fresh instead', note: 'The programmes', go: 'explore' }])}
@@ -893,8 +913,8 @@ const screens = {
         </div>
       </div>
       <div class="mb-spec-reads">
-        <div><span class="mb-eng">${WORLDS.strength.short}</span><span class="mb-read">${mmss(WORLDS.strength.today.duration * 60)}</span></div>
-        <div><span class="mb-eng">${WORLDS.writing.short}</span><span class="mb-read">${mmss(WORLDS.writing.today.duration * 60)}</span></div>
+        <div><span class="mb-eng">Timer — ${WORLDS.strength.short}</span><span class="mb-read">${mmss(WORLDS.strength.today.duration * 60)}</span></div>
+        <div><span class="mb-eng">Timer — ${WORLDS.writing.short}</span><span class="mb-read">${mmss(WORLDS.writing.today.duration * 60)}</span></div>
       </div>
       <p class="mb-spec-mono">0123456789 — tabular, for every readout</p>
       <div class="mb-spec-weeks">${w.weeks.map((_, i) => html`<span>W${pad2(i + 1)}</span>`)}</div>
@@ -910,18 +930,23 @@ const screens = {
 // ————— mount: wire interactions —————
 
 function mount(root, ctx) {
+  // Live-region text is injected a frame after insertion so screen readers
+  // reliably announce status/alert plates rendered with the screen.
+  root.querySelectorAll('[data-live-text]').forEach((el) => {
+    requestAnimationFrame(() => { el.textContent = el.getAttribute('data-live-text'); });
+  });
+
   root.querySelectorAll('[data-go]').forEach((el) => {
     el.addEventListener('click', () => {
       const target = el.getAttribute('data-go');
       if (target === '__record') {
+        // The mark is always seen: reduced motion shows the stamp pre-pressed
+        // for a static beat instead of skipping the confirmation entirely.
         const stamp = root.querySelector('#mb-stamp');
+        if (stamp) stamp.classList.add('is-pressed');
+        el.disabled = true;
         ctx.announce(`Day ${ctx.w.position.dayOfProgramme} recorded.`);
-        if (stamp && !reducedMotion(ctx)) {
-          stamp.classList.add('is-pressed');
-          setTimeout(() => ctx.go('question'), 480);
-        } else {
-          ctx.go('question');
-        }
+        makeTimeout(root, () => ctx.go('question'), reducedMotion(ctx) ? 250 : 480);
         return;
       }
       if (target === '__restore') {
@@ -943,22 +968,22 @@ function mount(root, ctx) {
     });
   });
 
+  // Choose-and-go controls: plain buttons (no toggle semantics) — the chosen
+  // socket fills for a held beat, then the screen advances.
   root.querySelectorAll('[data-choice]').forEach((el) => {
     el.addEventListener('click', () => {
       mem.choice = Number(el.getAttribute('data-choice'));
-      root.querySelectorAll('[data-choice]').forEach((b) => b.setAttribute('aria-pressed', 'false'));
-      el.setAttribute('aria-pressed', 'true');
-      setTimeout(() => ctx.go('acknowledge'), reducedMotion(ctx) ? 0 : 180);
+      el.classList.add('is-chosen');
+      makeTimeout(root, () => ctx.go('acknowledge'), 220);
     });
   });
 
   root.querySelectorAll('[data-cap]').forEach((el) => {
     el.addEventListener('click', () => {
       const i = Number(el.getAttribute('data-cap'));
-      root.querySelectorAll('[data-cap]').forEach((b) => b.setAttribute('aria-pressed', 'false'));
-      el.setAttribute('aria-pressed', 'true');
+      el.classList.add('is-chosen');
       ctx.announce(`${ctx.w.recovery.longAbsence.capacities[i].title}. Opening today’s reading.`);
-      setTimeout(() => ctx.go('today'), reducedMotion(ctx) ? 0 : 280);
+      makeTimeout(root, () => ctx.go('today'), 260);
     });
   });
 
@@ -969,14 +994,24 @@ function mount(root, ctx) {
     const arc = root.querySelector('#mb-arc');
     const segl = root.querySelector('#mb-seg');
     const segs = root.querySelector('#mb-segs');
+    // Wall-clock anchored: a throttled tab or locked phone never loses time.
+    const startedAt = Date.now() - mem.elapsed * 1000;
+    let lastSeg = segAt(ctx.w, mem.elapsed).label;
+    let announcedDone = false;
     makeTicker(root, () => {
-      mem.elapsed = Math.min(mem.elapsed + 1, total);
+      mem.elapsed = Math.min(Math.round((Date.now() - startedAt) / 1000), total);
+      const segNow = segAt(ctx.w, mem.elapsed).label;
       if (digits) digits.textContent = mmss(mem.elapsed);
       if (arc) arc.setAttribute('stroke-dashoffset', (C * (1 - Math.min(mem.elapsed / total, 1))).toFixed(1));
-      if (segl) segl.textContent = segAt(ctx.w, mem.elapsed).label;
+      if (segl) segl.textContent = segNow;
       if (segs) segs.innerHTML = render(html`${segRows(ctx.w, mem.elapsed)}`);
-      if (mem.elapsed === total) ctx.announce('Session complete. The reading is yours to record.');
-      else if (mem.elapsed % 60 === 0) ctx.announce(`${mmss(mem.elapsed)} elapsed. ${segAt(ctx.w, mem.elapsed).label}.`);
+      if (mem.elapsed === total && !announcedDone) {
+        announcedDone = true;
+        ctx.announce('Session complete. The reading is yours to record.');
+      } else if (segNow !== lastSeg) {
+        ctx.announce(`${segNow}. ${mmss(mem.elapsed)} elapsed.`);
+      }
+      lastSeg = segNow;
     });
   }
 
