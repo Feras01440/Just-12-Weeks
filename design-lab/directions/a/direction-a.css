@@ -521,7 +521,9 @@
 .qa-cat .qa-cat-title { font-size: calc(var(--ts) * 1.3rem); font-weight: 520; font-variation-settings: 'opsz' 40; margin: 0 0 6px; }
 .qa-cat .qa-cat-line { color: var(--qa-ink-2); font-size: var(--qa-fs-meta); font-style: italic; margin: 0 0 6px; line-height: 1.5; }
 .qa-cat .qa-cat-meta { font-size: var(--qa-fs-run); letter-spacing: 0.1em; text-transform: uppercase; color: var(--qa-ink-2); }
-.qa-cat.is-soon { opacity: 0.62; }
+/* "in preparation" entries mute via AA-passing colour, not opacity */
+.qa-cat.is-soon .qa-cat-title { color: var(--qa-ink-2); font-weight: 440; }
+.qa-cat.is-soon .qa-cat-line, .qa-cat.is-soon .qa-cat-meta { color: var(--qa-ink-2); }
 
 /* ribbon bookmark graphic */
 .qa-ribbon-g {

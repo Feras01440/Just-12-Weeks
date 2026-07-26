@@ -248,7 +248,7 @@ const screens = {
       <h1 class="qa-title">What you’ll need</h1>
       <div role="group" aria-label="Preparation checklist">
         ${t.prep.map(
-          (p, i) => html`<button class="qa-check" data-check="${i}" aria-pressed="${mem.prepDone.has(i)}">
+          (p, i) => html`<button class="qa-check" data-check="${i}" aria-pressed="${String(mem.prepDone.has(i))}">
             <span class="qa-box" aria-hidden="true">${mem.prepDone.has(i) ? '☑' : '☐'}</span>
             <span class="qa-check-label">${p}</span>
           </button>`
