@@ -1,6 +1,6 @@
 # Stage 1 Decision Criteria — Proceed / Pivot / Stop
 
-**Status:** Pre-registered 26 July 2026, **before any participant is contacted** — so the evidence can't be rationalised afterwards. The Gate 1→2 verdict is written against this page, and the founder's decision (with this page cited) goes to the decision log. Sample honesty: with 9–12 interviews these are strong directional signals, not statistics — which is why the criteria demand *unprompted, specific, past-behaviour* evidence rather than polite agreement.
+**Status:** Pre-registered 26 July 2026, **before any participant is contacted**. Scope updated under D-009: these interview-based criteria apply **when an interview escalation runs**; the *default* Gate 1→2 verdict is written against the passive system's pre-registered thresholds ([passive-validation-plan §4](../passive-validation-plan.md)) with this page's stop conditions (S1–S5) still governing where referenced. Escalated rounds report against the smallest sufficient subset of P1–P4. Sample honesty: with 9–12 interviews these are strong directional signals, not statistics — which is why the criteria demand *unprompted, specific, past-behaviour* evidence rather than polite agreement.
 
 ## PROCEED (all five required)
 

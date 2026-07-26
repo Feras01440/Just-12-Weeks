@@ -7,7 +7,7 @@
 | Ref | Decision | Founder's answer |
 |-----|----------|------------------|
 | Q2 ✅ | Validation audience | **D-006: "Age-inclusive Restarters"** — behavioural pattern, all four adult age bands, over-sampled to study the hardest retention/recovery problem; never implied as the product's only market |
-| Q9 ✅ (partial) | Founder constraints | **D-007:** ≥15–20 h/week; solo; third-year SWE student (TypeScript/React/Next.js, AI-assisted dev) with specialist reviews expected for mobile UX, visual design, accessibility, security, programme expertise, store readiness; no fixed date — quality gates take priority; organic acquisition to be test-prepared. **Residual: budget envelope** — see [`05-commercial/year-one-budget-scenarios.md`](../05-commercial/year-one-budget-scenarios.md) and confirm a scenario |
+| Q9 ✅ (partial) | Founder constraints | **D-007** (time element superseded by **D-008**: 3–5 h ordinary weeks, 6–8 at gates): solo; third-year SWE student (TypeScript/React/Next.js, AI-assisted dev) with specialist reviews expected for mobile UX, visual design, accessibility, security, programme expertise, store readiness; no fixed date — quality gates take priority; organic acquisition to be test-prepared. **Residual: budget envelope** — see [`05-commercial/year-one-budget-scenarios.md`](../05-commercial/year-one-budget-scenarios.md) and confirm a scenario |
 
 ## Tier 2 — decisions that gate Stage 2 (product architecture)
 

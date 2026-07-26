@@ -36,4 +36,4 @@ Spend is gated, not front-loaded: Stage 1 needs only incentives + tools (≈£60
 
 ## Not in these numbers
 
-Your time (15–20 h/week is the largest real investment); any paid user acquisition at scale (post-validation decision); Apple/Google revenue share (comes out of revenue, not budget); incorporation/accounting (jurisdiction-dependent, typically £300–1,500/yr — add if not already handled).
+Your time (3–5 focused hours in ordinary weeks under the D-008 operating model — still the scarcest input); any paid user acquisition at scale (post-validation decision); Apple/Google revenue share (comes out of revenue, not budget); incorporation/accounting (jurisdiction-dependent, typically £300–1,500/yr — add if not already handled).
