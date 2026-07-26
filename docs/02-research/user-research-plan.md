@@ -1,6 +1,6 @@
 # User Research Plan — Stage 1 Validation
 
-**Status:** Draft — awaiting founder review. Executes after the founder answers the foundation questions (Stage 0 gate), because the segment chosen in Q2 determines who we recruit.
+**Status:** Approved direction (Q2 answered — **D-006: Age-inclusive Restarters**, 26 Jul 2026). This document holds the strategy and rationale; the operational, copy-ready materials live in the [Stage 1 Validation Execution Pack](stage1-pack/README.md) — where this plan and the pack cover the same ground, **the pack is the single source** (this plan points rather than duplicates).
 
 ## 1. Research objectives
 
@@ -52,56 +52,17 @@ Realistic for a solo founder with little budget:
 - **3–4 interviews** in each secondary segment for contrast (optional if time-constrained).
 - **Landing-page smoke test:** ≥300 visitors from a small ad spend (£100–150) to measure message resonance; this supplements, never replaces, interviews.
 
-## 5. Interview script (45 minutes)
+## 5. Interview script
 
-Rules: never pitch the app before section E. Never ask "would you use an app that…". Past behaviour only, until the final section. Silence is a tool — let them fill it.
-
-**A. Context (5 min)**
-1. "Tell me a bit about a typical week for you right now."
-2. "When you think about something you've been wanting to change or get better at — what comes to mind first?"
-
-**B. The last attempt (15 min) — the core of the interview**
-3. "Tell me about the last time you seriously tried to [their goal]. Start from the day you decided."
-4. "What did you actually do in the first week?"
-5. "Walk me through when it started to slip. What was happening that week?"
-6. "What did you tell yourself at that point?"
-7. "Did anything or anyone almost pull you back on track? What?"
-8. "What happened to whatever you were using — the app, plan, notebook, membership?"
-
-**C. Money, alternatives and the shape of help (12 min)**
-9. "What have you spent money on for this goal — apps, memberships, products, courses? Roughly how much, all in?"
-10. "Which of those felt worth it? Which felt like a waste? Why?"
-11. "If you've used any apps: what made you keep or delete them?" (Listen for paywall timing, notification fatigue, streak anxiety — do not prompt these words.)
-11a. "When you were in the middle of it, what kind of help did you actually want on a given day — someone telling you exactly what to do, showing you how, keeping you company, or keeping score?" (Guidance-vs-tracking probe — listen for whether they wanted *direction* or *records*; do not offer the app's framing.)
-11b. "Was there a moment you didn't know *how* to do the thing right? What did you do?" (Tests demand for demonstration/instruction.)
-
-**D. The 12-week frame (10 min) — still no pitch**
-12. "Some people commit to a fixed period — say, 12 weeks — for a goal like this. Have you ever done something like that? How did it go?"
-13. "Imagine you're four weeks into a 12-week commitment and you miss five days. What do you honestly do next?"
-14. "How do you know, today, whether you're actually making progress on [goal]? What do you look at?"
-
-**E. Reaction (5 min) — concept exposure, last**
-15. Read the one-sentence promise: *"Turn one meaningful goal into a guided, measurable 12-week transformation."* — "What do you think that is? What would you expect it to do?"
-16. "What would it have to prove to you in the first week for you to keep it on your phone?"
-17. "What would make it feel like every other habit app you've deleted?"
-
-**Close:** "Who else do you know who's attempted something like this in the past year?" (snowball recruitment).
-
-### Questions we deliberately avoid
-- "Would you pay £X for this?" (hypothetical; use past spending as the signal)
-- "Do you think 12 weeks is a good length?" (leading)
-- "Would you like feature X?" (feature-shopping)
+The full script — timings, moderation technique, probes, the three concept statements, and the recovery-flow concept test — lives in the [moderator guide](stage1-pack/moderator-guide.md) (single source; the outline formerly here is absorbed and improved there). Its non-negotiables: past behaviour before opinions; concept exposure last; never ask "would you use/pay for this?"; never supply the words *guidance, tracker, streak, recovery, accountability* before the participant does.
 
 ## 6. Prototype testing plan (Stage 5, pre-registered now)
 
-- 10–12 participants from the same screener pool: primary-pattern majority, **every age band represented (n≥2), including at least two participants aged 65+ and at least two who self-rated low/medium digital confidence** (D-001).
-- Tasks: (1) first launch through to understanding the promise; (2) choose and start a programme; (3) receive today's guidance and complete a mock daily action — observing whether they understand *what to do and how* without entering data first (G1); (4) find and choose an easier alternative for a hard day; (5) find what happens after missing three days; (6) read the paywall and state, unaided, the price, billing period, and how to cancel.
-- Conditions: at least two sessions run at 200% text size; at least one with reduced motion; daily-loop tasks attempted one-handed.
-- Success bar: all participants can state the promise in their own words; ≥80% overall complete the daily action unaided with no age cohort majority failing (G6 regime); 5/5 sampled pass the paywall comprehension test (non-negotiable); zero participants describe the home screen as "a tracker/dashboard" when asked what it is.
+Pre-registered tasks, pass criteria, the aligned G6/G9 regime (10–12 participants, every age band n≥2, ≥80% overall with no cohort majority failing) and per-band analysis rules live in [stage1-pack/usability-tasks.md](stage1-pack/usability-tasks.md).
 
 ## 7. Recording insights and decisions
 
-- One page per interview, same day, in `02-research/validation-evidence.md`: goal, verbatim quotes (marked), observed facts, interpretations (kept visually separate from facts), surprises.
+- One page per interview, same day, using the [structured note template](stage1-pack/notes-and-coding.md) (coded evidence flows into `02-research/validation-evidence.md`): goal, verbatim quotes (marked), observed facts, interpretations (kept visually separate from facts), surprises.
 - A running evidence table: assumption → supporting evidence → contradicting evidence → verdict (supported / mixed / refuted / untested).
 - After every 4 interviews: 30-minute founder debrief; adjust script if a question consistently fails.
 - Decisions arising go to `00-foundation/decision-log.md` — never live only in someone's memory.
