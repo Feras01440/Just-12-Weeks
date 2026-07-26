@@ -120,7 +120,7 @@
   font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
   font-size: var(--at-fs-micro);
   font-weight: 600;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--at-ink-2);
   margin-bottom: 16px;
@@ -152,8 +152,7 @@
 .stage[data-dir="c"] .at-title.is-big { font-size: var(--at-fs-title-big); line-height: 1.08; margin-bottom: 14px; }
 .stage[data-dir="c"] .at-title.is-serif {
   font-family: 'Faustina', Georgia, serif;
-  font-weight: 500;
-  font-style: italic;
+  font-weight: 560;
   letter-spacing: 0;
   line-height: 1.22;
 }
@@ -178,11 +177,12 @@
 .stage[data-dir="c"] .at-lede { color: var(--at-ink); }
 .stage[data-dir="c"] .at-lede.is-center { text-align: center; max-width: 44ch; margin-left: auto; margin-right: auto; }
 .stage[data-dir="c"] .at-quiet { color: var(--at-ink-2); }
+/* the why-line: roman for sustained reading; emphasis comes from size,
+   not slant (italic is reserved for one-line asides) */
 .stage[data-dir="c"] .at-why {
-  font-style: italic;
   color: var(--at-ink);
-  font-size: calc(var(--ts) * 1.0625rem);
-  line-height: 1.58;
+  font-size: calc(var(--ts) * 1.125rem);
+  line-height: 1.55;
 }
 .stage[data-dir="c"] .at-meta {
   font-size: var(--at-fs-meta);
@@ -199,15 +199,16 @@
 .stage[data-dir="c"] .at-epigraph.is-left { text-align: left; }
 .stage[data-dir="c"] .at-epigraph.is-small { font-size: var(--at-fs-body); color: var(--at-ink-2); margin-top: 4px; }
 
+/* eyebrow — mixed-case Bricolage (tracked caps detach Bricolage's Q tail,
+   and fixture content like “The Squat” lands here) */
 .stage[data-dir="c"] .at-kicker {
   display: flex;
   align-items: flex-start;
   gap: 8px;
   font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
-  font-size: var(--at-fs-micro);
-  font-weight: 620;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  font-size: calc(var(--ts) * 0.8125rem);
+  font-weight: 650;
+  letter-spacing: 0.02em;
   color: var(--at-ink-2);
   margin: 0 0 10px;
 }
@@ -219,7 +220,7 @@
   border-radius: 50%;
   background: var(--at-thread);
   flex: 0 0 auto;
-  margin-top: calc(var(--ts) * 0.14rem); /* optically centre on the first line */
+  margin-top: calc(var(--ts) * 0.2rem); /* optically centre on the first line */
 }
 
 /* running-stitch rule */
@@ -235,10 +236,9 @@
   margin: 30px 0 0;
   text-align: center;
   font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
-  font-size: var(--at-fs-micro);
-  font-weight: 540;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
+  font-size: calc(var(--ts) * 0.8125rem);
+  font-weight: 560;
+  letter-spacing: 0.03em;
   color: var(--at-ink-2);
   font-variant-numeric: tabular-nums;
 }
@@ -254,10 +254,9 @@
 
 .stage[data-dir="c"] .at-wordmark {
   font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
-  font-size: var(--at-fs-micro);
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  font-size: calc(var(--ts) * 0.8125rem);
+  font-weight: 620;
+  letter-spacing: 0.05em;
   color: var(--at-ink-2);
   margin: 0 0 14px;
 }
@@ -284,8 +283,8 @@
   text-align: center;
   font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
   font-size: var(--at-fs-micro);
-  font-weight: 540;
-  letter-spacing: 0.14em;
+  font-weight: 560;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--at-ink-2);
 }
@@ -342,7 +341,7 @@
   font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
   font-size: var(--at-fs-micro);
   font-weight: 560;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--at-ink-2);
   font-variant-numeric: tabular-nums;
@@ -369,7 +368,7 @@
   font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
   font-size: var(--at-fs-micro);
   font-weight: 560;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--at-ink-2);
   font-variant-numeric: tabular-nums;
@@ -471,7 +470,17 @@
   font-style: italic;
   white-space: nowrap;
 }
-.stage[data-dir="c"] .at-link.is-back { color: var(--at-ink-2); min-height: 46px; }
+.stage[data-dir="c"] .at-link-chev {
+  flex: 0 0 auto;
+  color: var(--at-ink-2);
+  font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
+  font-size: calc(var(--ts) * 1.25rem);
+  font-weight: 500;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+.stage[data-dir="c"] .at-link:hover .at-link-chev { color: var(--at-ink); }
+.stage[data-dir="c"] .at-link.is-back { color: var(--at-ink-2); min-height: 50px; }
 .stage[data-dir="c"] .at-link.is-back .at-stitchmark { opacity: 0.5; }
 
 .stage[data-dir="c"] .at-stitchmark {
@@ -491,10 +500,12 @@
 }
 .stage[data-dir="c"] p.at-listline .at-stitchmark { transform: translateY(-4px); }
 
-/* soft large options (recovery choices, question answers, handover) */
+/* soft large options — each one a thread laid ready in the world's dye */
 .stage[data-dir="c"] .at-option {
   appearance: none;
-  display: block;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
   width: 100%;
   background: var(--at-panel);
   border: 1px solid var(--at-hairline);
@@ -502,17 +513,34 @@
   font-family: inherit;
   color: var(--at-ink);
   text-align: left;
-  padding: 14px 18px;
+  padding: 15px 18px;
   min-height: 58px;
   margin: 0 0 10px;
   cursor: pointer;
   transition: border-color 140ms linear, background 140ms linear;
 }
 .stage[data-dir="c"] .at-option:hover { border-color: var(--at-warp-strong); }
-.stage[data-dir="c"] .at-option[aria-pressed="true"] {
+.stage[data-dir="c"] .at-option[aria-pressed="true"],
+.stage[data-dir="c"] .at-option.is-chosen {
   border-color: var(--at-thread);
   box-shadow: inset 0 0 0 1px var(--at-thread);
 }
+.stage[data-dir="c"] .at-option.is-chosen .at-threadmark { height: 5px; margin-top: calc(var(--ts) * 0.5rem); }
+.stage[data-dir="c"] .at-option-body { flex: 1 1 auto; min-width: 0; display: block; }
+.stage[data-dir="c"] .at-threadmark {
+  flex: 0 0 auto;
+  width: calc(var(--ts) * 24px);
+  height: 3px;
+  border-radius: 2px;
+  background: var(--at-thread);
+  margin-top: calc(var(--ts) * 0.56rem); /* on the title's first line */
+}
+.stage[data-dir="c"] .at-option-glyph {
+  flex: 0 0 auto;
+  width: calc(var(--ts) * 45px);
+  margin-top: 2px;
+}
+.stage[data-dir="c"] .at-hand-swatch { display: block; width: 100%; height: auto; }
 .stage[data-dir="c"] .at-option-title {
   display: block;
   font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
@@ -524,19 +552,31 @@
   display: block;
   font-family: 'Faustina', Georgia, serif;
   font-size: var(--at-fs-meta);
-  font-style: italic;
   color: var(--at-ink-2);
   margin-top: 4px;
   line-height: 1.45;
 }
 .stage[data-dir="c"] .at-answers { margin-top: 16px; }
 
+/* warp strung behind a group of choices */
+.stage[data-dir="c"] .at-warpfield {
+  padding: 14px 14px 4px;
+  border-radius: 12px;
+  background: repeating-linear-gradient(90deg, var(--at-warp) 0 1px, transparent 1px 13px);
+}
+
+/* borrow the other world's dye for cross-world marks */
+.stage[data-dir="c"] .at-altdye { --at-thread: #2E4A85; }
+.stage[data-dir="c"][data-world="writing"] .at-altdye { --at-thread: #A0431F; }
+.stage[data-dir="c"].theme-dark .at-altdye { --at-thread: #94B1E9; }
+.stage[data-dir="c"].theme-dark[data-world="writing"] .at-altdye { --at-thread: #E0895B; }
+
 .stage[data-dir="c"] .at-flag {
   display: inline-block;
   font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
   font-size: var(--at-fs-micro);
   font-weight: 660;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--at-thread-text);
   margin-bottom: 5px;
@@ -559,7 +599,7 @@
   font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
   font-size: var(--at-fs-micro);
   font-weight: 660;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--at-ink-2);
 }
@@ -586,7 +626,6 @@
   align-items: baseline;
   font-size: var(--at-fs-meta);
   color: var(--at-ink-2);
-  font-style: italic;
 }
 .stage[data-dir="c"] .at-mendmark {
   flex: 0 0 auto;
@@ -659,7 +698,6 @@
 .stage[data-dir="c"] .at-page .at-step-text { font-size: var(--at-fs-body); line-height: 1.55; margin: 0; }
 .stage[data-dir="c"] .at-page .at-step-detail {
   grid-column: 2;
-  font-style: italic;
   color: var(--at-ink-2);
   font-size: var(--at-fs-meta);
   margin: 5px 0 0;
@@ -728,7 +766,7 @@
   font-size: var(--at-fs-body);
   margin: 0;
 }
-.stage[data-dir="c"] .at-timer-seg.is-note { color: var(--at-ink); max-width: 40ch; margin: 0 auto; }
+.stage[data-dir="c"] .at-timer-seg.is-note { color: var(--at-ink); max-width: 40ch; margin: 0 auto; font-style: normal; }
 .stage[data-dir="c"] .at-timer.is-paused .at-timer-digits { color: var(--at-ink-2); }
 
 /* session plan */
@@ -804,7 +842,7 @@
   font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
   font-size: var(--at-fs-micro);
   font-weight: 560;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--at-ink-2);
   margin: 0;
@@ -830,6 +868,23 @@
 .stage[data-dir="c"] .at-finish .at-display { margin-bottom: 20px; }
 .stage[data-dir="c"] .at-band.is-finished { margin: 6px 0 20px; }
 
+/* THE UNROLL — the one expressive moment: the finished band unrolls once,
+   left to right, when week 12 opens. Under reduced motion the band simply
+   renders complete (the kill-switch snaps the animation to its end state,
+   and the explicit rule below removes it entirely). */
+.stage[data-dir="c"] .at-unroll .at-band-svg {
+  transform-origin: left center;
+  animation: at-unroll-band 600ms cubic-bezier(0.25, 0.1, 0.25, 1) both;
+}
+@keyframes at-unroll-band {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+.stage[data-dir="c"].motion-reduced .at-unroll .at-band-svg { animation: none; clip-path: none; }
+@media (prefers-reduced-motion: reduce) {
+  .stage[data-dir="c"] .at-unroll .at-band-svg { animation: none; clip-path: none; }
+}
+
 /* ————— artefact plate ————— */
 
 .stage[data-dir="c"] .at-plate {
@@ -843,10 +898,9 @@
 .stage[data-dir="c"].theme-dark .at-plate { box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3); }
 .stage[data-dir="c"] .at-plate-sub {
   font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
-  font-size: var(--at-fs-micro);
+  font-size: calc(var(--ts) * 0.8125rem);
   font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  letter-spacing: 0.03em;
   color: var(--at-ink-2);
   text-align: center;
   margin: 0 0 6px;
@@ -870,10 +924,9 @@
 }
 .stage[data-dir="c"] .at-record-row dt {
   font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
-  font-size: var(--at-fs-micro);
-  font-weight: 580;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: calc(var(--ts) * 0.8125rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
   color: var(--at-ink-2);
   flex: 0 1 auto;
 }
@@ -944,11 +997,12 @@
   font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
   font-size: var(--at-fs-micro);
   font-weight: 560;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--at-ink-2);
 }
 .stage[data-dir="c"] .at-specglyph { width: calc(var(--ts) * 18px); height: auto; }
+.stage[data-dir="c"] .at-specrow { display: flex; align-items: baseline; gap: 10px; margin: 6px 0 2px; }
 .stage[data-dir="c"] .at-specpair { display: inline-flex; align-items: center; gap: 7px; margin-right: 12px; }
 
 /* ————— reduced motion: final states identical, just still ————— */

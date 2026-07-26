@@ -4,7 +4,7 @@
 // accumulated material, not travel along a path. A missed day is mended
 // in visible gold; the finished band is a kept object.
 
-import { html, raw, mmss, makeTicker, reducedMotion } from '../../shared/dom.js';
+import { html, raw, mmss, makeTicker, makeTimeout, reducedMotion } from '../../shared/dom.js';
 import { WORLDS } from '../../shared/fixtures.js';
 
 // Session + choice state shared across screens of this direction.
@@ -306,16 +306,47 @@ function linkrow(links) {
       <i class="at-stitchmark" aria-hidden="true"></i>
       <span class="at-link-label">${l.back ? '← ' : ''}${l.label}</span>
       ${l.note ? html`<span class="at-link-note">${l.note}</span>` : ''}
+      ${!l.back ? html`<span class="at-link-chev" aria-hidden="true">›</span>` : ''}
     </button>`
   )}</div>`;
 }
 
+// A soft large choice: a thread laid ready. `go: null` renders a control the
+// mount() wires by other data- attributes (choose-and-go rows).
 function option(title, detail, go, opts = {}) {
-  return html`<button class="at-option" data-go="${go}" ${raw(opts.attrs || '')}>
-    ${opts.flag ? html`<span class="at-flag ${raw(opts.flagCls || '')}">${opts.flag}</span>` : ''}
-    <span class="at-option-title">${title}</span>
-    ${detail ? html`<span class="at-option-sub">${detail}</span>` : ''}
+  return html`<button class="at-option" ${go ? raw(`data-go="${go}"`) : ''} ${raw(opts.attrs || '')}>
+    ${opts.glyph
+      ? html`<span class="at-option-glyph ${raw(opts.glyphCls || '')}" aria-hidden="true">${opts.glyph}</span>`
+      : html`<i class="at-threadmark" aria-hidden="true"></i>`}
+    <span class="at-option-body">
+      ${opts.flag ? html`<span class="at-flag ${raw(opts.flagCls || '')}">${opts.flag}</span>` : ''}
+      <span class="at-option-title">${title}</span>
+      ${detail ? html`<span class="at-option-sub">${detail}</span>` : ''}
+    </span>
   </button>`;
+}
+
+// small woven marks for the handover choices — the loom at rest, a fresh
+// warp beginning, and a swatch in the other world's dye
+function handoverSwatch(kind) {
+  const warp = [];
+  for (let i = 0; i < 8; i++) {
+    const x = 3.5 + i * 5.4;
+    warp.push(`<line x1="${x}" y1="1" x2="${x}" y2="29" stroke="var(--at-warp)" stroke-width="1"/>`);
+  }
+  let inner = warp.join('');
+  if (kind === 'rest') {
+    inner += `<line x1="5" y1="23" x2="39.5" y2="23" stroke="var(--at-thread)" stroke-width="6" stroke-linecap="round" opacity="0.4"/>`;
+  } else if (kind === 'begin') {
+    inner += `<line x1="3" y1="6" x2="41.5" y2="6" stroke="var(--at-thread)" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="3" y1="11" x2="41.5" y2="11" stroke="var(--at-thread)" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="3" y1="16" x2="30" y2="16" stroke="var(--at-thread)" stroke-width="2.2" stroke-linecap="round"/>`;
+  } else if (kind === 'world') {
+    for (let s = 0; s < 5; s++) {
+      inner += `<line x1="3" y1="${5 + s * 5}" x2="41.5" y2="${5 + s * 5}" stroke="var(--at-thread)" stroke-width="2.2" stroke-linecap="round"/>`;
+    }
+  }
+  return raw(`<svg viewBox="0 0 45 30" class="at-hand-swatch" aria-hidden="true" focusable="false">${inner}</svg>`);
 }
 
 function careLabel(tag, text, opts = {}) {
@@ -486,7 +517,7 @@ const screens = {
       <p class="at-epigraph is-left">The first thread is tomorrow morning’s.</p>
       <p class="at-lede">Twelve rows of bare warp — one for each week of ${ctx.w.programme.title}. Nothing here fills itself; every thread in this cloth will be one of your days.</p>
       ${loom(ctx, { log: emptyLog(), virgin: true, sr: 'The empty loom: twelve rows of bare warp, waiting.' })}
-      ${primary('Open row one', 'today', ctx.w.weeks[0].title)}
+      ${primary('Start Week One', 'today', ctx.w.weeks[0].title)}
       ${footline('84 days · 12 rows · one cloth')}
     `),
 
@@ -501,7 +532,7 @@ const screens = {
       ${kicker(t.kicker)}
       <h1 class="at-title is-big">${t.title}</h1>
       <p class="at-why">${t.why}</p>
-      ${primary('Begin today’s thread', 'begin', t.durationLabel.replace('utes', ''))}
+      ${primary('Begin', 'begin', t.durationLabel)}
       ${linkrow([
         { label: 'Show me how', note: `${t.how.length} steps`, go: 'how' },
         { label: 'Something gentler today', note: 'counts in full', go: 'easier' },
@@ -539,7 +570,7 @@ const screens = {
         </div>`
       )}
       ${careLabel('Take care', t.safety, { cls: 'is-warn' })}
-      ${primary('Begin', 'begin', t.durationLabel.replace('utes', ''))}
+      ${primary('Begin', 'begin', t.durationLabel)}
       ${linkrow([
         { label: 'What you’ll need', note: `${t.prep.length} things`, go: 'prep' },
         { label: 'Today', go: 'today', back: true },
@@ -562,7 +593,7 @@ const screens = {
         )}
       </div>
       <p class="at-meta">Ticking is optional — this list simply waits here every day.</p>
-      ${primary('Begin', 'begin', t.durationLabel.replace('utes', ''))}
+      ${primary('Begin', 'begin', t.durationLabel)}
       ${linkrow([{ label: 'Back', go: 'how', back: true }])}
     `);
   },
@@ -655,7 +686,7 @@ const screens = {
       <h1 class="at-title">${t.shortTitle} — woven.</h1>
       <p class="at-lede">${mmss(Math.max(mem.elapsed, 60))} of honest work, ready to join the cloth.</p>
       ${band(ctx, { log: logTodayDone(ctx.w), align: 'min', cls: 'at-band-roomy', sr: `Today’s thread in place: day ${p.dayOfProgramme} woven.` })}
-      ${primary(`Weave in day ${p.dayOfProgramme}`, '__beat')}
+      ${primary(`Mark day ${p.dayOfProgramme} done`, '__beat')}
       ${linkrow([{ label: 'Back to the session', go: 'active', back: true }])}
     `);
   },
@@ -667,8 +698,8 @@ const screens = {
       ${kicker('One question — then you’re done')}
       <h1 class="at-title is-serif">${q.prompt}</h1>
       <p class="at-meta">${q.why}</p>
-      <div role="group" aria-label="${q.prompt}" class="at-answers">
-        ${q.options.map((o, i) => html`<button class="at-option" data-choice="${i}" aria-pressed="false"><span class="at-option-title">${o}</span></button>`)}
+      <div role="group" aria-label="${q.prompt}" class="at-answers at-warpfield">
+        ${q.options.map((o, i) => option(o, null, null, { attrs: `data-choice="${i}"` }))}
       </div>
       ${linkrow([{ label: 'Skip — no answer today', go: 'acknowledge' }])}
     `);
@@ -687,7 +718,7 @@ const screens = {
         <hr class="at-hr" />
         <p class="at-meta">${ackLine}</p>
       </div>
-      ${primary('Rest the loom for today', 'journey')}
+      ${primary('Done for today', 'journey')}
       ${footline(a.weekLine)}
     `);
   },
@@ -698,7 +729,7 @@ const screens = {
       <h1 class="at-title">The cloth so far</h1>
       <p class="at-lede">Every thread here is a day you kept. Gaps stay part of the weave — mended, not erased.</p>
       ${loom(ctx)}
-      ${primary('Back to today’s thread', 'today')}
+      ${primary('Back to today', 'today')}
     `),
 
   'week-transition': (ctx) => {
@@ -736,7 +767,7 @@ const screens = {
       <h1 class="at-title">${r.headline}</h1>
       <p>${r.line}</p>
       <p class="at-mendnote"><i class="at-mendmark" aria-hidden="true"></i>Gaps get mended in gold, and mended places hold. Some are the strongest part of the cloth.</p>
-      ${primary('Pick up the thread', 'today', ctx.w.today.durationLabel.replace('utes', ''))}
+      ${primary(r.action, 'today', ctx.w.today.durationLabel)}
       ${option(r.altAction, r.altDetail, 'easier')}
       ${footline('nothing woven has been lost')}
     `);
@@ -768,11 +799,11 @@ const screens = {
       <p>${r.line}</p>
       <h2 class="at-h2">${r.capacityPrompt}</h2>
       <div role="group" aria-label="${r.capacityPrompt}">
-        ${r.capacities.map((c, i) => option(c.title, c.detail, 'today', { attrs: `data-capacity="${i}" aria-pressed="false"` }))}
+        ${r.capacities.map((c, i) => option(c.title, c.detail, null, { attrs: `data-capacity="${i}"` }))}
       </div>
       <hr class="at-hr" />
       <p class="at-meta">${r.reschedule}</p>
-      ${linkrow([{ label: 'Re-warp the loom', note: 'an honest calendar', go: 'programme-pause' }])}
+      ${linkrow([{ label: 'Change my weekly days', note: 're-warps the loom', go: 'programme-pause' }])}
     `);
   },
 
@@ -840,7 +871,7 @@ const screens = {
         <p class="at-wordmark">Row twelve · the last thread</p>
         <h1 class="at-display">${c.headline}</h1>
         ${band(ctx, {
-          log: completedLog(ctx.w), selvedge: true, shuttle: false, cls: 'at-band-roomy is-finished',
+          log: completedLog(ctx.w), selvedge: true, shuttle: false, cls: 'at-band-roomy is-finished at-unroll',
           sr: 'The finished cloth: eighty-four days, twelve rows, selvedge bound, one day mended in gold.',
         })}
         <p class="at-lede is-center">${c.line}</p>
@@ -853,7 +884,7 @@ const screens = {
   artefact: (ctx) => {
     const c = ctx.w.completion;
     return page(html`
-      ${head(ctx, 'The kept cloth')}
+      ${head(ctx, ctx.world === 'writing' ? c.artefact.title : 'The kept cloth')}
       <div class="at-plate">
         <p class="at-plate-sub">${c.artefact.subtitle}</p>
         <h1 class="at-plate-title">${c.artefact.title}</h1>
@@ -878,7 +909,11 @@ const screens = {
       ${kicker('The loom can rest, or be re-strung')}
       <h1 class="at-title">${h.line}</h1>
       ${h.options.map((o, i) =>
-        option(o.title, o.detail, i === 2 ? 'explore' : 'subscription', i === 0 ? { flag: 'Recommended' } : {})
+        option(o.title, o.detail, i === 2 ? 'explore' : 'subscription', {
+          glyph: handoverSwatch(['rest', 'begin', 'world'][i]),
+          glyphCls: i === 2 ? 'at-altdye' : '',
+          flag: i === 0 ? 'Recommended' : '',
+        })
       )}
       ${footline('whatever you choose, this cloth stays woven')}
     `);
@@ -927,7 +962,7 @@ const screens = {
       <p>${ctx.w.restore.line}</p>
       ${mem.restored
         ? html`${careLabel('Restored', ctx.w.restore.done, { attrs: 'role="status"', cls: 'is-good' })}
-          ${primary('Open today’s thread', 'today')}`
+          ${primary('Open today', 'today')}`
         : primary(ctx.w.restore.action, '__restore')}
       ${linkrow([{ label: 'Start fresh instead', note: 'the programmes', go: 'explore' }])}
     `),
@@ -958,7 +993,7 @@ const screens = {
         <span class="at-specpair">${raw(specGlyph('today'))}<span>the shuttle</span></span>
       </div>
       <p class="at-kicker"><i class="at-dot" aria-hidden="true"></i>${t.kicker}</p>
-      <p class="at-loom-n" style="display:block;margin:4px 0 2px;">Row ${ctx.w.position.week} · ${ctx.w.position.weekTheme}</p>
+      <p class="at-specrow"><span class="at-loom-n">Row ${ctx.w.position.week}</span><span class="at-loom-title">${ctx.w.position.weekTheme}</span></p>
       <h2 class="at-display is-mid" style="margin-top:18px;">${ctx.w.completion.headline}</h2>
       <p class="at-meta">Small metadata · ${t.acknowledgement.weekLine}</p>
       <hr class="at-hr" />
@@ -991,15 +1026,14 @@ function mount(root, ctx) {
     el.addEventListener('click', () => {
       const target = el.getAttribute('data-go');
       if (target === '__beat') {
-        // the new thread beats up into the cloth, then one question
+        // the new thread beats up into the cloth, then one question.
+        // Reduced motion still holds the confirmation for a static beat —
+        // the meaning is never skipped, only the movement.
         const shuttle = root.querySelector('.at-band-roomy .at-band-svg');
+        if (shuttle) shuttle.classList.add('at-beat');
+        el.disabled = true;
         ctx.announce(`Day ${ctx.w.position.dayOfProgramme} woven into the cloth.`);
-        if (shuttle && !reducedMotion(ctx)) {
-          shuttle.classList.add('at-beat');
-          setTimeout(() => ctx.go('question'), 420);
-        } else {
-          ctx.go('question');
-        }
+        makeTimeout(root, () => ctx.go('question'), reducedMotion(ctx) ? 250 : 420);
         return;
       }
       if (target === '__restore') {
@@ -1021,18 +1055,29 @@ function mount(root, ctx) {
     });
   });
 
+  // choose-and-go rows: plain buttons (no aria-pressed — they navigate),
+  // visual selection via a class for the brief settle before moving on
   root.querySelectorAll('[data-choice]').forEach((el) => {
     el.addEventListener('click', () => {
       mem.choice = Number(el.getAttribute('data-choice'));
-      el.setAttribute('aria-pressed', 'true');
-      setTimeout(() => ctx.go('acknowledge'), reducedMotion(ctx) ? 0 : 180);
+      el.classList.add('is-chosen');
+      makeTimeout(root, () => ctx.go('acknowledge'), reducedMotion(ctx) ? 0 : 160);
     });
   });
 
   root.querySelectorAll('[data-capacity]').forEach((el) => {
     el.addEventListener('click', () => {
-      el.setAttribute('aria-pressed', 'true');
+      el.classList.add('is-chosen');
+      makeTimeout(root, () => ctx.go('today'), reducedMotion(ctx) ? 0 : 160);
     });
+  });
+
+  // re-populate live-region banners one frame after insertion so screen
+  // readers reliably announce content that rendered with the page
+  root.querySelectorAll('[role="status"], [role="alert"]').forEach((el) => {
+    const markup = el.innerHTML;
+    el.innerHTML = '';
+    requestAnimationFrame(() => { el.innerHTML = markup; });
   });
 
   if (ctx.state === 'active') {
@@ -1044,10 +1089,14 @@ function mount(root, ctx) {
     const segEnds = [];
     let acc = 0;
     ctx.w.today.activity.segments.forEach((s) => { acc += s.mins * 60; segEnds.push(acc); });
+    // wall-clock anchored: a throttled tab or locked phone never loses time
+    const startedAt = Date.now() - mem.elapsed * 1000;
+    let lastSeg = currentSegment(ctx.w, mem.elapsed).label;
     makeTicker(root, () => {
-      mem.elapsed = Math.min(mem.elapsed + 1, total);
+      mem.elapsed = Math.min(Math.round((Date.now() - startedAt) / 1000), total);
+      const segNow = currentSegment(ctx.w, mem.elapsed).label;
       if (digits) digits.textContent = mmss(mem.elapsed);
-      if (seg) seg.textContent = currentSegment(ctx.w, mem.elapsed).label;
+      if (seg) seg.textContent = segNow;
       if (thread) thread.style.transform = `scaleX(${(mem.elapsed / total).toFixed(4)})`;
       plan.forEach((li, i) => {
         const start = i === 0 ? 0 : segEnds[i - 1];
@@ -1055,7 +1104,8 @@ function mount(root, ctx) {
         li.classList.toggle('is-done', mem.elapsed >= segEnds[i]);
       });
       if (mem.elapsed === total) ctx.announce('Session complete. The thread is drawn — well done.');
-      else if (mem.elapsed % 60 === 0) ctx.announce(`${mmss(mem.elapsed)} elapsed. ${currentSegment(ctx.w, mem.elapsed).label}.`);
+      else if (segNow !== lastSeg) ctx.announce(`${segNow}. ${mmss(mem.elapsed)} elapsed.`);
+      lastSeg = segNow;
     });
   }
 
