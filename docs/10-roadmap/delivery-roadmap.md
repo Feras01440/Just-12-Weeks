@@ -77,7 +77,7 @@ Stages 1–5 are cheap and reversible. The expensive commitment starts at Stage 
 
 - **Objective:** Design the core flows at low fidelity, in the chosen direction's structure but without visual polish.
 - **Inputs:** PRD, IA, engagement model, chosen brand territory.
-- **Tasks:** Information architecture; all 20 core user flows (first launch → deletion); wireframes for every screen state (loading/empty/error/offline); accessibility annotations.
+- **Tasks:** Information architecture; all 23 core user flows (first launch → deletion); wireframes for every screen state (loading/empty/error/offline); accessibility annotations.
 - **Deliverables:** `03-ux/*` complete; wireframe pack.
 - **Owner:** UX director.
 - **Dependencies:** Stage 2 + 3 gates.
@@ -89,7 +89,7 @@ Stages 1–5 are cheap and reversible. The expensive commitment starts at Stage 
 
 - **Objective:** Test the experience with target users before writing production code.
 - **Inputs:** Approved wireframes; brand direction.
-- **Tasks:** Clickable prototype of first-launch → day-3 experience and one weekly review; usability tests with ≥5 target-segment users; paywall comprehension test.
+- **Tasks:** Clickable prototype of first-launch → day-3 experience and one weekly review; usability tests with 10–12 target-audience users across all four age bands (n≥2 each); paywall comprehension test.
 - **Deliverables:** Prototype; usability findings; revised wireframes.
 - **Owner:** UX director; founder observes sessions.
 - **Dependencies:** Stage 4 gate.
@@ -172,7 +172,7 @@ Stages 1–5 are cheap and reversible. The expensive commitment starts at Stage 
 ## Stage 12 — Measurement & iteration
 
 - **Objective:** Learn what the first cohort's 12 weeks actually show, then decide what's next.
-- **Inputs:** Analytics (23-spec events); reviews; support themes.
+- **Inputs:** Analytics (the analytics-specification event set); reviews; support themes.
 - **Tasks:** Weekly metric review; first full-cohort completion analysis at week 13; pricing experiment (per 05-commercial plan); decide programme #2 based on demand evidence.
 - **Deliverables:** Quarterly strategy review; updated roadmap.
 - **Owner:** Founder + product.

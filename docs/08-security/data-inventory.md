@@ -31,6 +31,8 @@
 | D25 | Content-concern reports | S2 | Governance SLA | Legitimate interest | Governance records | R6 |
 | D26 | AuditEvents (user-subject) | S2 | Security, legal defence, trust ledger | Legal obligation/LI | DB append-only | R7 |
 | D27 | Server access logs (IP, request meta) | S2 | Security operations | Legitimate interest | Log stack, short-lived | R3 |
+| D28 | Optional private notes in recovery/pause flows (F12–F14) | **S3** | The user's own record, reflected back in their journey/report — meaningful-evidence job; never analysed, never analytics (same regime as D13) | Contract | DB encrypted | R2 |
+| D29 | Waitlist "programme I want" free-text suggestions | S2 (stored unlinked from analytics ID; account-linked for reply only if user opts in) | Programme-demand discovery (Q3/post-MVP catalogue decisions) | Consent (the field says what it's for) | DB | R6 (12 months) |
 
 ## What we deliberately do not collect (the anti-inventory — binding)
 

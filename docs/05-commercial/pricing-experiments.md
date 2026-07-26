@@ -4,7 +4,7 @@
 
 ## Phase A — before any code (Stage 1, weeks not months)
 
-**A1. Interview price anchoring (no hypotheticals).** In F-section of interviews: past spend reconstruction (what they actually paid for structure: PT blocks, courses, apps) → establishes each pattern's lived price band. Output: anchor distribution per behavioural pattern. Decision fed: which models (monetisation M1–M8) are inside lived bands.
+**A1. Interview price anchoring (no hypotheticals).** In section C of the interview script: past spend reconstruction (what they actually paid for structure: PT blocks, courses, apps) → establishes each pattern's lived price band. Output: anchor distribution per behavioural pattern. Decision fed: which models (monetisation M1–M8) are inside lived bands.
 
 **A2. Landing-page price framing test.** Same promise, three framings across variants: £24.99 one-off programme / £19.99 per 12-week term / £7.99 monthly. Measure: email-signup rate per arm + a one-question "what would you expect this to include?" follow-up. Weak signal, honest floor-check only. Decision: kills any framing that craters interest or badly mismatches expectations.
 

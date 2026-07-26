@@ -45,7 +45,7 @@ Every programme day resolves to a **Guided Action**: instruction (what) → demo
 - **FR-10 (M)** Browsable catalogue with honest metadata: outcome definition, weekly time cost, difficulty, suitability & exclusions, author + reviewer + credentials + review date, evidence basis.
 - **FR-11 (M)** Per-programme suitability screening as defined by that programme's governance record; may recommend against starting (honesty over conversion) with respectful alternatives.
 - **FR-12 (M)** Programme start ritual: goal confirmation in the user's own words (one field, the only free-text in onboarding), start-date choice with fresh-start framing (today/Monday/custom).
-- **FR-13 (S)** ⚠ Q4: user-requested/custom challenge builder — excluded from MVP pending founder clarification of the original brief's "other 12 needed list".
+- **FR-13 (L)** ⚠ Q4: user-requested/custom challenge builder — post-MVP at most, pending founder clarification of the original brief's "other 12 needed list".
 
 ### 6.3 Daily loop (Today)
 - **FR-20 (M)** Today screen per [today-experience spec](../03-ux/today-experience.md): today's Guided Action first, position-in-journey second, nothing else competing (G-series criteria).
@@ -73,7 +73,7 @@ Every programme day resolves to a **Guided Action**: instruction (what) → demo
 - **FR-51 (M)** ⚠ Q13: week-13 transition — guided next-goal selection and/or maintenance mode; model pending founder decision; engine supports both.
 
 ### 6.7 Notifications
-- **FR-60 (M)** Purposeful notification set only (daily action reminder at user-chosen time; weekly review; recovery re-entry; milestone). Every type individually toggleable; opt-out ≤ 2 taps (G8); no guilt copy (content strategy lexicon); quiet by default beyond the daily reminder.
+- **FR-60 (M)** Purposeful notification set only (daily action reminder at user-chosen time; weekly review; recovery re-entry; milestone). Every engagement type individually toggleable — transactional notices and the pre-renewal reminder excepted (the E9 honesty commitment); opt-out ≤ 2 taps (G8); no guilt copy (content strategy lexicon); quiet by default beyond the daily reminder.
 - **FR-61 (S)** Notification schedule adapts to observed behaviour (e.g. user completes evenings → suggest evening reminder), transparently.
 
 ### 6.8 Commercial
@@ -110,7 +110,7 @@ Every programme day resolves to a **Guided Action**: instruction (what) → demo
 - **PSR-01 (M)** iOS: StoreKit 2 subscriptions; Sign in with Apple offered if any third-party auth; App Privacy labels accurate; no misleading review prompts; HIG-respecting navigation idioms (platform conventions may differ from Android — one brand, native behaviour).
 - **PSR-02 (M)** Android: Play Billing current major version; Data safety form accurate; account-deletion web link; predictive back gesture support; adaptive icons; Material-respecting idioms where they don't break brand.
 - **PSR-03 (M)** Both: notification permission requested in context (after value shown), never on first open; store-compliant subscription disclosure screens.
-- **PSR-04 (S)** Health-platform integrations (HealthKit / Health Connect) only if the chosen flagship needs them (⚠ Q1) and only read-what's-used (data minimisation).
+- **PSR-04 (L)** Health-platform integrations (HealthKit / Health Connect) — post-MVP (scope.md item 4); only if the chosen flagship needs them (⚠ Q1) and only read-what's-used (data minimisation).
 
 ## 10. Acceptance criteria (product level)
 

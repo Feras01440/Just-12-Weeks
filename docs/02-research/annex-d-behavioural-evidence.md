@@ -2,6 +2,8 @@
 
 **Status:** Research annex, 26 July 2026. Peer-reviewed evidence relevant to the product's behavioural design. Verification labels are the reviewer's own ([verified] vs [established, not re-verified]); this annex seeds `06-content/research-standards.md` at Stage 2.
 
+**Audit note (26 Jul 2026):** preserved verbatim as a dated record. The *evidence* stands and seeds research-standards §4; the per-topic "design implications" predate founder directions D-001–D-004 and are superseded where they conflict — notably: progress *recording* is downstream of guidance (D-002), and streak mechanics are not used in any form (N-03); the lapse-recovery findings are implemented through the recovery experience instead.
+
 # Evidence Review for "12 Weeks" — Peer-Reviewed Literature Relevant to App Design
 
 **Scope note:** Citations marked **[verified]** were checked against live sources during this review (2026-07-26). Citations marked **[established, not re-verified]** are canonical works cited from well-established knowledge; details (journal, year, headline findings) are high-confidence but page-level figures were not re-checked. Anything uncertain is flagged explicitly.

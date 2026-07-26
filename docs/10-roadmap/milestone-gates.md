@@ -47,8 +47,8 @@
 
 ## Gate 5 → 6 : Prototype evidence supports building
 
-- [ ] 8–10 usability sessions run, including 65+ and low-digital-confidence participants
-- [ ] G6 met in every age cohort; G9 paywall comprehension 5/5
+- [ ] 10–12 usability sessions run, every age band n≥2, including low-digital-confidence participants
+- [ ] G6 regime met (≥80% overall, no cohort majority failing); G9 paywall comprehension 5/5
 - [ ] 200%-text and reduced-motion sessions completed without task failure
 - [ ] Findings fed back into flows; material changes re-tested
 - [ ] Founder approves build scope against evidence

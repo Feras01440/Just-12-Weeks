@@ -34,7 +34,7 @@ Bounding evidence from 31 products ([competitor audit](competitor-audit.md)): th
 
 ## 5. Sizing the realistic prize *(planning arithmetic, not a forecast)*
 
-Bottom-up, UK-first, using corrected benchmarks: a niche-respectable outcome (year 2–3) of 300k cumulative installs × 3% install→paid† blended × ~£35 realized first-year revenue per payer† ≈ £315k ARR-equivalent — a real business for a founder-led company, far below venture scale. The upside case runs through completion-driven word of mouth (P2), programme catalogue expansion (D-004), and term-pricing lifting realized revenue per payer above category medians. **These numbers exist to size effort honestly, not to promise outcomes** — Stage 1/9 evidence replaces them.
+Bottom-up, UK-first, using corrected benchmarks: a niche-respectable outcome (year 2–3) of 300k cumulative installs × 3% install→paid† blended × ~$35.64 median first-year revenue per payer† (≈£27 at £1≈$1.30, unverified FX) ≈ £245k ARR-equivalent — a real business for a founder-led company, far below venture scale. The upside case runs through completion-driven word of mouth (P2), programme catalogue expansion (D-004), and term-pricing lifting realized revenue per payer above category medians. **These numbers exist to size effort honestly, not to promise outcomes** — Stage 1/9 evidence replaces them.
 
 ## 6. What would falsify this opportunity assessment
 

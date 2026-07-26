@@ -48,7 +48,7 @@ Realistic for a solo founder with little budget:
 
 ## 4. Sample size
 
-- **8–12 interviews** in the primary segment hypothesis (patterns stabilise around 8; stop when the last two interviews add nothing new).
+- **9–12 interviews** minimum (the D-001 age-band quotas sum to 9), primary-pattern majority; stop when the last two interviews add nothing new.
 - **3–4 interviews** in each secondary segment for contrast (optional if time-constrained).
 - **Landing-page smoke test:** ≥300 visitors from a small ad spend (£100–150) to measure message resonance; this supplements, never replaces, interviews.
 
@@ -94,10 +94,10 @@ Rules: never pitch the app before section E. Never ask "would you use an app tha
 
 ## 6. Prototype testing plan (Stage 5, pre-registered now)
 
-- 8–10 participants from the same screener pool: primary-pattern majority, **including at least two participants aged 65+ and at least two who self-rated low/medium digital confidence** (D-001).
+- 10–12 participants from the same screener pool: primary-pattern majority, **every age band represented (n≥2), including at least two participants aged 65+ and at least two who self-rated low/medium digital confidence** (D-001).
 - Tasks: (1) first launch through to understanding the promise; (2) choose and start a programme; (3) receive today's guidance and complete a mock daily action — observing whether they understand *what to do and how* without entering data first (G1); (4) find and choose an easier alternative for a hard day; (5) find what happens after missing three days; (6) read the paywall and state, unaided, the price, billing period, and how to cancel.
 - Conditions: at least two sessions run at 200% text size; at least one with reduced motion; daily-loop tasks attempted one-handed.
-- Success bar: 5/5 can state the promise in their own words; ≥4/5 per age cohort complete the daily action unaided (G6); 5/5 pass the paywall comprehension test (non-negotiable); zero participants describe the home screen as "a tracker/dashboard" when asked what it is.
+- Success bar: all participants can state the promise in their own words; ≥80% overall complete the daily action unaided with no age cohort majority failing (G6 regime); 5/5 sampled pass the paywall comprehension test (non-negotiable); zero participants describe the home screen as "a tracker/dashboard" when asked what it is.
 
 ## 7. Recording insights and decisions
 

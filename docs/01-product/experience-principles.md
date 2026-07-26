@@ -42,7 +42,7 @@ No large onboarding questionnaire. The app asks a question **at the moment its a
 - Later questions arrive contextually: difficulty check-ins after early sessions, schedule preferences when reminders become relevant, equipment/constraint questions when a week first needs them.
 - Every contextual question is skippable unless safety-critical, and skipping never blocks guidance — it defaults conservatively.
 
-**Acceptance test G4:** first-launch question count ≤ 5 before the user sees their first real guided action (excluding legally required screens).
+**Acceptance test G4:** first-launch question count ≤ 5 before the user sees their first real guided action (excluding legally required screens and programme suitability screening, which is safety-driven, governance-owned, and capped at 6 by the programme template).
 
 ## 4. Programme-specific evidence *(Founder requirement — D-003)*
 
@@ -120,7 +120,7 @@ The home ("Today") screen, in priority order: (1) today's action, immediately ac
 | G3 | Required free-text fields in core daily loop | 0 | Design review |
 | G4 | First-launch questions before first guided action | ≤ 5 | Design review + analytics |
 | G5 | Lapse states with designed, blame-free flows | 4/4 | Design review + copy audit |
-| G6 | Users (incl. 65+ cohort) correctly state today's task in testing | ≥ 4/5 per cohort | Stage 5 usability tests, all four age bands |
+| G6 | Users correctly state today's task in testing (all four age bands, each n≥2) | ≥80% overall; no cohort with a failing majority | Stage 5 usability tests |
 | G7 | Daily completion possible one-handed, reduced-motion, 200% text | 100% of daily-loop screens | Accessibility test plan |
 | G8 | Notification opt-out reachable | ≤ 2 taps from Today | Design review |
 | G9 | Paywall comprehension (price, period, renewal, cancel) | 5/5 in testing | Stage 5 test |

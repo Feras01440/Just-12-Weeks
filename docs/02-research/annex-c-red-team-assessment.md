@@ -2,6 +2,8 @@
 
 **Status:** Research annex, 26 July 2026. An independent adversarial review of the founder brief, produced before and separately from the concept synthesis, then reconciled with it. Kept verbatim so the founder can see the unsoftened view.
 
+**Audit note (26 Jul 2026):** preserved verbatim as a dated record. Produced before founder directions D-001–D-004; where its framings conflict with them (e.g. age-defined segments), the working documents govern.
+
 # Red-Team Assessment: "12 Weeks" — Founder Brief Stress Test
 
 ## 1. WEAK OR UNCLEAR ASSUMPTIONS

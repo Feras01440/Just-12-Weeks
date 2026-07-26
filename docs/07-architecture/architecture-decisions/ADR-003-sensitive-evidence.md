@@ -15,7 +15,7 @@ Media never leaves the device (app-private encrypted storage); export via user's
 
 ### P2 — On-device + opt-in encrypted cloud backup
 P1 default; explicit per-item or per-programme opt-in to encrypted server backup (keys: platform-managed KMS envelope).
-- **For:** user agency matches D-003's spirit; loss-protection for those who want it;报 honest two-tier message.
+- **For:** user agency matches D-003's spirit; loss-protection for those who want it; honest two-tier message.
 - **Against:** we now operate a sensitive-media store (DPIA, retention, deletion-walker coverage, breach surface) *for a minority feature*; consent UX must be genuinely informed, not theatre.
 
 ### P3 — End-to-end encrypted cloud (user-held key)

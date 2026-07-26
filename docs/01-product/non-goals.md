@@ -14,7 +14,7 @@
 | N-06 | Under-18 users or positioning | D-001/D-005: 18+ product. |
 | N-07 | Permanent fitness-specific identity (language, navigation, engine, brand) | D-004: platform breadth preserved. |
 | N-08 | Medical diagnosis, treatment plans, or outcome guarantees | Claims policy / governance framework; store health policies. |
-| N-09 | Teeth-whitening programmes | Legally untenable as evidence-based content in UK/EU (synthesis §5.3). |
+| N-09 | Teeth-whitening programmes — *recommended permanent exclusion; formally confirmed with Q1* | Legally untenable as evidence-based content in UK/EU (synthesis §5.3); treated as excluded in all planning pending the Q1 decision-log record. |
 | N-10 | AI-generated programme content without qualified human authorship and review | Governance: accountability requires named authors/reviewers; the anti-generic mandate. |
 
 ## MVP non-goals *(post-MVP candidates, evidence-gated — see scope.md)*

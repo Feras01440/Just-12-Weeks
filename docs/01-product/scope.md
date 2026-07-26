@@ -19,7 +19,7 @@
 - Progress: journey view, weekly review, programme-defined evidence menu, export (FR-30…34; visual evidence only if the flagship's governance case justifies it — Q12A).
 - Recovery: all four lapse states designed and shipped (FR-40); pause/resume/restart (FR-41); weekly adaptation v1 (FR-42 — rule-based, transparent).
 - Completion: week-12 report; ⚠ Q13 week-13 transition v1 (at minimum: guided next-step choice, even if the "next" catalogue is small).
-- Notifications: the four purposeful types, full user control (FR-60).
+- Notifications: the closed purposeful catalogue (notification architecture §1) with full user control of engagement types; transactional and renewal-reminder notices excepted per E9 (FR-60).
 - Commercial: ⚠ Q5/Q6 entitlement + paywall to paywall-principles; restore; graceful expiry; cancellation guidance (FR-70…72).
 - Governance surface: author/reviewer/citations display; report-a-concern; programme versioning + emergency withdrawal plumbing (FR-80…82).
 - Cross-cutting: accessibility NFR-01; performance NFR-02; privacy/security NFR-04/05; reliability NFR-06.

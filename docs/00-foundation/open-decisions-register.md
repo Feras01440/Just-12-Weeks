@@ -13,7 +13,7 @@
 
 | Ref | Decision | Provisional recommendation | Blast radius |
 |-----|----------|----------------------------|--------------|
-| Q1 | Flagship launch category (launch scope only, per D-004) | Held genuinely open between fitness/body-composition and skill-learning; teeth whitening cut permanently | Programme content, governance depth, PSR-04 health integrations, launch positioning, Stage-1 interview goal-focus |
+| Q1 | Flagship launch category (launch scope only, per D-004) | Held genuinely open between fitness/body-composition and skill-learning; teeth whitening excluded in all planning (recommended permanent; formally recorded with Q1) | Programme content, governance depth, PSR-04 health integrations, launch positioning, Stage-1 interview goal-focus |
 | Q3 | Launch depth: one flagship vs two programmes | One deep; two if Q9 allows (second from a different archetype) | Content budget ×2, roadmap, W1 credibility |
 | Q4 | Meaning of the original brief's "other 12 needed list" | Clarification, not decision | Custom-challenge builder in/out of long-term scope (FR-13) |
 | Q5 | Countdown-offer posture | Never as written; honest intro pricing (store-native) or none | Paywall design, compliance posture |

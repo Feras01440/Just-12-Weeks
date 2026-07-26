@@ -42,7 +42,7 @@ Charts/graphs of any kind · numeric streaks · percentage "consistency" scores 
 
 ## 5. Acceptance tests (Stage 5 + every release)
 
-- Five users per age cohort, cold open: "what is this screen asking you to do?" ≥4/5 correct in every cohort (G6).
+- Stage-5 cohort (10–12 participants, every age band n≥2), cold open: "what is this screen asking you to do?" — ≥80% correct overall and no age cohort with a failing majority (G6 regime).
 - "What is this app?" asked post-task: zero "a tracker/dashboard" answers (research-plan bar).
 - 200% text: full anatomy usable, nothing truncated into ambiguity (G7).
 - Reduced motion: hero card's signature behaviour has a considered still form, not an absence.

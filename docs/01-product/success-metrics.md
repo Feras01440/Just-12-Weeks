@@ -24,20 +24,20 @@ Chosen over "programme completion rate" alone because it rewards recovery design
 |--------|-----------|--------------------:|-------------------|
 | Activation | % of installs who start a challenge (not just browse) within 72h | ≥ 25% | No clean public benchmark; set from Stage 5 funnel and revised |
 | First-action completion | % of challenge-starters completing day 1 | ≥ 70% | Internal hypothesis; the guided-action design is accountable for this |
-| D1 retention | % of challenge-starters returning day after start | ≥ 45% | Consumer app D1 medians ~20–25%†; goal-committed users should beat this |
-| D7 retention | Return in day 7 window | ≥ 30% | Category real-world D7 ~10–12%† |
+| D1 retention | % of challenge-starters returning day after start | ≥ 45% | Working assumption: typical consumer-app D1 is far lower (Unvalidated hypothesis — not audit-backed; source before external use) |
+| D7 retention | Return in day 7 window | ≥ 30% | Working assumption: category real-world D7 is roughly a third of this (Unvalidated hypothesis — not audit-backed) |
 | D30 retention | Return in day 30 window | ≥ 15% | Real-world wellness D30 ≈ 3–4% (Baumel 2019, mental-health apps — nearest honest analogue); trial-cohort figures are far higher and misleading. Beating the real-world floor ×3–4 is the ambition |
 | Weekly review completion | % of active week-enders completing the review | ≥ 40% | No public benchmark; core loop-health signal |
 | Recovery return rate | % entering a lapse state (2+ days) who complete an action within 7 days of the recovery conversation | ≥ 35% | **The differentiator metric.** No public benchmark exists — we will be the benchmark |
 | Week-4 survival | % of started challenges active (incl. paused-and-returned) at day 28 | ≥ 35% | Digital-intervention dropout ~43% by study end (Meyerowitz-Katz 2020)† |
-| Programme completion | % of started challenges reaching week-12 completion state (incl. adapted/restructured paths) | ≥ 15% at launch, ≥ 25% by year 1 | MOOC completion 3–10%†; paid fitness programmes unpublished; honest target rises with recovery-design iteration |
+| Programme completion | % of started challenges reaching week-12 completion state (incl. adapted/restructured paths) | ≥ 15% at launch, ≥ 25% by year 1 | Context: MOOC completion is widely reported in single digits (Unvalidated here — add to source audit before external use); paid fitness programmes unpublished; target rises with recovery-design iteration |
 | Completion outcome | % of completers whose programme-defined outcome evidence shows meaningful progress (per-programme definition) | ≥ 70% of completers | Programme-specific; the claims-policy-safe number we can talk about |
 
 ## Commercial metrics *(model-dependent — Q5/Q6; definitions fixed now so experiments compare)*
 
 | Metric | Definition | Planning hypothesis |
 |--------|-----------|--------------------:|
-| Preview→paid conversion | % of users hitting the entitlement boundary who purchase within 7 days | 8–12% (value-first boundary)† |
+| Preview→paid conversion | % of users hitting the entitlement boundary who purchase within 7 days | 8–12% (Unvalidated hypothesis — planning number, no external source) |
 | Trial→paid (if trials used) | Store-reported trial conversion | 30–40%† (H&F trial-to-paid benchmark range) |
 | Install→paid (35-day) | All-installs to any payment | 2–4% (freemium-style)†; interpret only alongside refund + rating health |
 | Annual-plan share | % of subscription revenue from annual (or 12-week, if offered) plans | Track; category ~68% annual† — but our natural unit experiment (quarterly) may deliberately shift this |
