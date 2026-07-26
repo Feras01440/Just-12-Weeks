@@ -1,6 +1,6 @@
 # Concept Statements, Positioning Hypotheses and the Landing Experiment
 
-**Status:** Execution-ready; nothing launched, no spend committed. Copy obeys the claims policy and pressure-lexicon bans — validation materials are brand materials.
+**Status:** Partially superseded, 26 Jul 2026 (D-009: passive-first default). **Single sources now:** the landing experiment, positioning arms, category vote and thresholds live in [`../landing-page-experiment.md`](../landing-page-experiment.md), [`../category-demand-test.md`](../category-demand-test.md), [`../pricing-interest-test.md`](../pricing-interest-test.md) and [`../passive-validation-plan.md`](../passive-validation-plan.md). **Still authoritative here:** §1 concept statements (shared stimuli for landing arms and any escalated interviews) and §5 willingness-to-pay interview methods (escalation use). Copy obeys the claims policy and pressure-lexicon bans — validation materials are brand materials.
 
 ## 1. Three concept statements (read aloud in interviews, rotated order; also the landing arms' seeds)
 
