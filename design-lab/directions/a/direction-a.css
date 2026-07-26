@@ -30,8 +30,9 @@
 
   /* motion tokens */
   --qa-settle: 240ms;
-  --qa-inkin: 420ms;
+  --qa-inkin: 900ms; /* continuous per-tick fill of the session rule */
   --qa-ease: cubic-bezier(0.22, 0.08, 0.14, 1); /* paper-settle */
+  --qa-border: #8a7f68; /* component boundaries — ≥3:1 non-text contrast */
 
   background: var(--qa-paper);
   color: var(--qa-ink);
@@ -46,8 +47,9 @@
   --qa-ink-2: #a89d87;
   --qa-hairline: #3a342a;
   --qa-hairline-strong: #55503f;
-  --qa-action: #a9bdf2;
-  --qa-action-ink: #10131f;
+  /* night reading keeps the paper's warmth: candlelight, not periwinkle */
+  --qa-action: #e5d5a3;
+  --qa-action-ink: #241e12;
   --qa-rubric: #e08a6a;
   --qa-gilt: #d3b25e;
   --qa-ribbon: #c96a55;
@@ -108,6 +110,15 @@
 }
 .qa-foredge i.is-done { background: var(--qa-ink); width: 6px; }
 .qa-foredge i.is-now { background: var(--qa-action); width: 8px; }
+
+/* folio as a control (Today → contents): real hit area, real focus */
+.qa-folio-btn {
+  display: block; width: 100%; min-height: 44px;
+  background: none; border: 0; font: inherit; color: inherit; cursor: pointer;
+  padding: 10px 2px;
+}
+.qa-folio-btn:hover { color: var(--qa-action); }
+.qa-folio-btn:focus-visible { outline: 2.5px solid var(--qa-action); outline-offset: 3px; }
 
 /* folio */
 .qa-folio {
@@ -270,6 +281,8 @@
   gap: 10px;
 }
 .qa-link .qa-link-note { color: var(--qa-ink-2); font-size: var(--qa-fs-meta); font-style: italic; }
+.qa-link::after { content: '›'; color: var(--qa-ink-2); font-size: calc(var(--ts) * 1.1rem); }
+.qa-link.qa-link-back::after { content: none; }
 .qa-link:hover { background: var(--qa-paper-deep); }
 .qa-link.qa-link-back { border-bottom: 0; color: var(--qa-ink-2); min-height: 46px; }
 
@@ -277,7 +290,7 @@
   appearance: none;
   width: 100%;
   background: none;
-  border: 1px solid var(--qa-hairline-strong);
+  border: 1.5px solid var(--qa-border);
   font-family: inherit;
   color: var(--qa-ink);
   text-align: left;
@@ -296,6 +309,23 @@
   display: inline-block; color: var(--qa-rubric); font-size: var(--qa-fs-run);
   letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 4px; font-weight: 600;
 }
+
+/* inline book-line choices (question) — a line in the book, not a survey card */
+.qa-choiceline {
+  appearance: none; width: 100%; background: none; border: 0;
+  border-bottom: 1px solid var(--qa-hairline);
+  font-family: inherit; color: var(--qa-ink); text-align: left; cursor: pointer;
+  font-size: var(--qa-fs-body); font-style: italic; line-height: 1.45;
+  padding: 15px 2px; min-height: 54px;
+  display: flex; gap: 12px; align-items: baseline;
+}
+.qa-choiceline::before { content: '—'; color: var(--qa-ink-2); flex: 0 0 auto; }
+.qa-choiceline:hover { background: var(--qa-paper-deep); }
+.qa-choiceline.is-chosen { color: var(--qa-action); }
+.qa-choiceline.is-chosen::before { content: '☙'; color: var(--qa-action); }
+.qa-choiceline:focus-visible { outline: 2.5px solid var(--qa-action); outline-offset: 3px; }
+
+.qa-plate .qa-stamp { font-size: calc(var(--ts) * 1.35rem); letter-spacing: 0.04em; }
 
 /* checklist (prep) */
 .qa-check {
@@ -347,7 +377,7 @@
 }
 .qa-inkline i {
   position: absolute; inset: 0; right: auto; background: var(--qa-action);
-  transition: width 900ms linear;
+  transition: width var(--qa-inkin) linear;
 }
 
 /* session plan with leader dots */
@@ -420,7 +450,7 @@
   color: var(--qa-ink-2); margin-bottom: 18px;
 }
 .qa-chapter .qa-display { margin: 0 0 6px; }
-.qa-chapter .qa-ch-title {
+.qa-ch-title {
   font-size: calc(var(--ts) * 1.5rem); font-weight: 560; font-variation-settings: 'opsz' 40;
   margin: 12px 0 8px;
 }
@@ -446,11 +476,11 @@
   color: var(--qa-ink);
 }
 .qa-stamp.is-gilt { border-color: var(--qa-gilt); color: var(--qa-gilt); }
+/* monotone settle — no undershoot, no bounce (vestibular doctrine) */
 .qa-stamped { animation: qa-stamp-in 360ms var(--qa-ease); }
 @keyframes qa-stamp-in {
-  0% { opacity: 0; transform: rotate(-6deg) scale(1.5); }
-  62% { opacity: 1; transform: rotate(-6deg) scale(0.94); }
-  100% { transform: rotate(-6deg) scale(1); }
+  0% { opacity: 0; transform: rotate(-6deg) scale(1.06); }
+  100% { opacity: 1; transform: rotate(-6deg) scale(1); }
 }
 
 /* record table (artefact) */
@@ -558,7 +588,10 @@
   height: 4px;
   background: linear-gradient(to right, transparent, var(--qa-gilt), transparent);
   margin: 26px 0;
+  transform-origin: left;
+  animation: qa-gilt-draw 600ms var(--qa-ease); /* the one earned moment */
 }
+@keyframes qa-gilt-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
 /* reduced-motion: settle becomes fade */
 .motion-reduced .qa-page { animation: none; }

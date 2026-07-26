@@ -2,7 +2,7 @@
 // Governing idea: twelve weeks are a book being read — twelve chapters,
 // one page per day, a bookmark that only moves forward.
 
-import { html, raw, render, ROMAN, mmss, makeTicker, reducedMotion } from '../../shared/dom.js';
+import { html, raw, render, ROMAN, mmss, makeTicker, makeTimeout, reducedMotion } from '../../shared/dom.js';
 
 // session + choice state shared across screens of this direction
 // elapsed pre-seeded so deep-linking straight to `active`/`paused` (screenshots,
@@ -42,7 +42,7 @@ function runningHead(w, right) {
   const p = w.position;
   return html`<header class="qa-running">
     <span>${w.programme.title}</span>
-    <span class="qa-run-right">${right ?? `Week ${ROMAN[p.week - 1]} · Day ${p.day}`}</span>
+    <span class="qa-run-right">${right ?? `Week ${p.week} · Day ${p.day}`}</span>
   </header>`;
 }
 
@@ -198,7 +198,7 @@ const screens = {
         { label: 'Something gentler today', note: 'counts in full', go: 'easier' },
         { label: 'Why this matters', go: 'why' },
       ])}
-      <button class="qa-folio qa-link-plain" data-go="journey" style="display:block;width:100%;background:none;border:0;font:inherit;color:inherit;cursor:pointer;">
+      <button class="qa-folio qa-folio-btn" data-go="journey">
         Chapter ${ROMAN[ctx.w.position.week - 1]} of XII · day ${ctx.w.position.dayOfProgramme} of 84 — see the contents
       </button>
     `);
@@ -373,10 +373,10 @@ const screens = {
       <p class="qa-kicker">One question — then you’re done</p>
       <h1 class="qa-title qa-em">${q.prompt}</h1>
       <p class="qa-meta">${q.why}</p>
-      <div role="group" aria-label="${q.prompt}" style="margin-top:18px;">
-        ${q.options.map((o, i) => html`<button class="qa-option" data-choice="${i}">${o}</button>`)}
+      <div role="group" aria-label="${q.prompt}" style="margin-top:18px;border-top:1px solid var(--qa-hairline);">
+        ${q.options.map((o, i) => html`<button class="qa-choiceline" data-choice="${i}" aria-pressed="false">${o}</button>`)}
       </div>
-      ${linkrow([{ label: 'Skip — no answer today', go: 'acknowledge' }])}
+      ${linkrow([{ label: 'Skip — no answer today', go: 'acknowledge', back: true }])}
     `);
   },
 
@@ -403,6 +403,7 @@ const screens = {
     return page(html`
       ${runningHead(ctx.w, 'Contents')}
       <h1 class="qa-title">Contents</h1>
+      <p class="qa-meta">Later chapters open week by week — their pages stay uncut until you reach them.</p>
       <ol class="qa-toc">
         ${ctx.w.weeks.map((wk, i) => {
           const n = i + 1;
@@ -605,7 +606,9 @@ const screens = {
           ${i === 0 ? html`<div class="qa-cat-flag">Recommended</div>` : ''}
           <h2 class="qa-cat-title">${o.title}</h2>
           <p class="qa-cat-line">${o.detail}</p>
-          <button class="qa-option" data-go="${i === 2 ? 'explore' : 'subscription'}" style="margin-top:6px;">${i === 0 ? 'Take the rest week' : i === 1 ? 'Read the particulars' : 'Browse the catalogue'}</button>
+          <button class="qa-link" data-go="${i === 2 ? 'explore' : 'subscription'}">
+            <span>${i === 0 ? 'Take the rest week' : i === 1 ? 'Read the particulars' : 'Browse the catalogue'}</span>
+          </button>
         </div>`
       )}
       ${folio(ctx.w, 'the book closes; another can open')}
@@ -615,7 +618,7 @@ const screens = {
   subscription: (ctx) => {
     const s = ctx.w.subscription;
     return page(html`
-      ${runningHead(ctx.w, 'The honest page')}
+      ${runningHead(ctx.w, 'Membership')}
       <h1 class="qa-title">${s.headline}</h1>
       <div class="qa-price">
         <span class="qa-price-big">${s.price}</span>
@@ -703,13 +706,12 @@ function mount(root, ctx) {
     el.addEventListener('click', () => {
       const target = el.getAttribute('data-go');
       if (target === '__stamp') {
+        // the mark is always seen — reduced motion shows it pre-pressed for a
+        // static beat instead of skipping the confirmation entirely
         const stamp = root.querySelector('#qa-stamp');
-        if (stamp && !reducedMotion(ctx)) {
-          stamp.classList.add('qa-stamped');
-          setTimeout(() => ctx.go('question'), 400);
-        } else {
-          ctx.go('question');
-        }
+        if (stamp) stamp.classList.add('qa-stamped');
+        el.disabled = true;
+        makeTimeout(root, () => ctx.go('question'), reducedMotion(ctx) ? 250 : 420);
         ctx.announce('Day marked complete.');
         return;
       }
@@ -738,8 +740,8 @@ function mount(root, ctx) {
   root.querySelectorAll('[data-choice]').forEach((el) => {
     el.addEventListener('click', () => {
       mem.choice = Number(el.getAttribute('data-choice'));
-      el.setAttribute('aria-pressed', 'true');
-      setTimeout(() => ctx.go('acknowledge'), reducedMotion(ctx) ? 0 : 160);
+      el.classList.add('is-chosen');
+      makeTimeout(root, () => ctx.go('acknowledge'), reducedMotion(ctx) ? 0 : 160);
     });
   });
 
@@ -749,14 +751,19 @@ function mount(root, ctx) {
     const seg = root.querySelector('#qa-seg');
     const ink = root.querySelector('#qa-ink');
     const plan = root.querySelectorAll('#qa-plan li');
+    // wall-clock anchored: a throttled tab or locked phone never loses time
+    const startedAt = Date.now() - mem.elapsed * 1000;
+    let lastSeg = currentSegment(ctx.w, mem.elapsed).label;
     makeTicker(root, () => {
-      mem.elapsed = Math.min(mem.elapsed + 1, total);
+      mem.elapsed = Math.min(Math.round((Date.now() - startedAt) / 1000), total);
+      const segNow = currentSegment(ctx.w, mem.elapsed).label;
       if (digits) digits.textContent = mmss(mem.elapsed);
-      if (seg) seg.textContent = currentSegment(ctx.w, mem.elapsed).label;
+      if (seg) seg.textContent = segNow;
       if (ink) ink.style.width = (mem.elapsed / total) * 100 + '%';
       plan.forEach((li, i) => { li.className = segClass(ctx.w, i, mem.elapsed); });
       if (mem.elapsed === total) ctx.announce('Session complete. Well done.');
-      if (mem.elapsed % 60 === 0) ctx.announce(`${mmss(mem.elapsed)} elapsed. ${currentSegment(ctx.w, mem.elapsed).label}.`);
+      else if (segNow !== lastSeg) ctx.announce(`${segNow}. ${mmss(mem.elapsed)} elapsed.`);
+      lastSeg = segNow;
     });
   }
 

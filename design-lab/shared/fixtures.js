@@ -34,22 +34,23 @@ export function journeyLog(currentWeek, currentDayOfWeek) {
 }
 
 const SUBSCRIPTION = {
-  headline: 'One programme. Twelve honest weeks.',
+  headline: 'One programme. Twelve weeks. One price.',
   price: '£44.99',
-  per: 'per twelve-week programme',
-  monthlyAlt: 'or £16.99 monthly, cancel any time',
-  trial: 'Week One is free — a real week of the programme, not a tour.',
+  per: 'once, for the twelve-week programme',
+  monthlyAlt: 'or £16.99 a month while you keep it — £50.97 over the same twelve weeks, renews monthly until you cancel',
+  trial: 'Week One is free — a real week of the programme, not a tour. No card is needed for Week One, and nothing is ever charged without asking you first.',
   includes: [
     'The full twelve-week programme, one day at a time',
     'Every “show me how”, alternative and recovery path',
-    'Your record and completion artefact, kept forever',
+    'Your record of the twelve weeks — a certificate of what you did, kept forever',
   ],
   terms: [
     'The price is the price. No introductory rate that rises later.',
-    'Cancel in two taps from this screen — no phone call, no guilt screen.',
+    'Cancel any time from this screen — we show you exactly where, and it takes about as long as subscribing did.',
     'If you cancel, everything you made stays yours to keep and export.',
+    'The full terms, privacy policy and refund policy live one tap away, in readable English.',
   ],
-  renewal: 'Renews only if you begin another programme. We will ask first.',
+  renewal: 'The one-off price never renews by itself. It renews only if you begin another programme — and we will ask first.',
 };
 
 export const WORLDS = {
@@ -74,7 +75,7 @@ export const WORLDS = {
         'Progress is measured in what you can do, not what you weigh',
       ],
       notFor:
-        'This programme is general conditioning, not medical care. If you are recovering from surgery, managing a heart condition, or have been told to limit exertion, talk to your clinician before starting.',
+        'This programme is general conditioning, not medical care. If you are recovering from surgery, managing a heart condition, have had a fall or blackout in the last year, or have been told to limit exertion, talk to your clinician before starting.',
     },
     weeks: [
       week(1, 'Standing Tall', 'Posture, breath and balance — the ground floor of every lift'),
@@ -101,7 +102,7 @@ export const WORLDS = {
       why:
         'The squat is how you get out of a car, down to a grandchild, up from the floor. This week you own the movement with support — depth and control come first, load comes much later.',
       whyDeeper:
-        'Yesterday you found your stance. Today you add the counter-hold, which lets your hips learn the full pattern while your hands quietly guarantee your balance. By Friday, the hold becomes two fingers. Next week, it becomes nothing.',
+        'Yesterday you found your stance. Today you add the counter-hold, which lets your hips learn the full pattern while your hands are there to steady you. When the hold starts to feel like habit rather than help — for many people that’s later this week — it will begin to leave. Readiness decides that, not the calendar.',
       prep: [
         'A sturdy counter, heavy table or windowsill — it must not slide',
         'Clear floor, about two steps square',
@@ -114,20 +115,21 @@ export const WORLDS = {
         { step: 'Sit back and down over three slow seconds, as if reaching for a chair behind you.', detail: 'Knees travel over toes as far as is comfortable. That is allowed — and normal.' },
         { step: 'Pause where you feel steady. That depth is today’s depth.', detail: 'Depth grows over weeks. Forcing it today buys nothing.' },
         { step: 'Press through the whole foot to stand, breathe out on the way up.', detail: 'Heel, big toe, little toe — all three stay planted.' },
+        { step: 'Today’s dose: five slow squats, then a full minute’s rest. Three rounds.', detail: 'Stop the set the moment control fades. Ragged repetitions teach the wrong lesson.' },
       ],
       safety:
-        'Mild muscle effort is expected. Sharp pain in a joint is not — if it appears, stop, and take the easier form today. It counts the same.',
+        'Mild muscle effort is expected. Sharp pain in a joint is not — if it appears, stop, and take the easier form today. It counts the same. Stop for the day if you feel dizzy, light-headed, or short of breath beyond normal effort.',
       easier: {
-        title: 'Sit-to-stand from a high chair',
+        title: 'Sit-to-stand from a raised, firm chair',
         why: 'The same pattern with a higher, safer finish. Every repetition counts toward the same milestone.',
         detail: 'Use a firm chair with armrests. Stand up and sit down slowly, hands helping as much as needed. Eight calm repetitions.',
       },
       advanced: {
         title: 'Counterweight squat',
-        why: 'Ready for more? A small weight held at your chest acts as a balancing partner and lets you sit deeper with control.',
-        detail: 'Hold a filled water bottle or a small bag at your chest. Same three-second descent. Six repetitions, full control.',
+        why: 'Ready for more? A small weight held at your chest acts as a balancing partner while you slow the descent even further — same depth, more control.',
+        detail: 'Hold a filled water bottle or a small bag at your chest. Five slow seconds down, the same depth as the plain form. Six repetitions.',
       },
-      milestone: 'This week ends with your first unassisted squat to chair height.',
+      milestone: 'This week builds toward your first unassisted squat to chair height — it arrives when the hold feels like habit, not by deadline.',
       question: {
         prompt: 'How did the depth feel today?',
         why: 'Your answer shapes tomorrow — nothing else is done with it.',
@@ -179,7 +181,7 @@ export const WORLDS = {
           { title: 'A steady session', detail: 'Rejoin at week 3, day 1 — one day rewound, everything else kept.' },
           { title: 'I’m ready — full session', detail: 'Straight back to today’s supported squat.' },
         ],
-        reschedule: 'Or, if five days a week was never realistic: rebuild the remaining weeks around three days. Same programme, honest calendar.',
+        reschedule: 'Or, if five days a week was never realistic: rebuild the remaining weeks around three days. Same programme, a calendar that fits.',
       },
       pause: {
         headline: 'Paused, on purpose.',
@@ -250,7 +252,7 @@ export const WORLDS = {
         'About 25–40 minutes on writing days, five days a week',
         'A first draft is measured in existence, not excellence — ugly pages count in full',
         'You will fall behind at least once; the programme is built for the return',
-        'By week 12: a complete draft, typically 40–60,000 words',
+        'By week 12: a complete draft. For some that is 25,000 words, for others 60,000 — complete counts either way',
       ],
       notFor:
         'This is a drafting programme, not an editing service or a publishing promise. It will not critique your pages — it will get them written.',
@@ -278,14 +280,14 @@ export const WORLDS = {
       duration: 25,
       durationLabel: '25 minutes',
       why:
-        'Every story turns on the moment a problem stops being avoidable. Your reader is waiting for it. Today you write yours — badly is allowed. A first draft’s only job is to exist.',
+        'Every story turns on the moment a problem stops being avoidable. Today you write yours — and let someone else in the scene see it happen. Badly is allowed. A first draft’s only job is to exist.',
       whyDeeper:
         'This is the scene your weeks of character work were for: the want you gave your protagonist in week 2 now collides with the obstacle from week 3, in front of a witness. After today, your story cannot go back — which is exactly what act one is for.',
       prep: [
         'The same seat as yesterday — ritual is half the work',
         'Phone face down, somewhere else',
         'Yesterday’s last paragraph, read once, aloud if you can',
-        'One line, written before the timer: what does she want in this scene?',
+        'One line, written before the timer: what do they want in this scene?',
       ],
       how: [
         { step: 'Re-read only the last paragraph you wrote. Not the chapter. The paragraph.', detail: 'Re-reading more is editing in disguise, and editing is a different programme.' },
@@ -303,10 +305,10 @@ export const WORLDS = {
       },
       advanced: {
         title: 'Write the scene twice',
-        why: 'If the draft is flowing, run the scene again from the other character’s head. You will keep the better half of each.',
-        detail: 'Same events, second point of view. Notice what each narrator cannot see. Add 20 minutes.',
+        why: 'If the draft is flowing, run the scene again from the other character’s head — you will keep the insight, not the pages.',
+        detail: 'Same events, second point of view, in your notebook rather than the draft. Notice what each narrator cannot see. Add 20 minutes.',
       },
-      milestone: 'This scene closes Act One of your draft.',
+      milestone: 'This scene closes Act One — most turning scenes are smaller; this is the big one.',
       question: {
         prompt: 'Where did the resistance show up today?',
         why: 'Your answer shapes tomorrow’s start ritual — nothing else is done with it.',

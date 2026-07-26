@@ -117,6 +117,7 @@ html, body {
    Directions also honour the real media query. */
 .motion-reduced *, .motion-reduced *::before, .motion-reduced *::after {
   animation-duration: 0.01ms !important;
+  animation-delay: 0s !important;
   animation-iteration-count: 1 !important;
   transition-duration: 0.01ms !important;
   scroll-behavior: auto !important;
@@ -124,6 +125,7 @@ html, body {
 @media (prefers-reduced-motion: reduce) {
   .stage *, .stage *::before, .stage *::after {
     animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
