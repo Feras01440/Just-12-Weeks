@@ -10,7 +10,7 @@
 | P2 | The category monetises from lived behaviour | ≥5 participants show real past spend on structure for their goal (MO-STRUCTURE or MO-SPENDER ≥£50) | Interviews C9–10 |
 | P3 | Guidance is the wanted shape | HS-DIRECT + HS-SHOW outnumber HS-SCORE among 11a answers | Interviews |
 | P4 | The recovery bet lands | In E2: RC-BELIEVED clearly outnumbers RC-DISBELIEF, **and** ≥3 participants whose honest D13 baseline was quit/start-something-new (RC-BASELINE-QUIT) react to the recovery message with belief or "which door" engagement | Interviews |
-| P5 | Cold-audience floor | ≥3% blended landing signup on ≥300 visitors | Landing test |
+| P5 | Cold-audience floor | ≥3% blended landing signup on ≥300 organic visitors *(signup-rate floor only — the category-vote and pricing reads carry their own qualified-sample floors and fixed read date: [passive-validation-plan §4](../passive-validation-plan.md))* | Landing test |
 
 Plus a soft signal (not gating): the 12-week frame reads FR-MOTIVATING more than FR-PRESSURE across bands (checked per band — a frame that motivates 25-year-olds and pressures 65-year-olds is a *design* finding, not a pass).
 

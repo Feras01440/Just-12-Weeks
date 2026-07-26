@@ -50,7 +50,7 @@ Realistic for a solo founder with little budget:
 
 - **9–12 interviews** minimum (the D-001 age-band quotas sum to 9), primary-pattern majority; stop when the last two interviews add nothing new.
 - **3–4 interviews** in each secondary segment for contrast (optional if time-constrained).
-- **Landing-page smoke test:** ≥300 visitors, organic-first per the [landing experiment spec](stage1-pack/concept-and-landing-tests.md) (a £100–150 paid top-up is pre-specified but launches only on the founder's separate go); this supplements, never replaces, interviews.
+- **Landing-page smoke test:** organic-first per the [landing experiment spec](stage1-pack/concept-and-landing-tests.md), read against the canonical floors and fixed read date in [passive-validation-plan §4](passive-validation-plan.md) (≥300 organic visitors for the signup-rate floor; ≥100 qualified votes for any category read; a £100–150 paid top-up is pre-specified but launches only on the founder's separate go); this supplements, never replaces, interviews.
 
 ## 5. Interview script
 

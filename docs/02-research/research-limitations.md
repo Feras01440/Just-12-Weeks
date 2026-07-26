@@ -17,6 +17,7 @@
 - **Vendor/competitor conflict-of-interest rows are flagged in-table** but could not be audited past the snippet.
 - **Older threads mix with current ones** (some streak-grief threads likely pre-2020): treated as evidence of persistent patterns, not current events, wherever undated.
 - **Synthetic materials are a separate universe:** the [synthetic stress test](synthetic-stress-test.md) and its derivatives are labelled hypothesis-generation and appear nowhere in the corpus or this evidence set's claims (R-19 guards the boundary).
+- **Channel bias in the passive system (standing guard):** landing traffic recruited through self-promotion channels over-represents those communities — a single subreddit or forum can dominate the sample and masquerade as "the market". Binding guards (landing spec §3; dashboard weekly): **≥3 distinct channels** contributing before any read; **no single channel >40% of qualified rows** at a read; per-channel shares reported every week; and every read includes a **sensitivity check** — the verdict recomputed with the largest channel excluded, both numbers shown side by side. A verdict that flips under the sensitivity check is reported as *channel-fragile*, not as a verdict.
 
 ## 3. Q15 — What public evidence cannot responsibly answer *(the honest list, feeding D-009 escalation design)*
 

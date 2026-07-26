@@ -23,9 +23,9 @@ One optional follow-up chip row: "If this existed, when would you realistically 
 
 ## 3. Reading rules
 
-- Concentration signal: ≥35% on one proposition across ≥100 **organic** votes (F&F excluded) = strong Q1 evidence for that category; 25–35% = leading-but-test-further; flat spread = revise propositions once (v2 wordings) before concluding the launch-thesis warning.
+- Verdict rules live in **[passive-validation-plan §4](passive-validation-plan.md)** (canonical, pre-registered): read at the fixed date only, on **n ≥ 100 qualified votes** (organic, confirmed, current wording version), requiring winner share **≥35% and a ≥12-point margin over the runner-up**, quoted with its confidence interval. **The former "25–35% = leading" band is void** — 25% is a four-option ballot's equal-share null, so shares near it are reported as "insufficient evidence", never as a lean. Whichever candidate wins gets its pre-specified cheap second test before Q1 goes to the founder (symmetric follow-up rule). A flat spread routes to Extend/Escalate per §4.5; one v2-wording revision starts a *new round* (results never pool across wordings).
 - Triangulation: read alongside (a) the public-evidence corpus's unmet-need findings (Q10) and (b) the flagship-opportunity analysis's non-demand factors (safety, cost, guidance-fit) — **demand is one input among fifteen**, and the analysis document owns the weighing.
-- Age-band lens: where the optional survey provides bands, concentration is also read per band (a category winning only under-30 is a different Q1 story than one winning across bands — D-001 relevance).
+- Age-band lens: where the optional survey provides bands, concentration is also read per band **once a band holds ≥10 qualified votes** (below that: "insufficient n", no cross-band claims) — a category winning only under-30 is a different Q1 story than one winning across bands (D-001 relevance).
 - Fraud hygiene: one vote per confirmed email; duplicate/disposable flags per passive-plan §3.5.
 
 ## 4. What this test cannot establish *(stated for reuse honesty)*

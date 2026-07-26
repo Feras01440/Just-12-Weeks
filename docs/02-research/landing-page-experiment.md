@@ -22,7 +22,7 @@ Copy rules: claims-policy compliant; no category named (D-004 — the vote suppl
 
 ## 3. Traffic plan (organic-first; per D-010)
 
-Channels where self-promotion is permitted, one post per channel, logged (where/when/wording): relevant subreddits' promo threads, indie/build-in-public communities, personal network (tagged `src=ff`), one weekly build-in-public post. Target ≥300 organic visitors within 2–3 weeks. Paid top-up (£100–150, evenly split) is pre-specified but **launches only on a named founder go** and stays inside Gate B's ≤£300 cumulative cap.
+Channels where self-promotion is permitted, one post per channel, logged (where/when/wording): relevant subreddits' promo threads, indie/build-in-public communities, personal network (tagged `src=ff`), one weekly build-in-public post — sustained across the **six-week window** (channel-mix rules: [research-limitations](research-limitations.md) channel-bias entry; ≥3 distinct channels, no channel >40% of qualified rows). **Target is stated in evidence, not visitors: ≥100 qualified category votes by the read date**, which the funnel arithmetic prices at **≈2,500–4,200 organic visitors** ([passive-validation-plan §4.2](passive-validation-plan.md)); ≥300 organic visitors remains the separate floor for the signup-*rate* read. Reaching the vote floor organically is genuinely uncertain — if the trajectory falls short, the read date records **Extend or Escalate** (§4.5), never a quiet threshold cut. Paid top-up (£100–150, evenly split) is pre-specified but **launches only on a named founder go**, stays inside Gate B's ≤£300 cumulative cap, and honestly buys only a fraction of the gap at typical click prices — escalation is the designed fallback, not paid spend.
 
 ## 4. Waitlist (privacy-respecting)
 

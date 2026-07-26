@@ -6,32 +6,38 @@
 
 ```
 WEEK OF: ____            (Stage: 1A synthesis | 1B passive | escalation active)
+READ DATE: ____ (pre-registered at publication; week __ of 6 + extensions __ of 2)
 STATUS LINE: one sentence — the week's single most decision-relevant fact.
+NO-PEEK RULE: accumulation only below; verdict language appears on the read date alone
+(safety S-class checks excepted). Verdict rules: passive-validation-plan §4.
 
 ── TRAFFIC & SIGNUP (organic / F&F shown separately, thresholds read on organic only)
-Visitors: __ organic / __ ff        Cumulative: __ / 300 target
-Signups (confirmed): __ org / __ ff  Blended organic rate: __% (floor 3%)
+Visitors: __ organic / __ ff        Cumulative: __ (signup-rate floor read needs ≥300)
+Signups (confirmed): __ org / __ ff  Blended organic rate: __% (floor 3%; ±__ pts at this n)
 By arm  H1: views __ · signups __ · rate __%
         H2: views __ · signups __ · rate __%
         H3: views __ · signups __ · rate __%     Lead ≥1.5×? yes/no/insufficient-volume
 Channel log: (posts made this week: where, when)   Excluded rows: __ (rule cited)
+Channel mix: top channel __% of qualified rows (cap 40%) · distinct channels ≥3? __
 
-── CATEGORY VOTE (organic, cumulative)
+── CATEGORY VOTE (qualified rows, cumulative; wording version: v_)
 P1 physical __%  ·  P2 skill __%  ·  P3 creative __%  ·  P4 routine __%  ·  other: top pick __
-n = __ / 100 read-threshold        "Start when": now __% / few months __% / someday __% / curious __%
-Concentration signal: none yet | leading (25–35%) | strong (≥35%) — wording version: v_
+n = __ / 100 read-floor   Trajectory to floor by read date: on-track / short / far-short
+"Start when": now __% / few months __% / someday __% / curious __%
+(no "leading" line exists — winner ≥35% AND margin ≥12 pts, read-date only, with CI)
 
-── PRICING INTEREST (organic, cumulative; honesty ceiling applies — interest, not conversion)
-Term __% · Monthly __% · One-off __% · Free-only __%      n = __ / 80 read-threshold
+── PRICING INTEREST (qualified rows, cumulative; secondary — interest, not conversion)
+Term __% · Monthly __% · One-off __% · Free-only __%   n = __ / 50 directional-floor (±14 pts at 50)
 
-── SURVEY (optional answers only; n per question)
+── SURVEY (optional answers only; n per question; per-band claims need band n ≥ 10)
 Age bands: __/__/__/__ (+PNTS __)   Tried before: top 2: __   Usual ending: top 2: __
 
 ── SPEND (Gate B cap £300 cumulative)
 This week £__ · cumulative £__ · lines: __        Requests needing approval: __
 
-── THRESHOLD & ESCALATION CHECK
-Proceed signals met: __ of 4     Revise signals: __     Stop signals: none | S4-watch (detail)
+── READ-DATE / ESCALATION CHECK
+Weeks to read date: __     Projected outcome if today were the read date: Read / Extend / Escalate / Stop
+S-class stop signals: none | S4-watch (detail)
 D-009 escalation triggers: none | trigger __ fired → recommended smallest response: __
 
 ── FOUNDER INBOX DELTA

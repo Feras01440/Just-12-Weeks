@@ -21,8 +21,8 @@ They map to the live monetisation candidates (M3 quarterly-term, M2 monthly, M1 
 
 ## 3. Reading rules
 
-- Distribution read on ≥80 **organic** clicks; F&F excluded; per-arm and per-category cuts where volume allows (a recovery-arm audience preferring the term option is a monetisation-fit signal).
-- Signals: "free only" <50% = paid appetite exists in this audience; term option leading or close = the native-unit hypothesis strengthens; one-off leading = catalogue-business pressure (W4 scenario); "free only" ≥65% = Q5/Q6 posture revisit before prototype.
+- **Secondary evidence, never gating alone** — verdict mechanics per [passive-validation-plan §4](passive-validation-plan.md). This panel sits *below* the vote in the funnel, so its qualified-click count will trail the vote count; directional claims require **n ≥ 50 qualified clicks** (95% interval ≈ ±14 points at that n — quoted whenever cited); below 50, raw counts are reported labelled "insufficient for any claim". Per-arm and per-category cuts only where the cut itself clears n ≥ 50.
+- Signals (at or above floor): "free only" <50% = paid appetite exists in this audience; term option leading or close = the native-unit hypothesis strengthens; one-off leading = catalogue-business pressure (W4 scenario); "free only" ≥65% = Q5/Q6 posture revisit before prototype.
 - Honesty ceiling *(carried into every citation of results)*: this measures **stated-preference-by-click among people interested enough to sign up** — it over-states real conversion by an unknown factor and cannot be cited as conversion evidence anywhere (research-limitations.md entry). Real WTP evidence arrives only at Gate D/E with genuine transactions.
 - If ambiguity persists after this test *and* it blocks a major decision → D-009 escalation trigger (small targeted interview round on past-spend reconstruction, the pack's method).
 
