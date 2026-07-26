@@ -1,6 +1,6 @@
 # Year-One Budget Scenarios
 
-**Status:** Guidance requested by the founder (D-007 residual), 26 July 2026. These are **planning estimates in GBP, not quotes** — UK freelance/contract mid-market rates, rounded; every line moves with negotiation, region and scope. The founder's own skills (TypeScript/React, can build) are already priced in: **no agency development line exists in any scenario** — engineering is founder time plus targeted specialist reviews. Confirm a scenario (or a custom envelope) and it becomes the Q9 budget of record in the decision log.
+**Status:** **Planning reference only — not a spending plan.** Superseded as spending authority by [`staged-capital-plan.md`](staged-capital-plan.md) under Confirmed founder decision D-010 (26 Jul 2026): capital is released gate by gate on evidence triggers (Gate A £0–100 → Gate E provisional £3,000–6,000 requiring a new founder decision). The scenarios below remain useful as *total-cost-of-quality* context — what a fully professional year costs if every specialist line eventually unlocks — and for calibrating individual line estimates. None of these totals is approved. Original estimating notes: UK freelance/contract mid-market rates, rounded; founder's own build skills priced in (no agency development line).
 
 ## What the money is actually for
 
