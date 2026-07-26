@@ -24,7 +24,8 @@ docs/
                    programme engine + authoring/adaptation/evidence/lifecycle
   02-research/     Source audit + correction log · competitor audit (31
                    products) · market opportunity, gaps & risks · annexes A–E
-                   · Stage 1A public-evidence corpus (222 rows) with theme,
+                   · Stage 1A public-evidence corpus (227 rows, stable
+                   EV-nnnn IDs) with theme,
                    guidance, payment, recovery and age-inclusive syntheses,
                    customer language bank, problem-evidence matrix and
                    research limitations · synthetic stress test, objection
