@@ -36,6 +36,10 @@ docs/
     interview-script.md       (planned — included in outline within research plan)
     competitor-audit-framework.md  (planned)
     validation-evidence.md    (planned — filled during Stage 1)
+    annex-a-store-policy-and-consumer-law.md   Cited policy/legal research
+    annex-b-market-landscape.md                Cited competitor & benchmark research
+    annex-c-red-team-assessment.md             Independent adversarial review
+    annex-d-behavioural-evidence.md            Peer-reviewed evidence base
 
   03-ux/                  Experience architecture                [planned]
     information-architecture.md, user-flows.md, content-strategy.md,
@@ -85,6 +89,7 @@ Foundation Phase, first response delivered. Written so far:
 | `00-foundation/decision-log.md` | Open — no decisions recorded yet |
 | `01-product/target-audiences.md` | Draft — hypotheses only, unvalidated |
 | `02-research/user-research-plan.md` | Draft — awaiting founder review |
+| `02-research/annex-a…d` (research annexes) | Compiled — citation caveats noted inside each |
 | `10-roadmap/delivery-roadmap.md` | Draft — awaiting founder review |
 
 **Next gate:** founder answers the questions in `00-foundation/assumptions-and-questions.md`. No design, no architecture, no code until then.

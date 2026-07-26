@@ -15,8 +15,8 @@ The brief names five: weight loss, muscle gain, teeth whitening, skin care, skil
 | (b) Two categories (fitness + one low-risk second, e.g. skill-learning) | Tests whether the engine generalises; hedges the bet | Doubles content cost; splits marketing message |
 | (c) All five from the brief | Matches the founder's written vision | Content cost and safety governance for teeth whitening/skincare are severe; teeth whitening in particular flirts with medical-adjacent claims; quality bar collapses |
 
-**Recommendation:** (a), with the engine *designed* for multiple measurement systems from day one so (b) follows cheaply. Teeth whitening should not be in the first release at all — it is the hardest category to support with defensible evidence and the closest to medical claims territory.
-**Basis:** Content governance analysis in [concept-synthesis.md](concept-synthesis.md) §6; solo-founder content budget reality.
+**Recommendation:** (a), with the engine *designed* for multiple measurement systems from day one so (b) follows cheaply. Teeth whitening should be **cut entirely, not deferred**: UK/EU law restricts effective peroxide concentrations to dental professionals, so an evidence-based 12-week whitening plan is not honestly writable in your home market, and tooth shade can't be measured credibly in-app ([synthesis §5.3](concept-synthesis.md), [Annex C §4](../02-research/annex-c-red-team-assessment.md)). A further reason for focus: one store listing cannot rank for "lose weight" and "learn to code" at once — every added category raises acquisition cost for all of them.
+**Basis:** Content governance analysis in [concept-synthesis.md](concept-synthesis.md) §5; UK cosmetic-products law; ASO fragmentation (Annex C); solo-founder content budget reality.
 
 ## Q2. Which target segment do we validate first?
 
@@ -44,16 +44,16 @@ Page 5 of your brief. Plausible readings: (a) a second set of 12 user-requested 
 
 ## Q5. The countdown-limited launch offer: keep, modify, or drop?
 
-Your brief specifies a discounted offer at first launch that expires after *n* hours. Direct professional advice: **as written, this is the single most dangerous idea in the brief.** It is (i) a recognised dark pattern ("false urgency") explicitly targeted by Apple/Google policy and UK consumer law (see synthesis §5 for citations), (ii) corrosive to the trust positioning of a premium, evidence-based brand, and (iii) placed *before* the user has received any value, which is where subscription apps get their worst conversion and their angriest reviews.
+Your brief specifies a discounted offer at first launch that expires after *n* hours. Direct professional advice: **as written, this is the single most dangerous idea in the brief.** It is (i) a recognised dark pattern ("false urgency"): a repeating countdown is a *per se banned practice* under the UK DMCC Act's Schedule 20 (CMA-enforceable since April 2025, fines up to 10% of global turnover — and the CMA's first eight investigations, opened November 2025, target exactly this), while Apple treats promoting a false price as grounds for removal *and developer-account termination* (Guideline 2.3.1(a)); (ii) corrosive to the trust positioning of a premium, evidence-based brand; and (iii) placed *before* the user has received any value — the exact flow that collapsed Her 75's store ranking in May 2026. Full citations: [synthesis §5.1](concept-synthesis.md) and [Annex A](../02-research/annex-a-store-policy-and-consumer-law.md).
 
 | Option | Advantages | Disadvantages |
 |--------|------------|---------------|
 | (a) Keep as written | Short-term conversion bump | Store rejection/enforcement risk; UK DMCC/CMA exposure; brand damage; refunds |
-| (b) Honest introductory pricing (a real launch price, or a genuine first-cohort discount, clearly stated, same for everyone that month) | Preserves an incentive without deception | Smaller urgency effect |
-| (c) No discount; value-first paywall after the user experiences day 1–3 | Highest trust; best long-term LTV pattern in subscription benchmarks | Slower initial revenue |
+| (b) Honest introductory pricing via the stores' native intro-offer mechanics (a real launch price or genuine one-time first-cohort discount, honestly framed, never re-offered to the same user) | Preserves an incentive lawfully; both stores support it natively | Smaller urgency effect |
+| (c) No discount; value-first paywall after the user experiences day 1–3 | Highest trust; benchmark data favours it (trial-originated subscribers show ~64% higher lifetime value in health & fitness) | Slower initial revenue |
 
 **Recommendation:** (b) or (c) — never (a). Test paywall *timing* (after onboarding vs after first completed day) as a legitimate experiment instead.
-**Basis:** Store policy and consumer-law findings cited in the synthesis; subscription industry retention data.
+**Basis:** Verified store policy and consumer-law findings (Annex A); market evidence (Annex B §4–5).
 
 ## Q6. What is free? (the free-tier boundary)
 
@@ -61,13 +61,13 @@ The brief implies everything meaningful is paid ("full access to all features").
 
 | Option | Advantages | Disadvantages |
 |--------|------------|---------------|
-| (a) Hard paywall (nothing free beyond a tour) | Simple; filters for intent; some premium apps succeed this way | User pays before experiencing the product's actual differentiator; highest refund/1-star risk |
+| (a) Hard paywall (nothing free beyond a tour) | Simple; filters for intent; converts ~10.7% of installs vs ~2.1% freemium in benchmark data | User pays before experiencing the product's actual differentiator; ~70% higher refund rates for hard-gated apps; the Her 75 case shows the ranking damage |
 | (b) Free first week of any programme, then paid | User experiences real value (day-1 action, first measurement) before paying; paywall lands when motivation is highest | Requires week 1 to be genuinely excellent; slightly more complex entitlement logic |
 | (c) One full free programme forever + paid catalogue | Generous; big top-of-funnel | Undermines "one meaningful goal" economics — many users only ever need one programme |
-| (d) Free trial via store mechanics (7-day trial on subscription) | Standard, well-understood; store-native | "Forgot to cancel" resentment unless handled with reminders; trial abuse |
+| (d) Free trial via store mechanics (7-day trial on subscription) | Standard, store-native; trial-originated subscribers show ~64% higher LTV in health & fitness | "Forgot to cancel" resentment unless handled with reminders; trial abuse |
 
-**Recommendation:** (b), possibly combined with (d) — experience week 1, subscribe to continue the journey. Decide after Stage 1 pricing interviews.
-**Basis:** Activation logic; to be validated.
+**Recommendation:** (b), possibly combined with (d) — experience week 1, subscribe to continue the journey. Worth testing alongside a **quarterly (12-week) plan**: it is the natural native unit of this product and almost nobody in the category sells it as the headline plan — a differentiation opportunity, though annual plans are where category revenue concentrates (~68% in health & fitness). Decide after Stage 1 pricing interviews.
+**Basis:** Benchmark data in [Annex B §2/§5](../02-research/annex-b-market-landscape.md); activation logic; to be validated.
 
 ## Q7. Who authors and reviews programme content?
 
@@ -91,11 +91,11 @@ The brief asks for 3D designs. Real-time 3D raises production cost, app size, lo
 
 ## Q9. What are your real constraints? *(information, not decision)*
 
-Everything commercial depends on facts only you have: hours per week you can give this; budget envelope for the first year (content, design, development, tools); your own skills (do you code? design?); whether anyone else is involved; target date pressure, if any. Please state them plainly — the roadmap durations and the build-vs-hire choices in Stage 6–7 hinge on this.
+Everything commercial depends on facts only you have: hours per week you can give this; budget envelope for the first year (content, design, development, tools); your own skills (do you code? design?); whether anyone else is involved; target date pressure, if any; and **where you expect the first thousand users to come from** — no acquisition channel is named anywhere in the brief, and channel choice (organic social, app-store search, paid ads, communities) changes the funnel and paywall design. Please state these plainly — the roadmap durations and the build-vs-hire choices in Stage 6–7 hinge on them.
 
 ## Q10. Naming direction
 
-"12 Weeks" is descriptive but weak as a trademark (descriptive terms are hard to protect and hard to search). No action needed now except: are there names you already love/hate, and do you want the Stage 3 brand work to generate naming territories alongside art direction? (Recommended: yes, same stage, one exercise.)
+"12 Weeks" is descriptive but weak as a trademark (descriptive terms are hard to protect and hard to search), and it sits close to *The 12 Week Year* — Brian Moran's established book, planner and software brand — as well as the broader 12-week-challenge heritage (Body for Life, 75 Hard). Both trademark proximity and store-search confusion need a proper screen before the name is kept. No action needed now except: are there names you already love/hate, and do you want the Stage 3 brand work to generate naming territories alongside art direction? (Recommended: yes, same stage, one exercise, including a preliminary trademark screen.)
 
 ## Q11. Age policy
 
@@ -104,6 +104,20 @@ Appearance-related goals attract under-18s, and weight-loss content for minors i
 ## Q12. Data residency of sensitive evidence (progress photos)
 
 Two viable postures: (a) photos stay **on-device by default**, cloud backup opt-in and end-to-end thought through later; (b) cloud storage by default with strong encryption. (a) is dramatically simpler for privacy compliance, trust messaging and cost at MVP; its price is no cross-device sync of photos and harder support cases. **Recommendation:** (a) at MVP. Confirm or challenge.
+
+## Q13. What happens at week 13?
+
+The product's promise *ends* — that is its integrity and its structural business risk. A subscription whose narrative completes in one quarter has negative built-in retention unless week 13 is designed deliberately (95% of annual subscribers who cancel never return, per category benchmark data).
+
+| Option | Advantages | Disadvantages |
+|--------|------------|---------------|
+| (a) Next-challenge sequencing ("your next 12 weeks" — new goal, guided handover) | Honest; matches the Restarter's multi-goal life; the natural subscription justification | Needs a second programme ready within ~one quarter of launch |
+| (b) Maintenance mode (lighter-touch consolidation programme after completion) | Keeps the habit alive; low content cost | Weaker reason to pay than a new transformation |
+| (c) Community/cohort layer for alumni | Strong retention in category data | A different product with moderation burden; not MVP |
+| (d) Accept single-cycle economics and price accordingly (one-off or quarterly purchase) | Simplest and most honest | Caps revenue; fights the category's annual-plan economics |
+
+**Recommendation:** design (a) as the retention model from day one — it is also the honest version of the founder's original multi-category vision, resequenced from a launch-scope problem into a year-one retention strategy — with (b) as the low-cost bridge until programme #2 exists. Decide the pricing implication (annual vs quarterly emphasis) after Stage 1.
+**Basis:** Annex B §2/§5 benchmarks; Annex C §5 failure mode 4; unvalidated on our own users until beta.
 
 ---
 

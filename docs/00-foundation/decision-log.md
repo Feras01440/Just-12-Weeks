@@ -28,8 +28,11 @@ These are the decisions queued for the founder, in dependency order. Full contex
 | Q6 | Free tier boundary: what is usable without paying | Monetisation model, activation funnel |
 | Q7 | Content authorship model (founder-curated vs expert-commissioned vs licensed) | Cost, credibility, governance, timeline |
 | Q8 | "3D designs": literal 3D requirement or premium-feel intent | Art direction, tech choice, performance budget |
-| Q9 | Founder's own time/skills/budget available for content and marketing | Everything commercial |
-| Q10 | Working name direction and naming constraints | Brand territory work (Stage 3) |
+| Q9 | Founder's constraints: time, skills, budget, acquisition channel | Everything commercial |
+| Q10 | Working name direction (incl. *The 12 Week Year* proximity screen) | Brand territory work (Stage 3) |
+| Q11 | Age policy (18+ for body-composition content) | Safety governance, store declarations |
+| Q12 | Progress-photo storage posture (on-device vs cloud at MVP) | Privacy model, architecture |
+| Q13 | Week-13 retention model | Monetisation, content roadmap, programme engine |
 
 ## Explicitly deferred decisions
 
