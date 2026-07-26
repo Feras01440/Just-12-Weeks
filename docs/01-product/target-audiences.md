@@ -1,66 +1,70 @@
-# Target Audience Hypotheses
+# Target Audience — Definition and Behavioural Segments
 
-**Status:** Draft — three hypotheses, none validated. The recommendation at the end is a *hypothesis to test in Stage 1*, not a decision. Nothing here should be treated as fact until `02-research/validation-evidence.md` contains evidence.
+**Status:** Revised 26 July 2026 under Confirmed founder decision D-001. Segment emphasis remains an **Unvalidated hypothesis** pending Stage 1.
 
-The founder's brief does not name an audience. "Everyone who wants self-improvement" is not a segment — it has no shared behaviour, no common alternative, no single acquisition channel and no coherent willingness to pay. Below are three deliberately different segments the product could serve first.
+## The audience definition *(Confirmed founder decision — D-001)*
 
----
+> **Adults aged 18+ who have a meaningful goal requiring sustained effort and who need structured guidance, encouragement and recovery support to remain consistent long enough to make meaningful progress.**
 
-## Segment A — "The Restarter" (28–42, serial self-improvement attempter)
+This is the product's audience. It is behavioural, not demographic. The product must be genuinely usable across adult life stages — including people in their 60s, 70s and beyond where a selected programme is suitable — and across levels of digital confidence (design consequences in [experience-principles.md §6](experience-principles.md)).
 
-- **Age and life context:** 28–42, working full-time, often early-parenthood or career-plateau years. Time-poor but not money-poor. Has a drawer of abandoned attempts: a lapsed gym membership, a 40%-finished online course, three deleted habit apps.
-- **Main goal:** Usually body composition or fitness, secondarily a skill ("finally learn to code / speak Spanish"). One big thing at a time — which matches the product's single-goal design.
-- **Existing behaviour:** Starts strongly in January/September, sustains 2–4 weeks, collapses after the first disrupted week (illness, travel, work crunch), then abandons out of self-disappointment rather than lost desire.
-- **Current alternatives:** Free habit trackers, YouTube plans, gym membership as a commitment token, occasional PT sessions, notes-app plans.
-- **Frustrations:** Progress is invisible week-to-week; apps punish the bad week (broken streaks) instead of helping them return; generic plans don't say *what to do today*.
-- **Willingness to pay:** Moderate-to-good hypothesis — this group already spends on memberships, courses and PTs (often hundreds of pounds a year) and has demonstrated they'll pay for *structure*. Needs Stage 1 confirmation of app-specific spend.
-- **Retention potential:** Good if the recovery design works — their defining behaviour is *falling off*, so a product designed for coming back addresses their actual failure point. Risk: they are also serial app-abandoners by definition.
-- **Acquisition difficulty:** Medium. Reachable via fitness/self-development content channels and search ("12 week plan"), but the space is noisy and CAC in health & fitness is competitive.
-- **Safety/regulatory implications:** Adults; weight-related content still requires eating-disorder-aware design and no outcome guarantees, but the risk profile is manageable with governance.
-- **Commercial advantages:** Large population; proven category spend; the product's differentiators (recovery, evidence of progress) map exactly onto their stated pain.
-- **Commercial disadvantages:** Crowded market; scepticism from repeated disappointment must be overcome in the first session; January-skewed demand seasonality.
+Two boundaries follow:
 
-## Segment B — "The Career Investor" (22–30, skill-builder)
+- **18+ only** (D-005): age screening at onboarding; no positioning toward minors.
+- **Per-programme suitability** (D-001): individual programmes define their own suitability, exclusions and safety requirements. "Adult-inclusive platform" never means "every programme for every adult."
 
-- **Age and life context:** 22–30, early career or career-switching; students, junior professionals, bootcamp-curious. More time than money, but accustomed to paying for education.
-- **Main goal:** Learn a career-relevant skill in a bounded period — coding, a language, a portfolio project. The brief's "learning an actual skill that takes time, like coding".
-- **Existing behaviour:** Enrols in Udemy/Coursera courses (completion rates in single digits industry-wide), watches tutorials, keeps loose Notion plans, restarts repeatedly ("tutorial hell").
-- **Current alternatives:** Duolingo (language), freeCodeCamp, Codecademy, YouTube, bootcamps at £3,000+, "100 Days of Code" community challenges.
-- **Frustrations:** Course abandonment; no external structure or deadline; can't tell if they're progressing; loneliness of self-study.
-- **Willingness to pay:** Present but anchored low by strong free alternatives (freeCodeCamp is free; Duolingo free tier is generous). They pay for *outcomes* (bootcamps, certificates) more readily than for *structure*.
-- **Retention potential:** Strong within a single 12-week cycle if the goal is career-critical; weak after completion (goal achieved → churn is structurally built in).
-- **Acquisition difficulty:** Medium-low — dense online communities (r/learnprogramming, #100DaysOfCode) and clear search intent. But those communities are also where free alternatives are evangelised.
-- **Safety/regulatory implications:** Lowest of the three. No health claims, no body content, no sensitive photos. Simplest first release from a governance standpoint.
-- **Commercial advantages:** Safest content category; measurable progress is natural (projects completed, exercises passed); credible expansion into B2B/education later.
-- **Commercial disadvantages:** The product would launch into competition with exceptional free products; skill-programme content is expensive to make genuinely better than YouTube; weakest fit with the founder's visual/body-transformation instincts (before/after evidence, measurements).
+A launch campaign or flagship programme may target a narrower need or channel (**launch-scope decision, Q1**), but that emphasis is never the product's permanent identity or an eligibility boundary.
 
-## Segment C — "The Event-Driven Transformer" (25–45, deadline-motivated)
+## Why segments still exist
 
-- **Age and life context:** 25–45 with a fixed date on the calendar: wedding, beach holiday, milestone birthday, sports event, reunion. The 12-week window isn't arbitrary to them — it's literally their timeline.
-- **Main goal:** Visible physical change by the date: body composition, skin, appearance. Occasionally performance (a 10K).
-- **Existing behaviour:** Sudden, urgent commitment ~8–16 weeks before the event; high initial spend (PT blocks, plans, products); intense but anxious engagement.
-- **Current alternatives:** Personal trainers (£30–60/session), "wedding shred"-type plans, generic fitness apps, crash approaches found online.
-- **Frustrations:** Doesn't know what actually works in the time available; overwhelmed by conflicting advice; fear of leaving it too late.
-- **Willingness to pay:** Highest of the three hypotheses — urgency plus a hard deadline is the classic high-conversion condition, and they already buy premium-priced help.
-- **Retention potential:** Structurally poor beyond one cycle: the event passes, the need ends. Lifetime value depends on life having more events, or on converting them to Segment A behaviour afterwards.
-- **Acquisition difficulty:** Low-to-medium — extremely targetable moments (wedding planning content, holiday booking cycles) and strong search intent, but per-event, not evergreen.
-- **Safety/regulatory implications:** **Highest risk.** Deadline pressure + appearance goals is exactly the context where crash dieting, over-training and body-image harm occur. Requires the strictest governance, conservative pacing, and willingness to tell some users "this goal is not healthy in this timeframe" — which costs conversions.
-- **Commercial advantages:** Sharpest willingness to pay; the 12-week frame sells itself; naturally produces dramatic (real) evidence of progress.
-- **Commercial disadvantages:** Single-cycle economics push toward one-off pricing, not subscription; the safety posture directly conflicts with the sales moment; brand risk if the product is ever seen as a crash-transformation tool.
+Validation research and launch marketing need somewhere to stand. The three segments below are **behavioural patterns** — ways adults relate to slow-results goals — not age brackets. Each pattern occurs in every adult age band; the "typical contexts" columns are illustrative, not eligibility.
 
----
+### Pattern A — The Restarter *(Unvalidated hypothesis)*
 
-## Recommendation (hypothesis, requiring Stage 1 validation)
+- **Defining behaviour:** starts meaningful goals sincerely, sustains 2–4 weeks, collapses after the first disrupted week, abandons out of self-disappointment rather than lost desire. Owns a history of lapsed memberships, part-finished courses, deleted apps.
+- **Typical contexts across ages:** the 24-year-old restarting fitness each term; the 38-year-old parent whose plans break on family logistics; the 55-year-old returning to exercise after a health scare; the 68-year-old restarting a language after retirement disrupted routine.
+- **Existing behaviour and alternatives:** free trackers, YouTube plans, memberships-as-commitment, notes-app plans; episodic paid attempts (PT blocks, courses).
+- **Frustrations:** progress invisible week-to-week; apps punish the bad week instead of helping the return; generic plans don't say what to do *today*.
+- **Willingness to pay:** moderate-to-good hypothesis — demonstrated category spend on structure (memberships, courses, coaching); needs Stage 1 confirmation for app-format spend.
+- **Retention potential:** good *if recovery design works* — their defining moment is the comeback; multi-goal lives give legitimate multi-cycle retention. Risk: serial app-abandoners by definition.
+- **Acquisition:** medium difficulty; reachable through search ("12 week plan"), self-development content, and January/September moments; noisy space.
+- **Safety/regulatory:** depends entirely on programme category, not the pattern itself.
+- **Commercial:** largest population of the three; maps exactly onto the product's differentiators (guidance, recovery, evidence of progress).
 
-**Lead with Segment A — The Restarter — with a fitness/body-composition flagship programme designed to also serve Segment C users who find it.**
+### Pattern B — The Structured Learner *(Unvalidated hypothesis)*
 
-Reasoning, honestly stated:
+- **Defining behaviour:** wants a capability (code, language, instrument, craft); drowns in free content; lacks syllabus, cadence and a finish line; restarts tutorials repeatedly.
+- **Typical contexts across ages:** the 22-year-old career-switcher; the 45-year-old adding a professional skill; the 70-year-old finally learning the piano properly.
+- **Alternatives:** MOOCs (single-digit completion rates industry-wide), YouTube, Duolingo-likes, freeCodeCamp, bootcamps at £1k–£5k+.
+- **Frustrations:** no structure or deadline; can't tell if they're progressing; free content answers "what exists" but not "what should *I* do today".
+- **Willingness to pay:** real but anchored down by excellent free alternatives; pays more readily for outcomes/credentials than for structure alone.
+- **Retention:** strong inside a cycle when the goal is life-relevant; churns on success — needs the week-13 "next goal" design (Q13).
+- **Acquisition:** dense communities and clear search intent; those same communities evangelise free tools.
+- **Safety/regulatory:** lowest of the three — no health claims, no body content. The safest archetype for proving the engine.
+- **Commercial:** cheapest safe launch candidate; strongest fit with guidance-first (instruction *is* the product); weakest fit with visual-transformation instincts.
 
-1. Segment A's defining pain (abandonment before visible results, punishment-by-streak) is precisely what the product's two most defensible ideas — recovery design and evidence of progress — address. Product-market fit is claimed where the differentiation actually is.
-2. It has demonstrated category spend without Segment C's safety-versus-sales conflict or Segment B's free-alternative squeeze.
-3. It supports subscription economics: Restarters have multiple goals over time (next 12 weeks: a different goal), giving the product a legitimate reason to retain them beyond one cycle — Segment C mostly doesn't, and Segment B churns on success.
-4. Segment C can be served by the same flagship programme with honest pacing, without being marketed to on urgency. Segment B becomes the second or third programme category once the engine is proven.
+### Pattern C — The Deadline Transformer *(Unvalidated hypothesis)*
 
-**What would change this recommendation:** Stage 1 evidence that Restarters won't pay for another app after their history of disappointments (kill-signal #2 in the research plan), or that demand concentrates strongly in skill-learning instead (which would promote Segment B and simplify safety governance considerably — a genuinely attractive fallback).
+- **Defining behaviour:** a fixed date (wedding, milestone birthday, event, reunion, medical goal agreed with a professional) creates a hard 8–16-week window and unusual commitment.
+- **Typical contexts across ages:** the 27-year-old before a wedding; the 42-year-old before a charity 10K; the 63-year-old preparing for a hip operation's prehab window (illustrative only — clinical prep would need clinical governance).
+- **Alternatives:** PTs (£30–60/session), event-specific plans, generic apps, risky crash approaches found online.
+- **Frustrations:** conflicting advice; fear of leaving it too late; no honest guide to what's achievable in the window.
+- **Willingness to pay:** sharpest of the three — urgency plus deadline; already buys premium help.
+- **Retention:** structurally single-cycle; the event ends the need unless week-13 design converts them to Pattern A behaviour.
+- **Acquisition:** highly targetable moments; per-event rather than evergreen.
+- **Safety/regulatory:** highest-risk *when the goal is appearance under time pressure* — exactly where crash behaviour lives. Serving this pattern honestly sometimes means telling the user their goal isn't achievable healthily in the window, which costs conversions and is non-negotiable.
+- **Commercial:** high conversion, capped lifetime value, brand risk if ever marketed on urgency.
 
-This choice is **Q2 in `00-foundation/assumptions-and-questions.md`** and belongs to the founder.
+## Recommendation *(Professional recommendation — Unvalidated hypothesis)*
+
+**Over-sample Pattern A in Stage 1 validation**, screen across all three patterns, and let category demand emerge from evidence rather than assumption. Reasoning:
+
+1. Pattern A's pain is the product's exact promise (guidance through the invisible-results gap; recovery instead of punishment). If A doesn't respond, the core thesis is wrong — better to learn that first.
+2. Pattern A exists in every adult age band, so one research round can simultaneously test the segment hypothesis and D-001's age-inclusivity requirement.
+3. Patterns B and C remain fully served by the platform design (D-004) and become launch-emphasis options depending on the Q1 category decision.
+
+**What would change this:** Stage 1 evidence that Pattern A won't pay for another app after their disappointment history (kill-signal in the research plan), or category demand concentrating in skill-learning (which would raise Pattern B and simplify governance).
+
+## Research sampling requirement *(Founder requirement — D-001)*
+
+Stage 1 interviews must include adults in all four bands: **18–29, 30–49, 50–64, 65+** — quotas in [`02-research/user-research-plan.md`](../02-research/user-research-plan.md). Findings are reported per band as well as per pattern, so age-related usability and motivation differences surface instead of averaging away.

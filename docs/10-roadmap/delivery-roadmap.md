@@ -34,14 +34,14 @@ Stages 1–5 are cheap and reversible. The expensive commitment starts at Stage 
 - **Owner:** Product strategist (with founder).
 - **Dependencies:** None.
 - **Risks:** Founder skips the questions and asks for screens — the process collapses into vibe-coding.
-- **Acceptance criteria:** Founder has read the synthesis and answered Q1–Q12 (or explicitly delegated specific ones).
-- **Approval gate:** Answers recorded in decision log. **Nothing downstream starts before this.**
+- **Acceptance criteria:** Founder directions recorded (D-001–D-004, done 26 Jul 2026); founder has answered the remaining open questions (Q1–Q13 as updated, or explicitly delegated specific ones).
+- **Approval gate:** Answers recorded in decision log. Documentation work that does not depend on the open answers proceeds with provisional, reversible recommendations (founder instruction, 26 Jul 2026); recruitment, spend and build do not start before the gate.
 
 ## Stage 1 — User validation
 
 - **Objective:** Test the riskiest assumptions with real people before designing anything.
-- **Inputs:** Chosen target segment hypothesis (Q2), research plan.
-- **Tasks:** Recruit 8–12 interviewees in the chosen segment; run interviews; landing-page smoke test (value proposition + price sensitivity); log evidence.
+- **Inputs:** Chosen behavioural-pattern emphasis (Q2), research plan.
+- **Tasks:** Recruit 9–12 interviewees across all four adult age bands (18–29, 30–49, 50–64, 65+ — quotas per research plan, D-001) with Pattern-A over-weight; run interviews; landing-page smoke test (value proposition + price sensitivity); log evidence per band and pattern.
 - **Deliverables:** `02-research/validation-evidence.md`, updated audience doc, go/pivot/stop recommendation.
 - **Owner:** Founder (interviews), strategist (script, synthesis).
 - **Dependencies:** Stage 0 gate.

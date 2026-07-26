@@ -1,29 +1,31 @@
 # Assumptions and Questions Requiring Founder Decisions
 
-**Status:** Open — these block the Stage 0 → Stage 1 gate.
-For each question: the options, their trade-offs, my recommendation and its basis. Recommendations are advice, not decisions. Answers get recorded in [decision-log.md](decision-log.md).
+**Status:** Updated 26 July 2026 after the founder's four directions (D-001–D-004). Former Q11 is **resolved** (18+ confirmed); former Q12 is **replaced** by Q12A/Q12B per D-003. Remaining questions block the Stage 0 → Stage 1 gate.
+For each question: the options, their trade-offs, my recommendation and its basis. Recommendations are **Professional recommendations**, not decisions. Answers get recorded in [decision-log.md](decision-log.md).
+
+Standing constraint on every answer below (**Confirmed founder decision D-004**): whatever is chosen for launch is a *launch-scope* decision only. Nothing — brand, engine, navigation, language — becomes permanently category-specific.
 
 ---
 
-## Q1. Which goal categories are in the first release?
+## Q1. Which goal category leads the first release? *(launch scope only, per D-004)*
 
-The brief names five: weight loss, muscle gain, teeth whitening, skin care, skill learning. They carry very different safety, credibility and content costs.
+The original brief names five: weight loss, muscle gain, teeth whitening, skin care, skill learning. They carry very different safety, credibility and content costs. Under D-004 this question chooses a **flagship launch programme**, not the product's identity; the engine and brand stay category-neutral either way.
 
 | Option | Advantages | Disadvantages |
 |--------|------------|---------------|
-| (a) One flagship category (fitness/body composition) | Deepest quality per pound of content budget; one governance regime; clear brand story | Narrower launch appeal; bets everything on one category |
-| (b) Two categories (fitness + one low-risk second, e.g. skill-learning) | Tests whether the engine generalises; hedges the bet | Doubles content cost; splits marketing message |
-| (c) All five from the brief | Matches the founder's written vision | Content cost and safety governance for teeth whitening/skincare are severe; teeth whitening in particular flirts with medical-adjacent claims; quality bar collapses |
+| (a) One flagship programme in one category — candidates: fitness/body composition **or** skill-learning | Deepest quality per pound of content budget; one governance regime; clear launch story | Narrower launch appeal; bets the launch (not the product) on one category |
+| (b) Two programmes from two archetypes (e.g. one physical + one skill) | Proves the engine's universality in public at launch; hedges the launch bet; matches D-004's spirit | Roughly doubles content cost; splits the launch message |
+| (c) All five from the original brief | Matches the founder's original notebook | Content cost and safety governance are severe; teeth whitening is legally untenable (see synthesis §5.3); quality bar collapses |
 
-**Recommendation:** (a), with the engine *designed* for multiple measurement systems from day one so (b) follows cheaply. Teeth whitening should be **cut entirely, not deferred**: UK/EU law restricts effective peroxide concentrations to dental professionals, so an evidence-based 12-week whitening plan is not honestly writable in your home market, and tooth shade can't be measured credibly in-app ([synthesis §5.3](concept-synthesis.md), [Annex C §4](../02-research/annex-c-red-team-assessment.md)). A further reason for focus: one store listing cannot rank for "lose weight" and "learn to code" at once — every added category raises acquisition cost for all of them.
-**Basis:** Content governance analysis in [concept-synthesis.md](concept-synthesis.md) §5; UK cosmetic-products law; ASO fragmentation (Annex C); solo-founder content budget reality.
+**Professional recommendation:** (a) as the base case for budget honesty — with the choice *between* fitness/body-composition and skill-learning left genuinely open until Stage 1 evidence (fitness has the larger proven spend but the heaviest governance; skill-learning is the safest and most guidance-native but fights free alternatives). (b) is the recommended *stretch* if Q9 reveals budget for two programmes, because launching one physical + one non-physical programme is the strongest public proof of D-004's platform claim. Teeth whitening remains **cut, not deferred**: UK/EU law restricts effective peroxide concentrations to dental professionals, so an evidence-based 12-week whitening plan is not honestly writable in your home market ([synthesis §5.3](concept-synthesis.md), [Annex C §4](../02-research/annex-c-red-team-assessment.md)). Note also: one store listing cannot rank for "lose weight" and "learn to code" equally — launch *positioning* will lead with the flagship regardless of platform breadth.
+**Basis:** Content governance analysis (synthesis §5); UK cosmetic-products law; ASO fragmentation (Annex C); content budget reality. **Founder decision required.**
 
-## Q2. Which target segment do we validate first?
+## Q2. Which behavioural segment do we over-sample first in validation?
 
-Three hypotheses in [`01-product/target-audiences.md`](../01-product/target-audiences.md): A "Restarter" (28–42 serial attempter), B "Career Investor" (22–30 skill-builder), C "Event-Driven Transformer" (deadline-motivated).
+Under D-001 the audience is behaviourally defined and age-inclusive; the segments in [`01-product/target-audiences.md`](../01-product/target-audiences.md) are now **behavioural patterns, not age brackets**: A "The Restarter" (serial attempter who collapses after disrupted weeks — any adult age), B "The Structured Learner" (goal is a capability; needs a syllabus and cadence), C "The Deadline Transformer" (fixed date drives the commitment). Stage 1 samples all four adult age bands (18–29, 30–49, 50–64, 65+) regardless of which pattern is emphasised.
 
-**Recommendation:** Segment A, for the reasons argued in that document (their pain maps onto our two real differentiators: recovery design and evidence of progress).
-**Basis:** Hypothesis only — Stage 1 interviews are the test. If you have personal conviction or unfair access to another segment (e.g. you're embedded in a coding-learners community), that is a legitimate reason to override.
+**Professional recommendation:** over-sample pattern A first — its defining pain (abandonment before visible results; punishment-by-streak) maps directly onto the product's differentiators (guidance, recovery, evidence of progress), and the pattern occurs across every adult age band, which lets one research round serve both the segment question and the age-inclusivity requirement.
+**Basis:** Unvalidated hypothesis — Stage 1 interviews are the test. **Founder decision required** (a light-touch one: this only orders recruitment emphasis).
 
 ## Q3. Launch depth: one flagship programme, or several?
 
@@ -97,13 +99,17 @@ Everything commercial depends on facts only you have: hours per week you can giv
 
 "12 Weeks" is descriptive but weak as a trademark (descriptive terms are hard to protect and hard to search), and it sits close to *The 12 Week Year* — Brian Moran's established book, planner and software brand — as well as the broader 12-week-challenge heritage (Body for Life, 75 Hard). Both trademark proximity and store-search confusion need a proper screen before the name is kept. No action needed now except: are there names you already love/hate, and do you want the Stage 3 brand work to generate naming territories alongside art direction? (Recommended: yes, same stage, one exercise, including a preliminary trademark screen.)
 
-## Q11. Age policy
+## ~~Q11. Age policy~~ — RESOLVED (Confirmed founder decision D-001/D-005)
 
-Appearance-related goals attract under-18s, and weight-loss content for minors is a genuine harm vector and a policy risk on both stores. **Recommendation:** 17+/18+ positioning, age screening at onboarding, and body-composition programmes explicitly excluded for minors. This costs some market and is the right call. Confirm.
+The product is for adults 18+, age-inclusive across adult life stages, with age screening at onboarding. Individual programmes still define their own suitability and exclusions on top of the 18+ baseline. Closed 26 July 2026.
 
-## Q12. Data residency of sensitive evidence (progress photos)
+## Q12A. Which programme types genuinely benefit from optional visual evidence? *(replaces former Q12, per D-003)*
 
-Two viable postures: (a) photos stay **on-device by default**, cloud backup opt-in and end-to-end thought through later; (b) cloud storage by default with strong encryption. (a) is dramatically simpler for privacy compliance, trust messaging and cost at MVP; its price is no cross-device sync of photos and harder support cases. **Recommendation:** (a) at MVP. Confirm or challenge.
+Visual evidence is a per-programme tool, never a platform default. The programme-evidence model (`01-product/progress-evidence-model.md`) proposes, per archetype, where optional photography earns its place (e.g. a physical programme's optional private before/after; a creative programme's artefact photos) and where it is pointless or harmful. **Founder decision required** at Stage 2 content design: approve the per-archetype evidence menus, specifically which (if any) launch programme includes optional photography at all.
+
+## Q12B. When visual evidence is justified, what storage/sync model best protects the user? *(Deferred technical decision)*
+
+The earlier "on-device by default at MVP" recommendation is **withdrawn as premature** per D-003. ADR-003 (`07-architecture/architecture-decisions/ADR-003-sensitive-evidence.md`) documents the option space — on-device only; on-device + opt-in encrypted backup; end-to-end-encrypted cloud; standard encrypted cloud — with trade-offs, and deliberately reaches no conclusion. This is decided only after Q12A establishes the actual feature need, the privacy model defines requirements, and the technical constraints are known. Until then, no architecture may hard-assume either posture.
 
 ## Q13. What happens at week 13?
 
@@ -127,7 +133,7 @@ The product's promise *ends* — that is its integrity and its structural busine
 |---|-----------|-------------------|
 | A1 | Target users experience "abandonment before visible results" as a top-3 felt problem | Interviews (unprompted mention) |
 | A2 | A fixed 12-week container motivates rather than intimidates | Interview section D |
-| A3 | Users will photograph private progress evidence if privacy is credible | Interview + prototype test |
+| A3 | *Where a programme justifies optional visual evidence (Q12A),* users will use it if privacy is credible — never assumed platform-wide (D-003) | Interview + prototype test, per programme |
 | A4 | Users will pay subscription prices for structure + evidence of progress | Past-spend evidence + landing test |
 | A5 | Recovery-after-failure design is a felt differentiator, not just our theory | Interviews (missed-days stories) |
 | A6 | One flagship programme is enough for launch credibility | Landing-page category-interest test |

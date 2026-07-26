@@ -24,7 +24,18 @@ Recruit people who, in the last 12 months:
 
 Screen out: professional coaches/PTs/dermatologists (different lens), people who have never attempted a slow-results goal (no problem to study), close friends and family (politeness bias) — friends may pilot the script only.
 
-Aim for a spread across the three segment hypotheses in `01-product/target-audiences.md` with a deliberate over-weight (≈50%) on the recommended primary segment.
+Aim for a spread across the three behavioural patterns in `01-product/target-audiences.md` with a deliberate over-weight (≈50%) on Pattern A (The Restarter).
+
+**Mandatory age-band quotas** *(Founder requirement — D-001)*: the interview set must include adults in all four bands, with no band left empty and findings reported per band:
+
+| Band | Minimum interviews | Note |
+|------|--------------------|------|
+| 18–29 | 2 | |
+| 30–49 | 3 | Largest expected volume; don't let it crowd out the others |
+| 50–64 | 2 | |
+| 65+ | 2 | Recruit via community groups, U3A-style networks, family second-degree contacts — not only online channels, which bias toward digital confidence |
+
+Also deliberately vary digital confidence within bands (screener question: "How comfortable are you learning a new app on your own?" — recruit at least 3 who answer low/medium).
 
 ## 3. Recruitment methods
 
@@ -57,10 +68,12 @@ Rules: never pitch the app before section E. Never ask "would you use an app tha
 7. "Did anything or anyone almost pull you back on track? What?"
 8. "What happened to whatever you were using — the app, plan, notebook, membership?"
 
-**C. Money and alternatives (10 min)**
+**C. Money, alternatives and the shape of help (12 min)**
 9. "What have you spent money on for this goal — apps, memberships, products, courses? Roughly how much, all in?"
 10. "Which of those felt worth it? Which felt like a waste? Why?"
 11. "If you've used any apps: what made you keep or delete them?" (Listen for paywall timing, notification fatigue, streak anxiety — do not prompt these words.)
+11a. "When you were in the middle of it, what kind of help did you actually want on a given day — someone telling you exactly what to do, showing you how, keeping you company, or keeping score?" (Guidance-vs-tracking probe — listen for whether they wanted *direction* or *records*; do not offer the app's framing.)
+11b. "Was there a moment you didn't know *how* to do the thing right? What did you do?" (Tests demand for demonstration/instruction.)
 
 **D. The 12-week frame (10 min) — still no pitch**
 12. "Some people commit to a fixed period — say, 12 weeks — for a goal like this. Have you ever done something like that? How did it go?"
@@ -81,9 +94,10 @@ Rules: never pitch the app before section E. Never ask "would you use an app tha
 
 ## 6. Prototype testing plan (Stage 5, pre-registered now)
 
-- 5–7 participants from the same screener pool, target segment only.
-- Tasks: (1) first launch through to understanding the promise; (2) choose and start a programme; (3) complete a mock daily action; (4) find what happens after missing three days; (5) read the paywall and state, unaided, the price, billing period, and how to cancel.
-- Success bar: 5/5 can state the promise in their own words; 4/5 complete the daily action unaided; 5/5 pass the paywall comprehension test (this one is non-negotiable).
+- 8–10 participants from the same screener pool: primary-pattern majority, **including at least two participants aged 65+ and at least two who self-rated low/medium digital confidence** (D-001).
+- Tasks: (1) first launch through to understanding the promise; (2) choose and start a programme; (3) receive today's guidance and complete a mock daily action — observing whether they understand *what to do and how* without entering data first (G1); (4) find and choose an easier alternative for a hard day; (5) find what happens after missing three days; (6) read the paywall and state, unaided, the price, billing period, and how to cancel.
+- Conditions: at least two sessions run at 200% text size; at least one with reduced motion; daily-loop tasks attempted one-handed.
+- Success bar: 5/5 can state the promise in their own words; ≥4/5 per age cohort complete the daily action unaided (G6); 5/5 pass the paywall comprehension test (non-negotiable); zero participants describe the home screen as "a tracker/dashboard" when asked what it is.
 
 ## 7. Recording insights and decisions
 

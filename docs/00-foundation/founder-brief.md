@@ -1,7 +1,7 @@
 # Founder Brief — "The 12 Weeks Challenge"
 
-**Source:** 6-page handwritten notebook PDF supplied by the founder (`The_12_Weeks_Challenge.pdf`), transcribed 26 July 2026.
-**Status:** Faithful transcription. This document records what the founder actually wrote, without correction or improvement. All professional interpretation lives in [concept-synthesis.md](concept-synthesis.md).
+**Source:** 6-page handwritten notebook PDF supplied by the founder (`The_12_Weeks_Challenge.pdf`), transcribed 26 July 2026, **plus four written founder directions issued 26 July 2026** (recorded in full in [decision-log.md](decision-log.md) as D-001–D-004).
+**Status:** Faithful transcription plus dated addenda. This document records what the founder actually communicated, without correction or improvement. All professional interpretation lives in [concept-synthesis.md](concept-synthesis.md).
 
 Transcription conventions: spelling is normalised for readability; wording and meaning are preserved. Anything uncertain in the handwriting is marked `[?]`. Sketches are described in square brackets.
 
@@ -70,3 +70,16 @@ These are the requirements the brief actually states, before any professional in
 | SR11 | All content based on books, research and proven techniques, explained well | 6 |
 
 Items SR7 (countdown pricing) and SR9 (12 plans at launch) are flagged as high-risk in the concept synthesis — they are recorded here because the founder wrote them, not because they are endorsed.
+
+---
+
+## Addendum — Founder directions of 26 July 2026 (Confirmed founder decisions)
+
+After reviewing the first foundation response, the founder issued four written directions that supplement — and where they conflict, override — both the original notebook and the team's earlier recommendations. Summaries below; authoritative full text in [decision-log.md](decision-log.md) D-001–D-004.
+
+| # | Direction | Effect on earlier material |
+|---|-----------|---------------------------|
+| FD-1 | **Adult and age-inclusive (18+).** Audience defined behaviourally, never primarily by age; usable across adult life stages including 65+; research must sample four adult age bands; age-inclusive design requirements are mandatory. | Supersedes any framing of the 28–42 "Restarter" as the product's audience; that becomes at most a launch-emphasis hypothesis. Resolves former Q11 (18+ confirmed). |
+| FD-2 | **Guidance-first, not tracker-first.** "Tell, show, guide and adapt before asking the user to record anything." Purposeful input only; progressive personalisation; home experience must not be dashboards/forms/journals. | Governs all UX work; adds `01-product/experience-principles.md` as a permanent reference. |
+| FD-3 | **Programme-specific progress.** Measurements/photos/self-reporting are per-programme tools, optional, never central to the universal platform. Former Q12 replaced by Q12A/Q12B; storage decision deferred until need is established. | Supersedes the earlier "photos on-device by default at MVP" recommendation, which is withdrawn as premature. |
+| FD-4 | **Preserve the broad platform vision.** Nothing (brand, language, engine, architecture) becomes permanently fitness-specific before validation. Flagship category = launch-scope decision only; fitness remains a candidate, not a choice. | Reframes the earlier "fitness flagship" recommendation as one candidate among options; universal-engine requirements strengthen. |
