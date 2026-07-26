@@ -52,6 +52,14 @@ export function makeTicker(root, fn, ms = 1000) {
   return id;
 }
 
+// Registered timeout: cancelled automatically when the screen unmounts,
+// so a pending navigation can never fire after the user has moved on.
+export function makeTimeout(root, fn, ms) {
+  const id = setTimeout(fn, ms);
+  (root.__cleanups ||= []).push(() => clearTimeout(id));
+  return id;
+}
+
 export function cleanup(root) {
   (root.__cleanups || []).forEach((f) => f());
   root.__cleanups = [];

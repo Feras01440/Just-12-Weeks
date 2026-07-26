@@ -12,8 +12,9 @@
 | Token | Value | Used for |
 |---|---|---|
 | `--qa-settle` | 240ms · `cubic-bezier(0.22, 0.08, 0.14, 1)` | every page arrival: rise 8px + fade — paper laid on a desk |
-| `--qa-inkin` | 420ms · linear width | the session progress rule “inking in”; rubric underlines drawing |
-| stamp-press | 360ms · same ease, scale 1.5→0.94→1 | the day’s mark pressed into the page (completing an action) |
+| `--qa-inkin` | 900ms · linear width | the session rule’s continuous per-tick fill (one second of ink per second of work) |
+| stamp-press | 360ms · same ease, scale 1.06→1 + fade — monotone, no undershoot | the day’s mark pressed into the page |
+| gilt-draw | 600ms · same ease, scaleX 0→1, once | week-12 arrival: the gilt edge draws across the page |
 | choice-settle | 160ms | selecting an option before navigation |
 
 Hierarchy: only one element animates per transition (the page itself, or the stamp — never both). Interruption: all animations are CSS, cancel on navigation; nothing blocks input. Reduced motion: page arrival becomes plain appearance; stamp appears pre-pressed; ink rule width updates without transition. Distance cap: 8px.
@@ -33,7 +34,7 @@ Hierarchy: pointer > face > text. The needle never overshoots (an instrument tha
 |---|---|---|
 | `--mc-draw` | 400ms · `cubic-bezier(0.25, 0.1, 0.25, 1)` | a day’s thread drawing in (stroke-dashoffset); session thread growing |
 | `--mc-beat` | 300ms · same | week transition: the finished row pressing into the cloth |
-| `--mc-rise` | 240ms | screen arrival: 6px rise + fade |
+| `--mc-enter` | 240ms | screen arrival: 6px rise + fade |
 | unroll | 600ms, once | week-12 only: the finished band unrolls — the single “expressive” moment in the whole lab |
 
 Hierarchy: thread > shuttle > text. Interruption: draws are decorative endpoints of real state — interrupting never loses the state. Reduced motion: threads render complete; the unroll is replaced by the finished band with a caption.
@@ -57,8 +58,10 @@ Hierarchy: thread > shuttle > text. Interruption: draws are decorative endpoints
 
 1. No animation ever gates input; primary controls are live from frame one.
 2. Anything longer than 240ms must be skippable by acting (tapping proceeds immediately).
-3. Timers tick by state, not by animation — a dropped frame never loses a second.
+3. Timers are wall-clock anchored (elapsed derives from a start timestamp, not tick counts) — a throttled tab or locked phone never loses a second.
 4. Auto-advancing happens only after explicit user action (e.g. stamp → question), never on a timer.
+5. Pending post-action navigations are registered against the screen and cancelled on unmount — a stale transition can never hijack the user (`makeTimeout` in `shared/dom.js`).
+6. Lab honesty note: screens re-render on navigation, so *cross-screen* continuity (a carriage sweeping between views, a thread persisting across screens) is **unvalidated** in this prototype — flagged for a shared-element transition spike on whichever direction survives.
 
 ## Reduced-motion contract
 
