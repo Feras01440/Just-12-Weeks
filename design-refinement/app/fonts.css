@@ -1,0 +1,24 @@
+/* Atelier's working pair (R8 — retained territory, not yet locked).
+   Both SIL Open Font License, latin subsets. */
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('fonts/bricolage-var.woff2') format('woff2');
+  font-weight: 200 800;
+  font-stretch: 75% 100%;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Faustina';
+  src: url('fonts/faustina-var.woff2') format('woff2');
+  font-weight: 300 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Faustina';
+  src: url('fonts/faustina-italic-var.woff2') format('woff2');
+  font-weight: 300 800;
+  font-style: italic;
+  font-display: swap;
+}
