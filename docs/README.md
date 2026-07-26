@@ -1,95 +1,52 @@
 # 12 Weeks — Product Documentation
 
-This is the documentation root for **12 Weeks** (working name; also considered: "The 12 Week Challenge"). The product is in the **foundation phase**: strategy, research and specification precede all production development. No application code exists yet, deliberately.
+Documentation root for **12 Weeks** (working name — final name is an open decision, Q10). A guided 12-week transformation platform for adults 18+: guidance-first, evidence-based, recovery-designed. The product is in the **foundation phase**: no production code, no final visual design — deliberately, by founder instruction.
 
-## How to read this
+## Governing decisions
 
-Every document carries a status header:
+Four confirmed founder decisions override everything else (full text: [`00-foundation/decision-log.md`](00-foundation/decision-log.md)):
 
-- **Draft — awaiting founder review**: written, not yet approved.
-- **Approved**: founder has signed off (recorded in `00-foundation/decision-log.md`).
-- **Planned**: agreed to exist, not yet written. Gated on an earlier approval.
+1. **D-001** Adult (18+) and age-inclusive; audience defined behaviourally, never primarily by age.
+2. **D-002** Guidance-first, never tracker-first: *"tell, show, guide and adapt before asking the user to record anything."*
+3. **D-003** Progress is programme-specific; measurements/photos are optional per-programme tools, never the platform's spine.
+4. **D-004** The broad platform vision is preserved; any flagship launch category is launch scope, not identity. **The flagship category is not yet chosen.**
 
-Nothing marked *Planned* is written until the gate before it is passed. This is intentional: the founder's brief requires explicit approval between phases.
+Open decisions live in [`00-foundation/assumptions-and-questions.md`](00-foundation/assumptions-and-questions.md) (Q1–Q13) and the [open-decisions register](00-foundation/open-decisions-register.md). Labels used throughout: Founder requirement · Confirmed founder decision · Verified external fact · Evidence-supported inference · Professional recommendation · Unvalidated hypothesis · Founder decision required · Deferred technical decision.
 
-## Structure
+## Map
 
 ```
 docs/
-  00-foundation/          The source concept and its honest assessment
-    founder-brief.md          Faithful transcription of the original handwritten brief
-    concept-synthesis.md      Professional synthesis: strengths, weaknesses, risks
-    assumptions-and-questions.md  Open questions requiring founder decisions
-    decision-log.md           Running record of decisions and their rationale
-
-  01-product/             What we are building and for whom      [partially drafted]
-    product-vision.md         (planned — after founder answers Q1–Q12)
-    product-thesis.md         (planned)
-    target-audiences.md       Three segment hypotheses + recommendation
-    prd.md                    (planned — after validation)
-    scope.md                  (planned — MVP boundaries)
-    programme-engine.md       (planned — universal 12-week engine spec)
-    success-metrics.md        (planned)
-
-  02-research/            How we validate before building        [partially drafted]
-    user-research-plan.md     Founder-led discovery plan
-    interview-script.md       (planned — included in outline within research plan)
-    competitor-audit-framework.md  (planned)
-    validation-evidence.md    (planned — filled during Stage 1)
-    annex-a-store-policy-and-consumer-law.md   Cited policy/legal research
-    annex-b-market-landscape.md                Cited competitor & benchmark research
-    annex-c-red-team-assessment.md             Independent adversarial review
-    annex-d-behavioural-evidence.md            Peer-reviewed evidence base
-
-  03-ux/                  Experience architecture                [planned]
-    information-architecture.md, user-flows.md, content-strategy.md,
-    engagement-model.md, accessibility-requirements.md
-
-  04-brand/               Brand strategy and art direction       [planned]
-    brand-strategy.md, art-direction-a.md, art-direction-b.md,
-    art-direction-c.md, typography-strategy.md, colour-strategy.md,
-    signature-experience.md, anti-generic-audit.md
-
-  05-commercial/          Monetisation and launch                [planned]
-    monetisation-options.md, pricing-experiments.md,
-    subscription-requirements.md, launch-strategy.md
-
-  06-content/             Programme content governance           [planned]
-    programme-governance.md, research-standards.md,
-    claims-policy.md, programme-template.md
-
-  07-architecture/        Technical foundation                   [planned]
-    system-context.md, container-architecture.md, domain-model.md,
-    data-model.md, api-strategy.md, state-machines.md,
-    architecture-decisions/
-
-  08-security/            Privacy and security                   [planned]
-    data-inventory.md, privacy-model.md, threat-model.md,
-    retention-and-deletion.md, third-party-register.md
-
-  09-quality/             Testing and release quality            [planned]
-    test-strategy.md, device-matrix.md,
-    accessibility-test-plan.md, release-checklist.md
-
-  10-roadmap/             Staged delivery                        [partially drafted]
-    delivery-roadmap.md       Stage 0–12 roadmap with approval gates
-    risk-register.md          (planned)
-    milestone-gates.md        (planned)
+  00-foundation/   Founder brief (transcribed + directions), concept synthesis,
+                   open questions, decision log, review report, work log
+  01-product/      Vision, thesis, experience principles, PRD, scope, non-goals,
+                   dependency map, success metrics, analytics spec,
+                   programme engine + authoring/adaptation/evidence/lifecycle
+  02-research/     User research plan, source audit + correction log,
+                   competitor audit (31 products), review themes, market
+                   opportunity, gaps & risks, annexes A–E
+  03-ux/           IA, navigation, 23 core flows, Today/recovery/week-12
+                   experience specs, content strategy, accessibility requirements
+  04-brand/        Brand strategy, three art-direction territories (A/B/C),
+                   typography & colour strategies, signature-experience
+                   candidates, anti-generic audit
+  05-commercial/   Monetisation options, pricing experiments, paywall
+                   principles, subscription compliance register, week-13 models
+  06-content/      Programme governance, research standards, claims policy,
+                   programme template, review workflow, content versioning
+  07-architecture/ C4 context & containers, domain model, data-model notes,
+                   API strategy, state machines, notification & content
+                   delivery architectures, ADR-001/002/003
+  08-security/     Data inventory & classification, privacy model, threat
+                   model, retention & deletion, third-party register,
+                   abuse cases, security requirements
+  09-quality/      Test strategy, device matrix, accessibility test plan,
+                   performance plan, release checklist
+  10-roadmap/      Stage 0–12 delivery roadmap, risk register, milestone gates
 ```
 
-## Current state (26 July 2026)
+## Status (26 July 2026)
 
-Foundation Phase, first response delivered. Written so far:
+**Foundation set complete and internally audited** (see [`00-foundation/foundation-review-report.md`](00-foundation/foundation-review-report.md) and [`work-completed.md`](00-foundation/work-completed.md)). Every document is **Draft — awaiting founder review** unless marked otherwise inside; provisional recommendations are explicitly reversible and unapproved. Planned-but-ungated items that remain deliberately unwritten: `01-product/prd` deep per-category extensions (post-Q1), `02-research/validation-evidence.md` (filled during Stage 1), interview-script.md (lives inside the research plan until Stage 1), competitor-audit-framework.md (superseded by the executed audit; the framework lives in its §2), design-system component library (post-Gate-3 by rule).
 
-| Document | Status |
-|---|---|
-| `00-foundation/founder-brief.md` | Draft — awaiting founder confirmation of transcription |
-| `00-foundation/concept-synthesis.md` | Draft — awaiting founder review |
-| `00-foundation/assumptions-and-questions.md` | Draft — **requires founder answers** |
-| `00-foundation/decision-log.md` | Open — no decisions recorded yet |
-| `01-product/target-audiences.md` | Draft — hypotheses only, unvalidated |
-| `02-research/user-research-plan.md` | Draft — awaiting founder review |
-| `02-research/annex-a…d` (research annexes) | Compiled — citation caveats noted inside each |
-| `10-roadmap/delivery-roadmap.md` | Draft — awaiting founder review |
-
-**Next gate:** founder answers the questions in `00-foundation/assumptions-and-questions.md`. No design, no architecture, no code until then.
+**Next gate:** founder reviews the [foundation review report](00-foundation/foundation-review-report.md) and answers the [open decisions](00-foundation/open-decisions-register.md). Stage 1 recruitment, brand-territory selection, and any build wait behind that gate.
