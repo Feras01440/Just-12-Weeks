@@ -1,6 +1,6 @@
 # Stage 1 Incentives and Cash Plan
 
-**Status:** Scenarios for founder selection — no spend authorised by this document. Feeds the year-one picture in [`05-commercial/year-one-budget-scenarios.md`](../../05-commercial/year-one-budget-scenarios.md); this page is Stage 1 only.
+**Status: SUPERSEDED as spending authority (26 Jul 2026 — audit finding M9).** Spending is governed solely by [`05-commercial/staged-capital-plan.md`](../../05-commercial/staged-capital-plan.md) under Confirmed founder decision D-010, and interviews run only on escalation under D-009 — so the scenarios below activate **only if an escalation trigger fires and the founder approves that specific round** (interview incentives are a Gate-B escalation line in the capital plan, £20/participant × only the interviews the trigger justifies). This page remains the *reference for pricing* any escalated round — incentive principles and per-line estimates — and authorises nothing. The year-one scenarios it fed ([`year-one-budget-scenarios.md`](../../05-commercial/year-one-budget-scenarios.md)) are themselves planning reference only.
 
 ## Incentive principles
 

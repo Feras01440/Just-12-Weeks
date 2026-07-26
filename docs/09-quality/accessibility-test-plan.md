@@ -10,7 +10,7 @@
 
 ## 2. Release protocol (manual, per release, ~half a day, checklist-driven)
 
-Run on the configured accessibility devices (device-matrix): 
+Run on the configured accessibility devices (device-matrix — assignments activate per its §Staging gates; until then the same protocols run on the founder's own configured devices, stated as a limitation in results): 
 
 1. **Screen-reader journeys** (VoiceOver on P5, TalkBack on P2): the five E2E journeys end-to-end by screen reader alone — first-start, daily loop (player incl. variant switch + timer announcements), recovery conversation, weekly review, paywall+purchase (sandbox) and restore. Pass = completable without sighted rescue, announcements meaningful, order logical.
 2. **Text scaling:** daily loop + paywall + report at largest platform accessibility sizes (beyond 200%) — usable, nothing clipped, G9 comprehension text intact.

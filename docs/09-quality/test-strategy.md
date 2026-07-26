@@ -29,7 +29,7 @@ The five journeys that define the product, on device farm iOS+Android: (1) first
 
 ## 4. Test data & environments
 
-Fixture programmes: one per archetype (the Gate-2 paper-test artefacts graduate into permanent test content — including a deliberately pathological one: heaviest media, longest steps, densest questions); staging wired to store sandboxes with test accounts per scenario (fresh, subscribed, grace, revoked, family-shared); time-travel harness for lifecycle timers (no waiting 28 real days); seeded low-end device lab per [device-matrix](device-matrix.md).
+Fixture programmes: one per archetype (the Gate-2 paper-test artefacts graduate into permanent test content — including a deliberately pathological one: heaviest media, longest steps, densest questions); staging wired to store sandboxes with test accounts per scenario (fresh, subscribed, grace, revoked, family-shared); time-travel harness for lifecycle timers (no waiting 28 real days); seeded low-end device lab per [device-matrix](device-matrix.md) (gate-staged under D-010 — see its §Staging table; emulated stand-ins carry a named limitation until each tier's gate).
 
 ## 5. Quality gates in the pipeline
 

@@ -33,6 +33,7 @@
 | D27 | Server access logs (IP, request meta) | S2 | Security operations | Legitimate interest | Log stack, short-lived | R3 |
 | D28 | Optional private notes in recovery/pause flows (F12–F14) | **S3** | The user's own record, reflected back in their journey/report — meaningful-evidence job; never analysed, never analytics (same regime as D13) | Contract | DB encrypted | R2 |
 | D29 | Waitlist "programme I want" free-text suggestions | S2 (stored unlinked from analytics ID; account-linked for reply only if user opts in) | Programme-demand discovery (Q3/post-MVP catalogue decisions) | Consent (the field says what it's for) | DB | R6 (12 months) |
+| D30 | Suitability-screening answers (per-programme, from the engine's `screening_questions[]`) | **S4 where health-adjacent** — physical-programme screens can reveal health conditions (special-category data, UK GDPR Art 9); else S2 | Safety gating and advise-against rules only (engine §suitability); the stored record is the gate outcome + answers needed to honour it; **never analytics, never marketing, never used to tailor offers** | Explicit consent where Art 9 applies, else contract | DB encrypted | R2 |
 
 ## What we deliberately do not collect (the anti-inventory — binding)
 
@@ -40,7 +41,7 @@ Age/DOB beyond D4 · gender · body data at account level (only per-programme op
 
 ## Store-form derivations (Stage 10 fills forms from this table, not memory)
 
-- **Apple App Privacy:** Contact info (D1, D3) · Health & Fitness (D14 *only if the flagship ships measurements*) · User content (D8, D12–D15) · Identifiers (account ID; **no** ad identifiers) · Purchases (D20) · Usage data (D22, consent-labelled) · Diagnostics (D23). "Data not linked to you": D22–D23 (pseudonymous).
+- **Apple App Privacy:** Contact info (D1, D3) · Health & Fitness (D14 *only if the flagship ships measurements*; **D30 if the flagship's screening is health-adjacent**) · User content (D8, D12–D15) · Identifiers (account ID; **no** ad identifiers) · Purchases (D20) · Usage data (D22, consent-labelled) · Diagnostics (D23). "Data not linked to you": D22–D23 (pseudonymous).
 - **Google Data safety:** mirrored, plus the account-deletion web URL (F20), encryption-in-transit yes, deletion-request yes; Health declaration per subscription-requirements G6 if flagship is physical (⚠ Q1).
 
 Any new feature PR that touches data must update this inventory in the same change (CI checklist item) — drift between code and inventory is a release blocker.

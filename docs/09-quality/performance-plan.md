@@ -1,6 +1,6 @@
 # Performance Plan
 
-**Status:** Draft for Gate 6. Budgets, measurement and the enforcement loop. All budgets are **measured on P1, the low-end Android reference** (device-matrix) unless stated — flagship numbers flatter and lie.
+**Status:** Draft for Gate 6. Budgets, measurement and the enforcement loop. All budgets are **measured on P1, the low-end Android reference** (device-matrix) unless stated — flagship numbers flatter and lie. Until a physical P1 exists (first hardware purchase, Gate C/D — device-matrix §Staging), budgets are tracked on emulated throttling profiles with that limitation named in every report; **no NFR-02 sign-off is claimed from emulation**.
 
 ## 1. Budgets (NFR-02 made specific)
 

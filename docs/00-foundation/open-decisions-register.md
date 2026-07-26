@@ -26,6 +26,7 @@
 
 | Ref | Decision | Gate | Current state |
 |-----|----------|------|---------------|
+| Q8 | "3D designs" — literal or aspirational? | Stage 3 (art direction) | Recommendation stands: treat "premium and distinctive" as the requirement, not literal 3D; revisit only if a territory earns it ([assumptions §Q8](assumptions-and-questions.md)); blast radius: motion/performance budget, reduced-motion accessibility, app size — *(restored to this register in the audit response; it had been dropped in consolidation)* |
 | Q10 | Product name | Stage 3 (with trademark screen incl. *The 12 Week Year* proximity) | Naming territories drafted (brand-strategy §11) |
 | — | Brand territory (A Printed Programme / B Instrument / C Long Path) | Gate 3 | Three genuinely distinct proposals ready |
 | — | Signature experiences to prototype | Gate 3 | Recommendation: S1+S4 pair + territory hero + S6 |
