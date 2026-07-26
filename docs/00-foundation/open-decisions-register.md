@@ -2,12 +2,12 @@
 
 **Status:** Consolidated register, 26 July 2026 — every decision awaiting the founder, in dependency order, with its blast radius. Full option analyses live in [assumptions-and-questions.md](assumptions-and-questions.md) and the referenced documents. Nothing below is decided; provisional recommendations exist to be overturned cheaply.
 
-## Tier 1 — decisions that gate Stage 1 (answer these first)
+## Tier 1 — ANSWERED 26 July 2026 (recorded in the decision log)
 
-| Ref | Decision | Provisional recommendation (reversible) | Blast radius if changed |
-|-----|----------|------------------------------------------|-------------------------|
-| Q2 | Which behavioural pattern to over-sample in validation | Pattern A "The Restarter" | Recruitment emphasis only — cheap to change |
-| Q9 | Your constraints: hours/week, year-1 budget envelope, your skills, collaborators, target dates, expected first acquisition channel | *No recommendation possible — facts only you have* | Sizes everything: content model (Q7), launch depth (Q3), roadmap durations, device lab, review budgets |
+| Ref | Decision | Founder's answer |
+|-----|----------|------------------|
+| Q2 ✅ | Validation audience | **D-006: "Age-inclusive Restarters"** — behavioural pattern, all four adult age bands, over-sampled to study the hardest retention/recovery problem; never implied as the product's only market |
+| Q9 ✅ (partial) | Founder constraints | **D-007:** ≥15–20 h/week; solo; third-year SWE student (TypeScript/React/Next.js, AI-assisted dev) with specialist reviews expected for mobile UX, visual design, accessibility, security, programme expertise, store readiness; no fixed date — quality gates take priority; organic acquisition to be test-prepared. **Residual: budget envelope** — see [`05-commercial/year-one-budget-scenarios.md`](../05-commercial/year-one-budget-scenarios.md) and confirm a scenario |
 
 ## Tier 2 — decisions that gate Stage 2 (product architecture)
 
