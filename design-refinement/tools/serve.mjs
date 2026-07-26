@@ -1,11 +1,11 @@
-// Zero-dependency static server for the design lab.
-// Usage: node tools/serve.mjs [port]   (from design-lab/)
+// Zero-dependency static server for the refined prototype.
+// Usage: node tools/serve.mjs [port]   (from design-refinement/)
 import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { extname, join, normalize } from 'node:path';
 
 const ROOT = new URL('..', import.meta.url).pathname;
-const PORT = Number(process.argv[2] || process.env.PORT || 4173);
+const PORT = Number(process.argv[2] || process.env.PORT || 4174);
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -32,4 +32,4 @@ createServer(async (req, res) => {
     res.writeHead(404, { 'content-type': 'text/plain' });
     res.end('not found');
   }
-}).listen(PORT, () => console.log(`design lab → http://localhost:${PORT}/app/index.html`));
+}).listen(PORT, () => console.log(`refined prototype → http://localhost:${PORT}/app/index.html`));

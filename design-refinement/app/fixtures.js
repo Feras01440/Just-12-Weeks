@@ -51,6 +51,25 @@ const SUBSCRIPTION = {
     'The full terms, privacy policy and refund policy live one tap away, in readable English.',
   ],
   renewal: 'The one-off price never renews by itself. It renews only if you begin another programme — and we will ask first.',
+  cancelBeside:
+    'Cancelling is one screen away, any time — Programme & Support → Membership. It takes about as long as subscribing did, and everything you made stays yours.',
+};
+
+// Programme & Support hub (R1) — shared by both worlds.
+const SUPPORT = {
+  title: 'Programme & Support',
+  intro: 'Membership, pace and help — one quiet place. No settings maze.',
+  rows: [
+    { title: 'Membership', note: '£44.99 once · Week One free', go: 'subscription' },
+    { title: 'Change my weekly days', note: 'same programme, a calendar that fits', go: 'long-absence' },
+    { title: 'Pause the programme', note: 'your place and record kept', go: 'programme-pause' },
+    { title: 'Restore purchase', note: 'from this or another device', go: 'restore' },
+  ],
+  help: {
+    title: 'Help',
+    line: 'Write to hello@twelveweeks.example — a person reads it, usually the same day. There is no chatbot to get past.',
+  },
+  termsLine: 'The full terms, privacy policy and refund policy live one tap away, in readable English.',
 };
 
 export const WORLDS = {
@@ -177,9 +196,9 @@ export const WORLDS = {
         line: 'What you built in weeks 1 and 2 is still in your body — strength fades far slower than schedules do. Nothing is reset; nothing needs explaining.',
         capacityPrompt: 'How much do you have today?',
         capacities: [
-          { title: 'Not much — ease me in', detail: 'A ten-minute refresher of Standing Tall. The plan re-opens tomorrow.' },
-          { title: 'A steady session', detail: 'Rejoin at week 3, day 1 — one day rewound, everything else kept.' },
-          { title: 'I’m ready — full session', detail: 'Straight back to today’s supported squat.' },
+          { title: 'Not much — ease me in', detail: 'A ten-minute refresher of Standing Tall. The plan re-opens tomorrow.', does: 'Begin — 10 minutes' },
+          { title: 'A steady session', detail: 'Rejoin at week 3, day 1 — one day rewound, everything else kept.', does: 'Begin — week 3, day 1' },
+          { title: 'I’m ready — full session', detail: 'Straight back to today’s supported squat.', does: 'Begin — 14 minutes, today in full' },
         ],
         reschedule: 'Or, if five days a week was never realistic: rebuild the remaining weeks around three days. Same programme, a calendar that fits.',
       },
@@ -232,6 +251,7 @@ export const WORLDS = {
       done: 'Membership restored. Week 3, day 2 is waiting.',
     },
     subscription: SUBSCRIPTION,
+    support: SUPPORT,
   },
 
   writing: {
@@ -355,9 +375,9 @@ export const WORLDS = {
         line: 'Three weeks away changes the writer, not the pages. 14,200 words exist because of you. They are exactly where you left them, and so is your place.',
         capacityPrompt: 'How much do you have today?',
         capacities: [
-          { title: 'Not much — ease me in', detail: 'Read your last three pages. Write one square-bracket note. That’s the whole task.' },
-          { title: 'A steady session', detail: 'Rejoin at week 4, day 1 — one day rewound, all words kept.' },
-          { title: 'I’m ready — full session', detail: 'Straight into the undeniable scene, 25 minutes.' },
+          { title: 'Not much — ease me in', detail: 'Read your last three pages. Write one square-bracket note. That’s the whole task.', does: 'Begin — a 10-minute read-back' },
+          { title: 'A steady session', detail: 'Rejoin at week 4, day 1 — one day rewound, all words kept.', does: 'Begin — week 4, day 1' },
+          { title: 'I’m ready — full session', detail: 'Straight into the undeniable scene, 25 minutes.', does: 'Begin — 25 minutes, today in full' },
         ],
         reschedule: 'Or, if five days a week was never realistic: re-lay the remaining weeks at three days. The draft finishes later, and finishes.',
       },
@@ -410,6 +430,7 @@ export const WORLDS = {
       done: 'Membership restored. Week 4, day 2 is waiting.',
     },
     subscription: SUBSCRIPTION,
+    support: SUPPORT,
   },
 };
 

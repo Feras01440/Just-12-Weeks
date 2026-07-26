@@ -1,0 +1,26 @@
+[
+  {
+    "world": "strength",
+    "state": "first-launch",
+    "variant": "light",
+    "file": "first-launch--light.png"
+  },
+  {
+    "world": "strength",
+    "state": "first-launch",
+    "variant": "dark",
+    "file": "first-launch--dark.png"
+  },
+  {
+    "world": "writing",
+    "state": "first-launch",
+    "variant": "light",
+    "file": "first-launch--light--writing.png"
+  },
+  {
+    "world": "writing",
+    "state": "first-launch",
+    "variant": "dark",
+    "file": "first-launch--dark--writing.png"
+  }
+]
