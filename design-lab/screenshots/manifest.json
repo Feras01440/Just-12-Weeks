@@ -1,0 +1,1283 @@
+[
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "today",
+    "variant": "light",
+    "file": "a/today--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "today",
+    "variant": "dark",
+    "file": "a/today--dark.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "today",
+    "variant": "scale200",
+    "file": "a/today--scale200.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "today",
+    "variant": "tablet",
+    "file": "a/today--tablet.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "today",
+    "variant": "small",
+    "file": "a/today--small.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "how",
+    "variant": "light",
+    "file": "a/how--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "easier",
+    "variant": "light",
+    "file": "a/easier--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "active",
+    "variant": "light",
+    "file": "a/active--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "active",
+    "variant": "dark",
+    "file": "a/active--dark.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "journey",
+    "variant": "light",
+    "file": "a/journey--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "journey",
+    "variant": "dark",
+    "file": "a/journey--dark.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "missed-one",
+    "variant": "light",
+    "file": "a/missed-one--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "missed-several",
+    "variant": "light",
+    "file": "a/missed-several--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "long-absence",
+    "variant": "light",
+    "file": "a/long-absence--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "long-absence",
+    "variant": "scale200",
+    "file": "a/long-absence--scale200.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "week-transition",
+    "variant": "light",
+    "file": "a/week-transition--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "week-transition",
+    "variant": "dark",
+    "file": "a/week-transition--dark.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "question",
+    "variant": "light",
+    "file": "a/question--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "week-12",
+    "variant": "light",
+    "file": "a/week-12--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "week-12",
+    "variant": "dark",
+    "file": "a/week-12--dark.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "artefact",
+    "variant": "light",
+    "file": "a/artefact--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "subscription",
+    "variant": "light",
+    "file": "a/subscription--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "offline",
+    "variant": "light",
+    "file": "a/offline--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "error",
+    "variant": "light",
+    "file": "a/error--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "loading",
+    "variant": "light",
+    "file": "a/loading--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "empty",
+    "variant": "light",
+    "file": "a/empty--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "expired",
+    "variant": "light",
+    "file": "a/expired--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "restore",
+    "variant": "light",
+    "file": "a/restore--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "first-launch",
+    "variant": "light",
+    "file": "a/first-launch--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "first-launch",
+    "variant": "dark",
+    "file": "a/first-launch--dark.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "explanation",
+    "variant": "light",
+    "file": "a/explanation--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "explore",
+    "variant": "light",
+    "file": "a/explore--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "suitability",
+    "variant": "light",
+    "file": "a/suitability--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "start-journey",
+    "variant": "light",
+    "file": "a/start-journey--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "begin",
+    "variant": "light",
+    "file": "a/begin--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "paused",
+    "variant": "light",
+    "file": "a/paused--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "complete",
+    "variant": "light",
+    "file": "a/complete--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "acknowledge",
+    "variant": "light",
+    "file": "a/acknowledge--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "programme-pause",
+    "variant": "light",
+    "file": "a/programme-pause--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "handover",
+    "variant": "light",
+    "file": "a/handover--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "specimen",
+    "variant": "light",
+    "file": "a/specimen--light.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "specimen",
+    "variant": "scale200",
+    "file": "a/specimen--scale200.png"
+  },
+  {
+    "dir": "a",
+    "world": "strength",
+    "state": "journey",
+    "variant": "reduced",
+    "file": "a/journey--reduced.png"
+  },
+  {
+    "dir": "a",
+    "world": "writing",
+    "state": "today",
+    "variant": "light",
+    "file": "a/today--light--writing.png"
+  },
+  {
+    "dir": "a",
+    "world": "writing",
+    "state": "today",
+    "variant": "dark",
+    "file": "a/today--dark--writing.png"
+  },
+  {
+    "dir": "a",
+    "world": "writing",
+    "state": "today",
+    "variant": "scale200",
+    "file": "a/today--scale200--writing.png"
+  },
+  {
+    "dir": "a",
+    "world": "writing",
+    "state": "today",
+    "variant": "tablet",
+    "file": "a/today--tablet--writing.png"
+  },
+  {
+    "dir": "a",
+    "world": "writing",
+    "state": "today",
+    "variant": "small",
+    "file": "a/today--small--writing.png"
+  },
+  {
+    "dir": "a",
+    "world": "writing",
+    "state": "how",
+    "variant": "light",
+    "file": "a/how--light--writing.png"
+  },
+  {
+    "dir": "a",
+    "world": "writing",
+    "state": "active",
+    "variant": "light",
+    "file": "a/active--light--writing.png"
+  },
+  {
+    "dir": "a",
+    "world": "writing",
+    "state": "active",
+    "variant": "dark",
+    "file": "a/active--dark--writing.png"
+  },
+  {
+    "dir": "a",
+    "world": "writing",
+    "state": "journey",
+    "variant": "light",
+    "file": "a/journey--light--writing.png"
+  },
+  {
+    "dir": "a",
+    "world": "writing",
+    "state": "journey",
+    "variant": "dark",
+    "file": "a/journey--dark--writing.png"
+  },
+  {
+    "dir": "a",
+    "world": "writing",
+    "state": "long-absence",
+    "variant": "light",
+    "file": "a/long-absence--light--writing.png"
+  },
+  {
+    "dir": "a",
+    "world": "writing",
+    "state": "long-absence",
+    "variant": "scale200",
+    "file": "a/long-absence--scale200--writing.png"
+  },
+  {
+    "dir": "a",
+    "world": "writing",
+    "state": "week-12",
+    "variant": "light",
+    "file": "a/week-12--light--writing.png"
+  },
+  {
+    "dir": "a",
+    "world": "writing",
+    "state": "week-12",
+    "variant": "dark",
+    "file": "a/week-12--dark--writing.png"
+  },
+  {
+    "dir": "a",
+    "world": "writing",
+    "state": "artefact",
+    "variant": "light",
+    "file": "a/artefact--light--writing.png"
+  },
+  {
+    "dir": "a",
+    "world": "writing",
+    "state": "specimen",
+    "variant": "light",
+    "file": "a/specimen--light--writing.png"
+  },
+  {
+    "dir": "a",
+    "world": "writing",
+    "state": "specimen",
+    "variant": "scale200",
+    "file": "a/specimen--scale200--writing.png"
+  },
+  {
+    "dir": "a",
+    "world": "writing",
+    "state": "journey",
+    "variant": "reduced",
+    "file": "a/journey--reduced--writing.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "today",
+    "variant": "light",
+    "file": "b/today--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "today",
+    "variant": "dark",
+    "file": "b/today--dark.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "today",
+    "variant": "scale200",
+    "file": "b/today--scale200.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "today",
+    "variant": "tablet",
+    "file": "b/today--tablet.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "today",
+    "variant": "small",
+    "file": "b/today--small.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "how",
+    "variant": "light",
+    "file": "b/how--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "easier",
+    "variant": "light",
+    "file": "b/easier--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "active",
+    "variant": "light",
+    "file": "b/active--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "active",
+    "variant": "dark",
+    "file": "b/active--dark.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "journey",
+    "variant": "light",
+    "file": "b/journey--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "journey",
+    "variant": "dark",
+    "file": "b/journey--dark.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "missed-one",
+    "variant": "light",
+    "file": "b/missed-one--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "missed-several",
+    "variant": "light",
+    "file": "b/missed-several--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "long-absence",
+    "variant": "light",
+    "file": "b/long-absence--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "long-absence",
+    "variant": "scale200",
+    "file": "b/long-absence--scale200.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "week-transition",
+    "variant": "light",
+    "file": "b/week-transition--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "week-transition",
+    "variant": "dark",
+    "file": "b/week-transition--dark.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "question",
+    "variant": "light",
+    "file": "b/question--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "week-12",
+    "variant": "light",
+    "file": "b/week-12--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "week-12",
+    "variant": "dark",
+    "file": "b/week-12--dark.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "artefact",
+    "variant": "light",
+    "file": "b/artefact--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "subscription",
+    "variant": "light",
+    "file": "b/subscription--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "offline",
+    "variant": "light",
+    "file": "b/offline--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "error",
+    "variant": "light",
+    "file": "b/error--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "loading",
+    "variant": "light",
+    "file": "b/loading--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "empty",
+    "variant": "light",
+    "file": "b/empty--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "expired",
+    "variant": "light",
+    "file": "b/expired--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "restore",
+    "variant": "light",
+    "file": "b/restore--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "first-launch",
+    "variant": "light",
+    "file": "b/first-launch--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "first-launch",
+    "variant": "dark",
+    "file": "b/first-launch--dark.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "explanation",
+    "variant": "light",
+    "file": "b/explanation--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "explore",
+    "variant": "light",
+    "file": "b/explore--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "suitability",
+    "variant": "light",
+    "file": "b/suitability--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "start-journey",
+    "variant": "light",
+    "file": "b/start-journey--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "begin",
+    "variant": "light",
+    "file": "b/begin--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "paused",
+    "variant": "light",
+    "file": "b/paused--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "complete",
+    "variant": "light",
+    "file": "b/complete--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "acknowledge",
+    "variant": "light",
+    "file": "b/acknowledge--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "programme-pause",
+    "variant": "light",
+    "file": "b/programme-pause--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "handover",
+    "variant": "light",
+    "file": "b/handover--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "specimen",
+    "variant": "light",
+    "file": "b/specimen--light.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "specimen",
+    "variant": "scale200",
+    "file": "b/specimen--scale200.png"
+  },
+  {
+    "dir": "b",
+    "world": "strength",
+    "state": "journey",
+    "variant": "reduced",
+    "file": "b/journey--reduced.png"
+  },
+  {
+    "dir": "b",
+    "world": "writing",
+    "state": "today",
+    "variant": "light",
+    "file": "b/today--light--writing.png"
+  },
+  {
+    "dir": "b",
+    "world": "writing",
+    "state": "today",
+    "variant": "dark",
+    "file": "b/today--dark--writing.png"
+  },
+  {
+    "dir": "b",
+    "world": "writing",
+    "state": "today",
+    "variant": "scale200",
+    "file": "b/today--scale200--writing.png"
+  },
+  {
+    "dir": "b",
+    "world": "writing",
+    "state": "today",
+    "variant": "tablet",
+    "file": "b/today--tablet--writing.png"
+  },
+  {
+    "dir": "b",
+    "world": "writing",
+    "state": "today",
+    "variant": "small",
+    "file": "b/today--small--writing.png"
+  },
+  {
+    "dir": "b",
+    "world": "writing",
+    "state": "how",
+    "variant": "light",
+    "file": "b/how--light--writing.png"
+  },
+  {
+    "dir": "b",
+    "world": "writing",
+    "state": "active",
+    "variant": "light",
+    "file": "b/active--light--writing.png"
+  },
+  {
+    "dir": "b",
+    "world": "writing",
+    "state": "active",
+    "variant": "dark",
+    "file": "b/active--dark--writing.png"
+  },
+  {
+    "dir": "b",
+    "world": "writing",
+    "state": "journey",
+    "variant": "light",
+    "file": "b/journey--light--writing.png"
+  },
+  {
+    "dir": "b",
+    "world": "writing",
+    "state": "journey",
+    "variant": "dark",
+    "file": "b/journey--dark--writing.png"
+  },
+  {
+    "dir": "b",
+    "world": "writing",
+    "state": "long-absence",
+    "variant": "light",
+    "file": "b/long-absence--light--writing.png"
+  },
+  {
+    "dir": "b",
+    "world": "writing",
+    "state": "long-absence",
+    "variant": "scale200",
+    "file": "b/long-absence--scale200--writing.png"
+  },
+  {
+    "dir": "b",
+    "world": "writing",
+    "state": "week-12",
+    "variant": "light",
+    "file": "b/week-12--light--writing.png"
+  },
+  {
+    "dir": "b",
+    "world": "writing",
+    "state": "week-12",
+    "variant": "dark",
+    "file": "b/week-12--dark--writing.png"
+  },
+  {
+    "dir": "b",
+    "world": "writing",
+    "state": "artefact",
+    "variant": "light",
+    "file": "b/artefact--light--writing.png"
+  },
+  {
+    "dir": "b",
+    "world": "writing",
+    "state": "specimen",
+    "variant": "light",
+    "file": "b/specimen--light--writing.png"
+  },
+  {
+    "dir": "b",
+    "world": "writing",
+    "state": "specimen",
+    "variant": "scale200",
+    "file": "b/specimen--scale200--writing.png"
+  },
+  {
+    "dir": "b",
+    "world": "writing",
+    "state": "journey",
+    "variant": "reduced",
+    "file": "b/journey--reduced--writing.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "today",
+    "variant": "light",
+    "file": "c/today--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "today",
+    "variant": "dark",
+    "file": "c/today--dark.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "today",
+    "variant": "scale200",
+    "file": "c/today--scale200.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "today",
+    "variant": "tablet",
+    "file": "c/today--tablet.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "today",
+    "variant": "small",
+    "file": "c/today--small.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "how",
+    "variant": "light",
+    "file": "c/how--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "easier",
+    "variant": "light",
+    "file": "c/easier--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "active",
+    "variant": "light",
+    "file": "c/active--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "active",
+    "variant": "dark",
+    "file": "c/active--dark.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "journey",
+    "variant": "light",
+    "file": "c/journey--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "journey",
+    "variant": "dark",
+    "file": "c/journey--dark.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "missed-one",
+    "variant": "light",
+    "file": "c/missed-one--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "missed-several",
+    "variant": "light",
+    "file": "c/missed-several--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "long-absence",
+    "variant": "light",
+    "file": "c/long-absence--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "long-absence",
+    "variant": "scale200",
+    "file": "c/long-absence--scale200.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "week-transition",
+    "variant": "light",
+    "file": "c/week-transition--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "week-transition",
+    "variant": "dark",
+    "file": "c/week-transition--dark.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "question",
+    "variant": "light",
+    "file": "c/question--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "week-12",
+    "variant": "light",
+    "file": "c/week-12--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "week-12",
+    "variant": "dark",
+    "file": "c/week-12--dark.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "artefact",
+    "variant": "light",
+    "file": "c/artefact--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "subscription",
+    "variant": "light",
+    "file": "c/subscription--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "offline",
+    "variant": "light",
+    "file": "c/offline--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "error",
+    "variant": "light",
+    "file": "c/error--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "loading",
+    "variant": "light",
+    "file": "c/loading--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "empty",
+    "variant": "light",
+    "file": "c/empty--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "expired",
+    "variant": "light",
+    "file": "c/expired--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "restore",
+    "variant": "light",
+    "file": "c/restore--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "first-launch",
+    "variant": "light",
+    "file": "c/first-launch--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "first-launch",
+    "variant": "dark",
+    "file": "c/first-launch--dark.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "explanation",
+    "variant": "light",
+    "file": "c/explanation--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "explore",
+    "variant": "light",
+    "file": "c/explore--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "suitability",
+    "variant": "light",
+    "file": "c/suitability--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "start-journey",
+    "variant": "light",
+    "file": "c/start-journey--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "begin",
+    "variant": "light",
+    "file": "c/begin--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "paused",
+    "variant": "light",
+    "file": "c/paused--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "complete",
+    "variant": "light",
+    "file": "c/complete--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "acknowledge",
+    "variant": "light",
+    "file": "c/acknowledge--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "programme-pause",
+    "variant": "light",
+    "file": "c/programme-pause--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "handover",
+    "variant": "light",
+    "file": "c/handover--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "specimen",
+    "variant": "light",
+    "file": "c/specimen--light.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "specimen",
+    "variant": "scale200",
+    "file": "c/specimen--scale200.png"
+  },
+  {
+    "dir": "c",
+    "world": "strength",
+    "state": "journey",
+    "variant": "reduced",
+    "file": "c/journey--reduced.png"
+  },
+  {
+    "dir": "c",
+    "world": "writing",
+    "state": "today",
+    "variant": "light",
+    "file": "c/today--light--writing.png"
+  },
+  {
+    "dir": "c",
+    "world": "writing",
+    "state": "today",
+    "variant": "dark",
+    "file": "c/today--dark--writing.png"
+  },
+  {
+    "dir": "c",
+    "world": "writing",
+    "state": "today",
+    "variant": "scale200",
+    "file": "c/today--scale200--writing.png"
+  },
+  {
+    "dir": "c",
+    "world": "writing",
+    "state": "today",
+    "variant": "tablet",
+    "file": "c/today--tablet--writing.png"
+  },
+  {
+    "dir": "c",
+    "world": "writing",
+    "state": "today",
+    "variant": "small",
+    "file": "c/today--small--writing.png"
+  },
+  {
+    "dir": "c",
+    "world": "writing",
+    "state": "how",
+    "variant": "light",
+    "file": "c/how--light--writing.png"
+  },
+  {
+    "dir": "c",
+    "world": "writing",
+    "state": "active",
+    "variant": "light",
+    "file": "c/active--light--writing.png"
+  },
+  {
+    "dir": "c",
+    "world": "writing",
+    "state": "active",
+    "variant": "dark",
+    "file": "c/active--dark--writing.png"
+  },
+  {
+    "dir": "c",
+    "world": "writing",
+    "state": "journey",
+    "variant": "light",
+    "file": "c/journey--light--writing.png"
+  },
+  {
+    "dir": "c",
+    "world": "writing",
+    "state": "journey",
+    "variant": "dark",
+    "file": "c/journey--dark--writing.png"
+  },
+  {
+    "dir": "c",
+    "world": "writing",
+    "state": "long-absence",
+    "variant": "light",
+    "file": "c/long-absence--light--writing.png"
+  },
+  {
+    "dir": "c",
+    "world": "writing",
+    "state": "long-absence",
+    "variant": "scale200",
+    "file": "c/long-absence--scale200--writing.png"
+  },
+  {
+    "dir": "c",
+    "world": "writing",
+    "state": "week-12",
+    "variant": "light",
+    "file": "c/week-12--light--writing.png"
+  },
+  {
+    "dir": "c",
+    "world": "writing",
+    "state": "week-12",
+    "variant": "dark",
+    "file": "c/week-12--dark--writing.png"
+  },
+  {
+    "dir": "c",
+    "world": "writing",
+    "state": "artefact",
+    "variant": "light",
+    "file": "c/artefact--light--writing.png"
+  },
+  {
+    "dir": "c",
+    "world": "writing",
+    "state": "specimen",
+    "variant": "light",
+    "file": "c/specimen--light--writing.png"
+  },
+  {
+    "dir": "c",
+    "world": "writing",
+    "state": "specimen",
+    "variant": "scale200",
+    "file": "c/specimen--scale200--writing.png"
+  },
+  {
+    "dir": "c",
+    "world": "writing",
+    "state": "journey",
+    "variant": "reduced",
+    "file": "c/journey--reduced--writing.png"
+  }
+]
