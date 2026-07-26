@@ -158,6 +158,9 @@ function stageSlot(dirId, caption) {
   stage.style.setProperty('--ts', route.scale === '200' ? '2' : '1');
   const screen = document.createElement('div');
   screen.className = 'screen';
+  // the screen is a scroll container — it must be keyboard-reachable
+  screen.setAttribute('tabindex', '0');
+  screen.setAttribute('aria-label', 'Prototype screen');
   stage.appendChild(screen);
   frame.appendChild(stage);
   slot.appendChild(cap);
@@ -218,11 +221,6 @@ function renderStage() {
   if (out.mount) out.mount(screen, ctx);
   mountedScreens.push(screen);
 
-  // Move focus to the screen container for keyboard users on state change,
-  // without stealing focus during initial load or in chromeless screenshots.
-  if (route.chrome === 'on' && renderStage._navigated) {
-    screen.setAttribute('tabindex', '-1');
-  }
   renderStage._navigated = true;
 }
 
