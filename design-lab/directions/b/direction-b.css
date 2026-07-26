@@ -2,9 +2,9 @@
    DIRECTION B — MERIDIAN
    The field instrument. A bone-faced, amber-armed precision tool for a
    twelve-week undertaking: engraved wide labels (Archivo wdth axis),
-   IBM Plex Mono for every readout, hairline graduations, one warm
-   control. Never a dashboard; never neon. The instrument re-zeros —
-   it does not judge.
+   IBM Plex Mono reserved for numbers, readings and log lines, hairline
+   graduations, one warm control. Never a dashboard; never a tracker.
+   The instrument holds your place — it does not judge.
    ———————————————————————————————————————————————————————————————— */
 
 .stage[data-dir="b"] {
@@ -20,6 +20,7 @@
   --mb-amber-text: #8a5300;  /* amber as text on light */
   --mb-warn: #8c3b24;
   --mb-done: #2f6b58;
+  --mb-focus: #8a5300;       /* focus ring — passes 3:1 on the page */
   --mb-edge: rgba(255, 255, 255, 0.65);
   --mb-shadow-in: inset 0 1.5px 3px rgba(35, 40, 46, 0.07);
   --mb-arm-lip: rgba(0, 0, 0, 0.2);
@@ -54,6 +55,7 @@
   --mb-amber-text: #e9a13b;
   --mb-warn: #d98b75;
   --mb-done: #7fb8a4;
+  --mb-focus: #e9a13b;
   --mb-edge: rgba(255, 255, 255, 0.05);
   --mb-shadow-in: inset 0 1.5px 4px rgba(0, 0, 0, 0.45);
   --mb-arm-lip: rgba(0, 0, 0, 0.4);
@@ -66,7 +68,6 @@
   max-width: 640px;
   margin: 0 auto;
   padding: 16px 22px 40px;
-  container-type: inline-size;
   animation: mb-in var(--mb-sweep) var(--mb-ease);
 }
 .stage[data-dir="b"].vp-tablet .mb { padding: 34px 64px 60px; }
@@ -95,7 +96,7 @@
   color: var(--mb-ink2);
 }
 
-/* engraved wide labels — the direction's voice */
+/* engraved wide labels — the direction's voice (Archivo, never mono) */
 .stage[data-dir="b"] .mb-eng,
 .stage[data-dir="b"] .mb-kicker,
 .stage[data-dir="b"] .mb-h2 {
@@ -111,6 +112,7 @@
 .stage[data-dir="b"] .mb-kicker { margin: 0 0 10px; }
 .stage[data-dir="b"] .mb-kicker-amber { color: var(--mb-amber-text); }
 .stage[data-dir="b"] .mb-kicker-done { color: var(--mb-done); }
+.stage[data-dir="b"] .mb-kicker-warn { color: var(--mb-warn); }
 .stage[data-dir="b"] .mb-h2 {
   color: var(--mb-ink);
   margin: 26px 0 12px;
@@ -133,19 +135,19 @@
   text-transform: uppercase;
   letter-spacing: 0.15em;
   line-height: 1.16;
-  font-size: min(calc(var(--ts) * 2.375rem), 12.5cqw);
+  font-size: calc(var(--ts) * 2.375rem);
   text-indent: 0.15em; /* optically recentre letterspaced caps */
 }
 
-/* mono readouts */
+/* mono readouts — numbers, readings and log lines only */
 .stage[data-dir="b"] .mb-read,
 .stage[data-dir="b"] .mb-foot-status,
 .stage[data-dir="b"] .mb-head-right,
-.stage[data-dir="b"] .mb-row-note,
 .stage[data-dir="b"] .mb-card-spec,
 .stage[data-dir="b"] .mb-entry-line,
 .stage[data-dir="b"] .mb-vnum,
 .stage[data-dir="b"] .mb-seg-val,
+.stage[data-dir="b"] .mb-plan-val,
 .stage[data-dir="b"] .mb-rec-val,
 .stage[data-dir="b"] .mb-term-n,
 .stage[data-dir="b"] .mb-idx-n,
@@ -275,7 +277,7 @@
   border-style: dashed;
   box-shadow: none;
 }
-.stage[data-dir="b"] .mb-face.is-standby::before { background: var(--mb-tick2); }
+.stage[data-dir="b"] .mb-face.is-standby::before { background: var(--mb-ink2); }
 .stage[data-dir="b"] .mb-standby-line {
   color: var(--mb-ink2);
   font-size: var(--mb-fs-meta) !important;
@@ -286,12 +288,12 @@
 
 .stage[data-dir="b"] button { font-family: inherit; }
 .stage[data-dir="b"] button:focus-visible {
-  outline: 2.5px solid var(--mb-amber);
+  outline: 2.5px solid var(--mb-focus);
   outline-offset: 3px;
   border-radius: 3px;
 }
 
-/* the ARM bar */
+/* the primary bar */
 .stage[data-dir="b"] .mb-arm {
   display: flex;
   align-items: center;
@@ -322,7 +324,7 @@
   font-variant-numeric: tabular-nums;
   font-weight: 600;
   font-size: calc(var(--ts) * 0.9375rem);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   white-space: nowrap;
 }
 
@@ -350,16 +352,26 @@
   line-height: 1.4;
 }
 .stage[data-dir="b"] .mb-row:hover { background: var(--mb-face); }
+.stage[data-dir="b"] .mb-row-label { flex: 1; }
 .stage[data-dir="b"] .mb-row-note {
+  font-stretch: 112%;
+  font-weight: 650;
   font-size: calc(var(--ts) * 0.65625rem);
-  font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--mb-ink2);
   white-space: nowrap;
   flex: none;
 }
-.stage[data-dir="b"] .mb-row-note.is-full { color: var(--mb-amber-text); font-weight: 600; }
+.stage[data-dir="b"] .mb-row-note.is-full { color: var(--mb-amber-text); }
+.stage[data-dir="b"] .mb-row-chev {
+  flex: none;
+  color: var(--mb-ink2);
+  font-size: calc(var(--ts) * 1.3125rem);
+  font-weight: 400;
+  line-height: 1;
+  transform: translateY(calc(var(--ts) * -0.05rem));
+}
 .stage[data-dir="b"] .mb-row.is-back { color: var(--mb-ink2); border-bottom: 0; min-height: 46px; }
 
 /* option plates */
@@ -380,10 +392,6 @@
   transition: border-color var(--mb-press) linear;
 }
 .stage[data-dir="b"] .mb-option:hover { border-color: var(--mb-ink2); }
-.stage[data-dir="b"] .mb-option[aria-pressed="true"] {
-  border-color: var(--mb-amber);
-  box-shadow: inset 0 0 0 1.5px var(--mb-amber);
-}
 .stage[data-dir="b"] .mb-option.is-solo { margin-top: 12px; }
 .stage[data-dir="b"] .mb-option-title {
   display: block;
@@ -409,7 +417,7 @@
   margin-bottom: 5px;
 }
 
-/* prep checklist — square toggles */
+/* prep checklist — square toggles (a real checklist, by design) */
 .stage[data-dir="b"] .mb-checks { border-top: 1px solid var(--mb-tick); margin-top: 6px; }
 .stage[data-dir="b"] .mb-check {
   display: flex;
@@ -433,7 +441,7 @@
   width: calc(var(--ts) * 1.125rem);
   height: calc(var(--ts) * 1.125rem);
   margin-top: calc(var(--ts) * 0.15rem);
-  border: 2px solid var(--mb-tick2);
+  border: 2px solid var(--mb-ink2);
   border-radius: 2px;
   position: relative;
   transition: background var(--mb-detent) linear, border-color var(--mb-detent) linear;
@@ -536,7 +544,7 @@
 
 .stage[data-dir="b"] .mb-sys {
   border: 1px solid var(--mb-tick2);
-  border-left: 4px solid var(--mb-tick2);
+  border-left: 4px solid var(--mb-ink2);
   border-radius: 4px;
   background: var(--mb-face);
   padding: 12px 14px;
@@ -556,6 +564,7 @@
   font-size: var(--mb-fs-meta) !important;
   line-height: 1.55 !important;
   margin: 0 !important;
+  min-height: calc(var(--ts) * 1.1rem); /* holds shape while live text lands */
   color: var(--mb-ink);
 }
 .stage[data-dir="b"] .mb-sys.is-warn { border-left-color: var(--mb-warn); }
@@ -616,7 +625,7 @@
   transform: translateY(calc(var(--ts) * -0.09rem));
 }
 
-/* ————— foot: status line + traverse rail ————— */
+/* ————— foot: status line + rail ————— */
 
 .stage[data-dir="b"] .mb-foot {
   display: block;
@@ -640,7 +649,6 @@
   fill: var(--mb-ink2);
 }
 .stage[data-dir="b"] .mb-rail text.is-cur { fill: var(--mb-ink); font-weight: 600; }
-.stage[data-dir="b"] .mb-rail text.is-fut { fill: var(--mb-tick2); }
 .stage[data-dir="b"] .mb-rail text.is-comp { fill: var(--mb-done); }
 .stage[data-dir="b"] .r-base { fill: var(--mb-tick); }
 .stage[data-dir="b"] .rt-min { fill: var(--mb-tick); }
@@ -707,7 +715,7 @@
   left: 0;
   width: 14px;
 }
-.stage[data-dir="b"] .mb-vbody { padding: 0 0 20px 8px; min-width: 0; }
+.stage[data-dir="b"] .mb-vbody { padding: 0 0 18px 8px; min-width: 0; }
 .stage[data-dir="b"] .mb-vhead {
   display: flex;
   flex-wrap: wrap;
@@ -725,24 +733,18 @@
   font-size: calc(var(--ts) * 1.0625rem);
   letter-spacing: -0.01em;
 }
-.stage[data-dir="b"] .mb-vweek.is-sealed .mb-vtitle,
 .stage[data-dir="b"] .mb-vweek.is-next .mb-vtitle { font-weight: 480; }
-.stage[data-dir="b"] .mb-vweek.is-sealed .mb-vtitle {
-  color: var(--mb-tick2);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  font-size: var(--mb-fs-meta);
+.stage[data-dir="b"] .mb-vweek.is-later .mb-vtitle {
+  color: var(--mb-ink2);
+  font-weight: 450;
+  font-size: var(--mb-fs-body);
 }
-.stage[data-dir="b"] .mb-vweek.is-sealed .mb-vbody { padding-bottom: 14px; }
+.stage[data-dir="b"] .mb-vweek.is-later .mb-vbody { padding-bottom: 14px; }
 .stage[data-dir="b"] .mb-vnote {
-  font-stretch: 112%;
-  font-weight: 600;
-  font-size: calc(var(--ts) * 0.625rem);
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
+  font-size: var(--mb-fs-meta);
   color: var(--mb-ink2);
 }
-.stage[data-dir="b"] .mb-vweek.is-cur .mb-vnote { color: var(--mb-amber-text); }
+.stage[data-dir="b"] .mb-vweek.is-cur .mb-vnote { color: var(--mb-amber-text); font-weight: 600; }
 .stage[data-dir="b"] .mb-vopen {
   display: block;
   margin-top: 4px;
@@ -750,7 +752,7 @@
   color: var(--mb-ink2);
 }
 
-/* recorded log entries */
+/* current-week day entries */
 .stage[data-dir="b"] .mb-vlog { list-style: none; margin: 9px 0 0; padding: 0; }
 .stage[data-dir="b"] .mb-log {
   display: flex;
@@ -770,24 +772,37 @@
   height: calc(var(--ts) * 0.4375rem);
   background: var(--mb-ink);
   transform: translateY(calc(var(--ts) * -0.05rem));
+  position: relative;
 }
 .stage[data-dir="b"] .mb-log.d-missed { color: var(--mb-ink2); }
 .stage[data-dir="b"] .mb-log.d-missed .mb-log-tick {
   background: none;
-  border: 1.5px solid var(--mb-tick2);
+  border: 1.5px solid var(--mb-ink2);
 }
 .stage[data-dir="b"] .mb-log.d-rest { color: var(--mb-ink2); }
 .stage[data-dir="b"] .mb-log.d-rest .mb-log-tick {
-  background: var(--mb-tick2);
+  background: var(--mb-ink2);
   height: calc(var(--ts) * 0.15rem);
 }
+/* mended: verdigris tick with a stitch notch — shape, not colour alone
+   (the row text also says MENDED) */
 .stage[data-dir="b"] .mb-log.d-mended .mb-log-tick { background: var(--mb-done); }
+.stage[data-dir="b"] .mb-log.d-mended .mb-log-tick::after {
+  content: '';
+  position: absolute;
+  left: -3px;
+  right: -3px;
+  top: 50%;
+  height: 1.5px;
+  margin-top: -0.75px;
+  background: var(--mb-bg);
+}
 .stage[data-dir="b"] .mb-log.d-today { color: var(--mb-amber-text); font-weight: 600; }
 .stage[data-dir="b"] .mb-log.d-today .mb-log-tick { background: var(--mb-amber); }
-.stage[data-dir="b"] .mb-log.d-future { color: var(--mb-tick2); }
+.stage[data-dir="b"] .mb-log.d-future { color: var(--mb-ink2); }
 .stage[data-dir="b"] .mb-log.d-future .mb-log-tick {
   background: none;
-  border: 1px solid var(--mb-tick);
+  border: 1px solid var(--mb-tick2);
 }
 
 /* ————— session bezel ————— */
@@ -848,7 +863,7 @@
 }
 @keyframes mb-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
 .stage[data-dir="b"] .mb-bezel-digits {
-  font-size: min(calc(var(--ts) * 2.875rem), 15cqw);
+  font-size: calc(var(--ts) * 2.875rem);
   font-weight: 500;
   letter-spacing: 0.02em;
   line-height: 1;
@@ -879,9 +894,8 @@
   font-size: var(--mb-fs-meta) !important;
 }
 
-/* segment list */
+/* segment list (live session) */
 .stage[data-dir="b"] .mb-segs { list-style: none; margin: 10px 0 0; padding: 0; }
-.stage[data-dir="b"] .mb-face .mb-segs { margin: 2px 0; }
 .stage[data-dir="b"] .mb-seg {
   display: flex;
   align-items: baseline;
@@ -890,12 +904,11 @@
   border-bottom: 1px solid var(--mb-tick);
   font-size: var(--mb-fs-body);
 }
-.stage[data-dir="b"] .mb-face .mb-seg:last-child { border-bottom: 0; }
 .stage[data-dir="b"] .mb-seg-tick {
   flex: none;
   width: calc(var(--ts) * 0.5rem);
   height: calc(var(--ts) * 0.5rem);
-  border: 1.5px solid var(--mb-tick2);
+  border: 1.5px solid var(--mb-ink2);
   align-self: center;
 }
 .stage[data-dir="b"] .mb-seg.is-done .mb-seg-tick { background: var(--mb-done); border-color: var(--mb-done); }
@@ -912,13 +925,36 @@
 }
 .stage[data-dir="b"] .mb-seg.is-done .mb-seg-val { color: var(--mb-done); font-weight: 600; }
 
+/* session plan (begin) — hairline leaders, deliberately not a checklist */
+.stage[data-dir="b"] .mb-plan { list-style: none; margin: 2px 0; padding: 0; }
+.stage[data-dir="b"] .mb-plan-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: var(--mb-fs-body);
+}
+.stage[data-dir="b"] .mb-plan-lead {
+  flex: 1;
+  min-width: 24px;
+  border-bottom: 1px solid var(--mb-tick);
+  transform: translateY(calc(var(--ts) * -0.25rem));
+}
+.stage[data-dir="b"] .mb-plan-val {
+  font-size: var(--mb-fs-meta);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--mb-ink2);
+  white-space: nowrap;
+}
+
 /* ————— recorded stamp (complete / acknowledge) ————— */
 
 .stage[data-dir="b"] .mb-entryplate {
   margin: 18px 0;
   padding: 16px 18px;
 }
-.stage[data-dir="b"] .mb-entryplate.is-quiet::before { background: var(--mb-tick2); }
+.stage[data-dir="b"] .mb-entryplate.is-quiet::before { background: var(--mb-ink2); }
 .stage[data-dir="b"] .mb-entry-line {
   display: block;
   font-size: calc(var(--ts) * 0.8125rem);
@@ -932,9 +968,9 @@
   display: inline-block;
   margin-top: 12px;
   padding: 6px 13px;
-  border: 2px dashed var(--mb-tick2); /* the empty slot, awaiting the press */
+  border: 2px dashed var(--mb-ink2); /* the empty slot, awaiting the press */
   border-radius: 3px;
-  color: var(--mb-tick2);
+  color: var(--mb-ink2);
   font-stretch: 115%;
   font-weight: 700;
   font-size: calc(var(--ts) * 0.6875rem);
@@ -962,23 +998,18 @@
   text-align: center;
   padding: 40px 0 6px;
 }
-.stage[data-dir="b"] .mb-adv-meta {
-  text-align: center;
-  margin-top: 26px;
-  letter-spacing: 0.12em;
-}
 .stage[data-dir="b"] .mb-adv-nums {
   display: flex;
   align-items: baseline;
   justify-content: center;
   gap: 20px;
-  font-size: min(calc(var(--ts) * 3rem), 17cqw);
+  font-size: calc(var(--ts) * 3rem);
   font-weight: 600;
   letter-spacing: 0.02em;
   margin: 10px 0 22px;
   line-height: 1;
 }
-.stage[data-dir="b"] .mb-adv-nums .is-prev { color: var(--mb-tick2); }
+.stage[data-dir="b"] .mb-adv-nums .is-prev { color: var(--mb-ink2); }
 .stage[data-dir="b"] .mb-adv-arrow { color: var(--mb-amber-text); font-weight: 400; }
 .stage[data-dir="b"] .mb-adv-nums.is-done { color: var(--mb-done); }
 .stage[data-dir="b"] .mb-adv-nums.is-done i { font-style: normal; color: var(--mb-ink2); }
@@ -988,8 +1019,13 @@
   margin: 0 auto 10px !important;
 }
 .stage[data-dir="b"] .mb-advance .mb-title { text-align: center; }
+.stage[data-dir="b"] .mb-adv-meta {
+  text-align: center;
+  margin-top: 26px;
+  letter-spacing: 0.12em;
+}
 
-/* ————— capacity dial (long absence) ————— */
+/* ————— capacity dial / choice dial ————— */
 
 .stage[data-dir="b"] .mb-dialwrap { margin: 20px 0 8px; }
 .stage[data-dir="b"] .mb-dial-label { display: block; margin-bottom: 10px; }
@@ -1005,7 +1041,7 @@
   gap: 14px;
   align-items: flex-start;
   width: 100%;
-  min-height: 64px;
+  min-height: 60px;
   padding: 15px 16px;
   background: none;
   border: 0;
@@ -1022,13 +1058,13 @@
   width: calc(var(--ts) * 1.375rem);
   height: calc(var(--ts) * 1.375rem);
   margin-top: 2px;
-  border: 2.5px solid var(--mb-tick2);
+  border: 2.5px solid var(--mb-ink2);
   border-radius: 50%;
   position: relative;
   transition: border-color var(--mb-detent) linear;
 }
-.stage[data-dir="b"] .mb-dial-opt[aria-pressed="true"] .mb-dial-socket { border-color: var(--mb-amber); }
-.stage[data-dir="b"] .mb-dial-opt[aria-pressed="true"] .mb-dial-socket::after {
+.stage[data-dir="b"] .mb-dial-opt.is-chosen .mb-dial-socket { border-color: var(--mb-amber); }
+.stage[data-dir="b"] .mb-dial-opt.is-chosen .mb-dial-socket::after {
   content: '';
   position: absolute;
   inset: 20%;
@@ -1103,7 +1139,9 @@
   color: var(--mb-ink2);
 }
 .stage[data-dir="b"] .mb-card .mb-option { margin: 12px 0 0; background: var(--mb-bg); }
-.stage[data-dir="b"] .mb-card.is-sealed { opacity: 0.66; box-shadow: none; }
+/* sealed card: dashed plate, no dimming — text keeps full contrast */
+.stage[data-dir="b"] .mb-card.is-sealed { box-shadow: none; border-style: dashed; border-color: var(--mb-tick2); }
+.stage[data-dir="b"] .mb-card.is-sealed .mb-card-title { color: var(--mb-ink2); }
 
 /* ————— price (subscription) ————— */
 
@@ -1115,7 +1153,7 @@
   margin: 14px 0 8px;
 }
 .stage[data-dir="b"] .mb-price-big {
-  font-size: min(calc(var(--ts) * 2.625rem), 15cqw);
+  font-size: calc(var(--ts) * 2.625rem);
   font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1;
@@ -1194,13 +1232,13 @@
 .stage[data-dir="b"] .mb-launch .mb-foot-status { text-align: center; }
 .stage[data-dir="b"] .mb-launch .mb-rows { text-align: left; }
 .stage[data-dir="b"] .mb-launch-under {
-  margin-top: auto;
+  margin: auto 0 0 !important;
   padding-top: 22px;
   text-align: center;
   font-size: calc(var(--ts) * 0.65625rem);
 }
 
-/* ————— sealed detent (empty) ————— */
+/* ————— next detent (empty) ————— */
 
 .stage[data-dir="b"] .mb-sealedrow {
   display: flex;
@@ -1218,14 +1256,14 @@
 .stage[data-dir="b"] .mb-sealed-num {
   font-size: calc(var(--ts) * 1.5rem);
   font-weight: 600;
-  color: var(--mb-tick2);
+  color: var(--mb-ink2);
 }
 
 /* ————— loading ————— */
 
 .stage[data-dir="b"] .mb-ghost-read {
   font-size: calc(var(--ts) * 2.25rem);
-  color: var(--mb-tick2);
+  color: var(--mb-ink2);
   letter-spacing: 0.04em;
   margin: 24px 0 14px;
 }
@@ -1241,7 +1279,7 @@
 .stage[data-dir="b"] .mb-ghostline.w90 { width: 90%; }
 .stage[data-dir="b"] .mb-ghostline.tall { height: calc(var(--ts) * 3.4rem); margin-top: 26px; }
 @keyframes mb-breathe { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
-.stage[data-dir="b"] .mb-loading .mb-ghost-read,
+/* only the non-text ghost bars breathe — the readout text keeps contrast */
 .stage[data-dir="b"] .mb-loading .mb-ghostline { animation: mb-breathe 1.7s ease-in-out infinite; }
 
 /* ————— specimen ————— */
@@ -1271,9 +1309,61 @@
 }
 .stage[data-dir="b"] .mb-spec-comp { margin-top: 10px; }
 
+/* ————— 200% text: loosen the engraving so lines wrap clean ————— */
+/* Wide tracking is a 100%-scale luxury; at 200% it shatters metadata into
+   ragged fragments. Sizes stay driven by --ts (no caps); only outsized
+   display faces step down a notch, still far larger than their 100% size. */
+
+.stage[data-dir="b"].scale-200 .mb-eng,
+.stage[data-dir="b"].scale-200 .mb-kicker,
+.stage[data-dir="b"].scale-200 .mb-h2,
+.stage[data-dir="b"].scale-200 .mb-head-brand,
+.stage[data-dir="b"].scale-200 .mb-caution-label,
+.stage[data-dir="b"].scale-200 .mb-sys-label,
+.stage[data-dir="b"].scale-200 .mb-option-flag,
+.stage[data-dir="b"].scale-200 .mb-fullplate-flag,
+.stage[data-dir="b"].scale-200 .mb-card-flag,
+.stage[data-dir="b"].scale-200 .mb-dial-key,
+.stage[data-dir="b"].scale-200 .mb-bezel-mode,
+.stage[data-dir="b"].scale-200 .mb-bezel-seg,
+.stage[data-dir="b"].scale-200 .mb-row-note,
+.stage[data-dir="b"].scale-200 .mb-stamp,
+.stage[data-dir="b"].scale-200 .mb-launch-under {
+  letter-spacing: 0.04em;
+  text-indent: 0;
+}
+.stage[data-dir="b"].scale-200 .mb-foot-status,
+.stage[data-dir="b"].scale-200 .mb-head-right,
+.stage[data-dir="b"].scale-200 .mb-card-spec,
+.stage[data-dir="b"].scale-200 .mb-entry-line,
+.stage[data-dir="b"].scale-200 .mb-adv-meta,
+.stage[data-dir="b"].scale-200 .mb-spec-weeks {
+  letter-spacing: 0;
+}
+/* nowrap is a 100%-scale luxury too — let metadata wrap at 200% */
+.stage[data-dir="b"].scale-200 .mb-row-note,
+.stage[data-dir="b"].scale-200 .mb-head-right,
+.stage[data-dir="b"].scale-200 .mb-seg-val,
+.stage[data-dir="b"].scale-200 .mb-plan-val,
+.stage[data-dir="b"].scale-200 .mb-arm-read {
+  white-space: normal;
+  flex: 0 1 auto;
+  min-width: 0;
+  text-align: right;
+}
+.stage[data-dir="b"].scale-200 .mb-display {
+  font-size: calc(var(--ts) * 1.625rem);
+  letter-spacing: 0.06em;
+  text-indent: 0.06em;
+}
+.stage[data-dir="b"].scale-200 .mb-bezel-digits { font-size: calc(var(--ts) * 2.25rem); }
+.stage[data-dir="b"].scale-200 .mb-adv-nums { font-size: calc(var(--ts) * 2.125rem); }
+.stage[data-dir="b"].scale-200 .mb-price-big { font-size: calc(var(--ts) * 2rem); }
+
 /* ————— reduced motion ————— */
-/* The lab's kill-switch already zeroes durations; these remove entrance
-   movement entirely so nothing flashes. */
+/* The lab's kill-switch already zeroes durations and delays; these remove
+   entrance movement entirely so nothing flashes. The recorded stamp stays
+   fully visible — reduced motion holds the confirmation, it never skips it. */
 .stage[data-dir="b"].motion-reduced .mb,
 .stage[data-dir="b"].motion-reduced .mb-carriage,
 .stage[data-dir="b"].motion-reduced .mb-recdot,
@@ -1286,16 +1376,3 @@
   .stage[data-dir="b"] .mb-stamp.is-pressed { animation: none; }
   .stage[data-dir="b"] .mb-stamp.is-pressed { opacity: 1; transform: none; }
 }
-
-/* ————— audit fixes (axe pass 2026-07-26) —————
-   Muted "future/sealed/ghost" text was set in tick colours or via card
-   opacity and fell below AA; mute with the secondary ink instead. */
-.stage[data-dir="b"] .mb-card.is-sealed { opacity: 1; box-shadow: none; }
-.stage[data-dir="b"] .mb-card.is-sealed .mb-card-title { color: var(--mb-ink2); }
-.stage[data-dir="b"] .mb-log.d-future { color: var(--mb-ink2); }
-.stage[data-dir="b"] .mb-vweek.is-sealed .mb-vtitle { color: var(--mb-ink2); }
-.stage[data-dir="b"] .mb-adv-nums .is-prev { color: var(--mb-ink2); }
-.stage[data-dir="b"] .mb-sealed-num { color: var(--mb-ink2); }
-.stage[data-dir="b"] .mb-ghost-read { color: var(--mb-ink2); }
-.stage[data-dir="b"] .mb-stamp.is-waiting, .stage[data-dir="b"] #mb-stamp { color: var(--mb-ink2); }
-@keyframes mb-breathe { 0%, 100% { opacity: 0.72; } 50% { opacity: 1; } }
