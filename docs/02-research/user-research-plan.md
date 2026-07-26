@@ -50,7 +50,7 @@ Realistic for a solo founder with little budget:
 
 - **9–12 interviews** minimum (the D-001 age-band quotas sum to 9), primary-pattern majority; stop when the last two interviews add nothing new.
 - **3–4 interviews** in each secondary segment for contrast (optional if time-constrained).
-- **Landing-page smoke test:** ≥300 visitors from a small ad spend (£100–150) to measure message resonance; this supplements, never replaces, interviews.
+- **Landing-page smoke test:** ≥300 visitors, organic-first per the [landing experiment spec](stage1-pack/concept-and-landing-tests.md) (a £100–150 paid top-up is pre-specified but launches only on the founder's separate go); this supplements, never replaces, interviews.
 
 ## 5. Interview script
 
@@ -69,13 +69,7 @@ Pre-registered tasks, pass criteria, the aligned G6/G9 regime (10–12 participa
 
 ## 8. Evidence required before development (Stage 1 → Stage 2 gate)
 
-Proceed only if **all** of:
-
-1. ≥7 of 10 primary-segment interviewees describe the abandonment-before-results problem unprompted and with specific past examples.
-2. ≥5 have already spent money attempting the goal (evidence the category monetises).
-3. The 12-week frame reads as motivating to a clear majority when described (D12), not as pressure.
-4. At least one goal category shows concentrated demand (avoids launching five shallow categories).
-5. Landing-page test: ≥3% of cold visitors leave an email for "early access" against the core promise (weak signal, but a floor).
+The pre-registered gate — five proceed criteria (P1–P5), five pivot triggers and five stop conditions, with their coded-evidence definitions — lives in [stage1-pack/decision-criteria.md](stage1-pack/decision-criteria.md) (single source; registered 26 Jul 2026, before any recruitment). Summary shape: unprompted problem stories (≥7 core), real past spend (≥5), guidance as the wanted help-shape, the recovery message believed, and the ≥3% landing floor — all five required to proceed.
 
 ## 9. Signals that would support the idea
 
