@@ -1,26 +1,14 @@
 [
   {
     "world": "strength",
-    "state": "first-launch",
+    "state": "motif-study",
     "variant": "light",
-    "file": "first-launch--light.png"
+    "file": "motif-study--light.png"
   },
   {
     "world": "strength",
-    "state": "first-launch",
+    "state": "motif-study",
     "variant": "dark",
-    "file": "first-launch--dark.png"
-  },
-  {
-    "world": "writing",
-    "state": "first-launch",
-    "variant": "light",
-    "file": "first-launch--light--writing.png"
-  },
-  {
-    "world": "writing",
-    "state": "first-launch",
-    "variant": "dark",
-    "file": "first-launch--dark--writing.png"
+    "file": "motif-study--dark.png"
   }
 ]

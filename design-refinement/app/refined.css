@@ -1171,7 +1171,7 @@ html, body {
 }
 .stage .at-motif-num {
   font-family: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
-  font-size: 8px;
+  font-size: 12px; /* R8 label floor applies to diagram numerals too */
   font-weight: 600;
   fill: var(--at-ink-2);
 }

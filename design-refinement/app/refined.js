@@ -946,7 +946,7 @@ const screens = {
       ${head(ctx)}
       ${kicker('The day’s work')}
       <h1 class="at-title">${t.shortTitle} — done.</h1>
-      <p class="at-lede">${mmss(Math.max(mem.elapsed, 60))} of honest work, ready to join the record.</p>
+      <p class="at-lede">${Math.max(1, Math.round(mem.elapsed / 60))} honest ${Math.round(Math.max(60, mem.elapsed) / 60) === 1 ? 'minute' : 'minutes'} of work, ready to join the record.</p>
       ${band(ctx, { log: logTodayDone(ctx.w), align: 'min', material: true, cls: 'at-band-roomy', sr: `Today’s thread in place: day ${p.dayOfProgramme} kept.` })}
       ${primary(`Mark day ${p.dayOfProgramme} done`, '__beat')}
       ${linkrow([{ label: 'Back to the session', go: 'active', back: true }])}
