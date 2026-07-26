@@ -38,6 +38,10 @@
 | — | Analytics/cloud/email vendors | Stage 6 | Register rules ready; no vendors selected |
 | — | Programme catalogue size | Evidence-led, per quarter | Never "12 at launch" (superseded) |
 
+## Method and capital notes (26 Jul 2026)
+
+Under D-008/D-009/D-010: Stage-1 evidence for these decisions arrives by default from the public-evidence corpus and the passive validation system (interviews only on escalation); capital for any decision's execution is governed by the gated plan (`05-commercial/staged-capital-plan.md`), and the former budget scenarios are reference material only. Q1's evidence base now includes `02-research/flagship-opportunity-analysis.md` (reversible ranking — not a decision).
+
 ## How to answer
 
-Reply in any form — per-ref one-liners suffice ("Q5: agreed, drop it"; "Q1: I want fitness first"; "Q9: 15h/week, ~£20k year one, I don't code"). Each answer gets a decision-log entry with date and rationale; anything you'd rather delegate, say so and it will be recorded as a delegated decision with the recommendation adopted provisionally.
+Reply in any form — per-ref one-liners suffice ("Q5: agreed, drop it"; "Q1: I want fitness first"). Each answer gets a decision-log entry with date and rationale; anything you'd rather delegate, say so and it will be recorded as a delegated decision with the recommendation adopted provisionally.

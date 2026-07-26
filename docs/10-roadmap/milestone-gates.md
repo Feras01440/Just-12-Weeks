@@ -5,17 +5,18 @@
 ## Gate 0 → 1 : Foundation accepted, validation may start
 
 - [ ] Founder directions D-001–D-004 recorded and reflected consistently across docs *(done 26 Jul 2026; verified by cross-doc audit)*
-- [ ] Remaining open questions (Q1–Q13 as updated) answered or explicitly delegated
+- [ ] Remaining open questions (per open-decisions register) answered or explicitly delegated
 - [ ] Source audit complete; corrections applied; no load-bearing claim rests on an unsupported source
-- [ ] Research plan approved, including four-band age quotas (D-001)
-- [ ] Landing-page copy for smoke test approved (claims-policy compliant)
-- [ ] Recruitment budget confirmed (vouchers ~£200–300)
+- [ ] Stage 1A public-evidence synthesis delivered and reviewed
+- [ ] Passive validation system approved for publication (Gate B go; copy claims-policy compliant)
+- [ ] Gate B spend authority confirmed (≤£300 cumulative, D-010)
 
 ## Gate 1 → 2 : Evidence supports proceeding
 
-- [ ] ≥9 interviews done across all four age bands; per-band notes exist
-- [ ] Every pre-registered support/kill signal has an evidenced verdict
-- [ ] Go / pivot / stop recommendation written; founder decision recorded
+- [ ] Passive-system thresholds read on sufficient organic volume (or documented shortfall + plan); per-band signal reported where survey volume allows
+- [ ] Every pre-registered proceed/revise/stop threshold has an evidenced verdict
+- [ ] D-009 escalation checks performed; any fired trigger resolved (targeted interviews done per pack) or explicitly accepted open
+- [ ] Go / pivot / stop recommendation written (gate pack); founder decision recorded
 - [ ] Q1 (flagship launch category) decided on evidence
 - [ ] Q2 pattern emphasis confirmed or revised
 

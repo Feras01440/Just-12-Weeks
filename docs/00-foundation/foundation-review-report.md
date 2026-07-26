@@ -44,4 +44,10 @@ Stage-1 execution (participant contact — forbidden this session); `validation-
 
 ## 10. The exact next approval gate
 
-**Gate 0→1** ([milestone-gates.md](../10-roadmap/milestone-gates.md)): you read this report, answer the [open-decisions register](open-decisions-register.md) (one-liners suffice; delegation is a valid answer), and approve the research plan. On your answers: decisions land in the log, Stage 1 recruitment begins, and the brand-territory work (Gate 3 track) can run in parallel. Nothing downstream — no design fidelity, no architecture hardening, no code — starts before that.
+**Gate 0→1** ([milestone-gates.md](../10-roadmap/milestone-gates.md)): you read this report, answer the [open-decisions register](open-decisions-register.md) (one-liners suffice; delegation is a valid answer), and give the Gate B publication go for the passive validation system. Nothing downstream — no design fidelity, no architecture hardening, no code — starts before that.
+
+---
+
+## Addendum — 26 July 2026 (second session): operating model revision and Stage 1A
+
+Recorded after this report's first issue; governing changes: **D-008** (founder capacity re-planned to 3–5 ordinary hours/week, 6–8 at gates, under an agent-led delivery model — see `10-roadmap/delivery-operating-model.md`), **D-009** (moderated interviews reclassified as escalation-only; the Stage-1 default is public-evidence synthesis plus the passive validation system), **D-010** (gated capital A–E replaces scenario budgets as spending authority — `05-commercial/staged-capital-plan.md`). Stage 1A (public-evidence synthesis across fifteen questions) and the synthetic adversarial panel were executed under this model; their outputs live in `02-research/` with strict evidence-classification and synthetic labelling. The flagship-opportunity analysis (`02-research/flagship-opportunity-analysis.md`) carries the evidence-weighted, **reversible** category ranking. New material risks registered from adversarial findings: store-billing configurability of a true 12-week term (R-20) and pause/term-billing reconciliation (R-21) — both verification tasks at Stage 2, before pricing copy hardens.

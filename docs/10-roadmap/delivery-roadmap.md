@@ -37,16 +37,16 @@ Stages 1–5 are cheap and reversible. The expensive commitment starts at Stage 
 - **Acceptance criteria:** Founder directions recorded (D-001–D-004, done 26 Jul 2026); founder has answered the remaining open questions (Q1–Q13 as updated, or explicitly delegated specific ones).
 - **Approval gate:** Answers recorded in decision log. Documentation work that does not depend on the open answers proceeds with provisional, reversible recommendations (founder instruction, 26 Jul 2026); recruitment, spend and build do not start before the gate.
 
-## Stage 1 — User validation
+## Stage 1 — Validation (evidence-first, agent-led per D-008/D-009)
 
-- **Objective:** Test the riskiest assumptions with real people before designing anything.
-- **Inputs:** Chosen behavioural-pattern emphasis (Q2), research plan.
-- **Tasks:** Recruit 9–12 interviewees across all four adult age bands (18–29, 30–49, 50–64, 65+ — quotas per research plan, D-001) with Pattern-A over-weight; run interviews; landing-page smoke test (value proposition + price sensitivity); log evidence per band and pattern.
+- **Objective:** Test the riskiest assumptions against real evidence before designing anything.
+- **Inputs:** D-006 validation audience; public-evidence corpus (Stage 1A); passive validation system (Stage 1B).
+- **Tasks:** **1A** — public-evidence synthesis across the fifteen research questions (agent-executed; founder reads the synthesis). **1B** — publish the passive validation system on founder go (landing arms, category vote, pricing-interest test, waitlist; organic-first; Gate B caps). **Escalation only (D-009):** targeted moderated interviews (typically 3–5) when a named trigger fires — never the default.
 - **Deliverables:** `02-research/validation-evidence.md`, updated audience doc, go/pivot/stop recommendation.
-- **Owner:** Founder (interviews), strategist (script, synthesis).
+- **Owner:** Implementer (research, synthesis, system operation); Founder (weekly ~15-minute dashboard read, publication go, escalation decisions).
 - **Dependencies:** Stage 0 gate.
-- **Risks:** Leading questions produce false positives; recruiting from friends biases results.
-- **Acceptance criteria:** Every kill-signal and support-signal in the research plan has an evidenced verdict.
+- **Risks:** Channel bias in passive evidence; friends-and-family inflation (separated by source tags); over-reading pricing-interest clicks (honesty ceiling applies).
+- **Acceptance criteria:** Every pre-registered proceed/revise/stop threshold (passive plan §4; decision-criteria) has an evidenced verdict; escalation checks run weekly even when green.
 - **Approval gate:** Founder reviews evidence and decides: proceed as scoped / adjust segment or category / stop. Recorded in decision log.
 
 ## Stage 2 — Product architecture

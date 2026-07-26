@@ -1,6 +1,6 @@
 # User Research Plan — Stage 1 Validation
 
-**Status:** Approved direction (Q2 answered — **D-006: Age-inclusive Restarters**, 26 Jul 2026). This document holds the strategy and rationale; the operational, copy-ready materials live in the [Stage 1 Validation Execution Pack](stage1-pack/README.md) — where this plan and the pack cover the same ground, **the pack is the single source** (this plan points rather than duplicates).
+**Status:** Revised 26 Jul 2026 under D-008/D-009. **Stage 1's default method is no longer founder-led interviewing.** The stage now runs as: **Stage 1A** public-evidence synthesis (see `public-evidence-corpus.md` and companions) + **Stage 1B** the [passive validation system](passive-validation-plan.md) — with the [moderated-interview pack](stage1-pack/README.md) retained as **optional escalation material** under the D-009 triggers. Validation audience per **D-006**: Age-inclusive Restarters, all four adult age bands. This document keeps the research objectives, participant thinking and signal definitions (still valid for whichever method collects the evidence); operational single sources are the pack (interviews) and the passive-plan documents (default path).
 
 ## 1. Research objectives
 

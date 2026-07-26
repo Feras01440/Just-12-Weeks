@@ -1,6 +1,6 @@
-# Stage 1 Validation Execution Pack
+# Stage 1 Moderated-Interview Pack — OPTIONAL ESCALATION MATERIAL
 
-**Status:** Execution-ready, 26 July 2026. The operational layer of [`../user-research-plan.md`](../user-research-plan.md) — strategy and rationale live there; everything here is what you actually use, in the order you use it. Validation audience per **D-006**: Age-inclusive Restarters, all four adult age bands. Constraints honoured: no participants have been contacted, no money spent, nothing launched — this pack makes those actions one decision away, not one project away.
+**Status:** Retained as escalation tooling under **Confirmed founder decision D-009** (26 Jul 2026) — moderated interviews are **not** Stage 1's default method. The default path is public-evidence synthesis (Stage 1A) plus the [passive validation system](../passive-validation-plan.md) (Stage 1B). This pack activates only when an escalation trigger fires: public evidence materially conflicts; passive behaviour can't explain an important result; a safety-sensitive question is unresolved; age-inclusive usability failures need diagnosis; willingness-to-pay stays too ambiguous; or a major decision can't responsibly be made from existing evidence. Escalations use the **smallest sufficient round** (often 3–5 targeted interviews, not 9–12) and are a founder decision. Validation audience per **D-006**: Age-inclusive Restarters, all four adult age bands. Nothing here contacts anyone until that decision.
 
 ## Contents
 
@@ -15,16 +15,16 @@
 | [incentives-and-budget.md](incentives-and-budget.md) | Incentive scenarios and Stage-1 cash plan | Incentive-budget scenarios |
 | [usability-tasks.md](usability-tasks.md) | Age-inclusive usability test tasks (pre-registered for Stage 5) | Age-inclusive usability tasks |
 
-## How Stage 1 runs (three-to-five weeks, founder-led)
+## How an escalated interview round runs (when triggered)
 
-**Week 0 (setup, ~4h):** read this pack; pilot the screener + moderator guide on one friendly non-participant (practice only, excluded from data); set up the screener form and note files from templates; choose incentive scenario.
-**Weeks 1–2 (recruit + first interviews):** post recruitment messages (channels list); screen respondents against quotas; run first 4–5 interviews; after interview 4: 30-minute self-debrief against the dashboard; adjust probes if any question consistently fails (log the change).
-**Weeks 2–4 (complete interviews + landing test):** finish to 9–12 interviews with quotas met; launch the landing experiment (organic-first traffic plan; paid top-up only when you separately approve spend); code as you go — never more than 2 uncoded interviews behind.
-**Week 4–5 (synthesis + gate):** synthesis board session (~half a day); score every assumption in the traceability matrix; write the one-page Gate 1→2 verdict against [decision-criteria](decision-criteria.md); record the decision in the decision log.
+**Scope first:** the escalation memo names the unresolved question and the smallest sufficient round (typically 3–5 interviews targeted at the specific gap — e.g. the 65+ band, or past-spend reconstruction). Full 9–12 rounds are reserved for a major decision that genuinely cannot be made otherwise.
+**Setup (~2h, mostly prepared already):** screener form live; recruitment messages posted to the relevant channels only; consent flow as written.
+**Interviews:** founder-led per the moderator guide (interviews are the one activity that cannot be delegated to tooling); ~1.5h each including same-day notes; delivery-team support handles scheduling admin, coding assistance and synthesis preparation.
+**Synthesis:** coded per the framework; the escalated question gets an explicit verdict appended to the traceability matrix and the weekly dashboard.
 
-## Founder time estimate
+## Founder time estimate (escalation rounds; D-008 envelope)
 
-~4h setup · ~1.5h per interview incl. same-day notes (≈15–18h for 10–12) · ~2h recruitment/admin per week · ~3h landing-test setup + ~1h/week monitoring · ~5h synthesis and verdict. **Total ≈ 30–36 hours across 3–5 weeks** — inside the 15–20 h/week envelope with product time to spare.
+Targeted round of 3–5: **~7–10 founder hours across 2 weeks** (setup ~2h, interviews ~5–7.5h incl. notes; synthesis prepared for you, ~1h review). Full 9–12 round (rare, major-decision-only): ~18–22 founder hours across 3–4 weeks — scheduled deliberately around university/travel, never assumed as routine capacity.
 
 ## Hard rules (restated because they are the point)
 
