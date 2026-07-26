@@ -156,7 +156,7 @@ export const WORLDS = {
     },
     recovery: {
       oneDay: {
-        headline: 'Yesterday went unwritten. Today is here.',
+        headline: 'Yesterday got away. Today is here.',
         line: 'One quiet day changes nothing about your twelve weeks. The squat is exactly where you left it.',
         action: 'Pick up today',
         altAction: 'Make today lighter',

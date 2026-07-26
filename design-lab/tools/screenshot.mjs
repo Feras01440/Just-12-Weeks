@@ -112,17 +112,26 @@ async function main() {
             if (item.full) {
               // grow the stage to the full scrolled height of its screen;
               // run twice so post-growth reflow (min-height chains) settles
+              let grown = h;
               for (let i = 0; i < 2; i++) {
-                await page.evaluate(() => {
+                grown = await page.evaluate(() => {
                   const s = document.querySelector('.stage');
                   const scr = document.querySelector('.stage .screen');
                   if (s && scr) {
                     s.style.height = 'auto';
-                    s.style.height = Math.min(scr.scrollHeight, 4200) + 'px';
+                    const target = Math.min(scr.scrollHeight, 4200);
+                    s.style.height = target + 'px';
+                    return target;
                   }
+                  return 0;
                 });
                 await page.waitForTimeout(90);
               }
+              // the stage sits in an inner scroll pane, so stitched element
+              // capture blacks out below the viewport — size the viewport to
+              // the whole stage instead and capture in one shot
+              await page.setViewportSize({ width: w + 40, height: Math.min(grown + 60, 4300) });
+              await page.waitForTimeout(120);
             }
             const name = `${item.state}${item.suffix ? '' : ''}--${vName}${world === 'writing' ? '--writing' : ''}.png`;
             const outDir = join(ROOT, 'screenshots', dir);
