@@ -2,6 +2,8 @@
 
 **Status:** Research annex, 26 July 2026. Every claim carries its source; FACTS are separated from INTERPRETATION; the "Could not verify" list at the end must be respected before any figure is reused in external material.
 
+**Audit note (26 Jul 2026):** this annex is preserved verbatim as a dated research record; several figures were subsequently precised or corrected — see [source-audit.md](source-audit.md) and [correction-log.md](correction-log.md) (notably COR-01..COR-08, COR-12). Working documents carry the corrected wording.
+
 # Market landscape research — "12 Weeks" (goal-transformation app)
 Research date: 26 July 2026. Method note: this environment's outbound proxy blocked direct page fetches (HTTP 403) for most publisher sites, so all findings come from web-search retrieval of the cited pages. Load-bearing numbers were cross-checked across at least two queries where possible; anything that could not be cross-checked is listed under "Could not verify". GBP conversions marked "~£" use an assumed rate of £1 ≈ $1.30 (approximate, unverified).
 

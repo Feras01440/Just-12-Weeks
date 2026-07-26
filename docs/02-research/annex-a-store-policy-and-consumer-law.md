@@ -2,6 +2,8 @@
 
 **Status:** Research annex, 26 July 2026. Compiled by a dedicated research pass; facts are labelled with source and confidence. Items marked "fetch blocked" were reconstructed from search-indexed policy text and reputable secondary sources — re-verify against primary pages before relying on them externally.
 
+**Audit note (26 Jul 2026):** this annex is preserved verbatim as a dated research record; several statements were subsequently precised or corrected — see [source-audit.md](source-audit.md) and [correction-log.md](correction-log.md) (notably COR-09..COR-13, COR-15). Working documents carry the corrected wording.
+
 # Compliance research: "12 Weeks" (iOS + Google Play subscription app) — facts with sources
 Research date: 26 July 2026. Access note: Apple developer pages fetched directly (primary). All Google support/policy pages (support.google.com, play.google), gov.uk, legislation.gov.uk and web.archive.org were **blocked from this environment** (HTTP 403 / proxy CONNECT 403); Google/UK policy content below is reconstructed from search-indexed policy text and reputable secondary sources, marked accordingly.
 

@@ -8,7 +8,7 @@
 
 ## The world we're responding to *(Evidence-supported inference)*
 
-Adults don't lack goals, information or apps. They lack **structure that survives contact with real life**. The gap between effort and visible results is where almost everyone quits: median time to habit automaticity is ~66 days (Lally 2010; Singh 2024), real-world 30-day retention for wellness apps sits near 3–4% (Baumel 2019), and the category's own tools make it worse — punishing lapses with broken streaks, demanding logging instead of giving direction, and paywalling before delivering value.
+Adults don't lack goals, information or apps. They lack **structure that survives contact with real life**. The gap between effort and visible results is where almost everyone quits: median time to habit automaticity is ~66 days (Lally 2010; Singh 2024), real-world 30-day retention in the nearest comparable app category sits near 3–4% (Baumel 2019, mental-health apps), and this category's own tools make it worse — punishing lapses with broken streaks, demanding logging instead of giving direction, and paywalling before delivering value.
 
 ## What the product is
 

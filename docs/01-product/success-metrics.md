@@ -41,7 +41,7 @@ Chosen over "programme completion rate" alone because it rewards recovery design
 | Trial→paid (if trials used) | Store-reported trial conversion | 30–40%† (H&F trial-to-paid benchmark range) |
 | Install→paid (35-day) | All-installs to any payment | 2–4% (freemium-style)†; interpret only alongside refund + rating health |
 | Annual-plan share | % of subscription revenue from annual (or 12-week, if offered) plans | Track; category ~68% annual† — but our natural unit experiment (quarterly) may deliberately shift this |
-| First renewal rate | % of subscribers renewing at first term end | Annual ≥ 40% year-1 (category first-year annual renewal ~83% is *at-renewal-event*†; our number will blend early cancels — define precisely in dashboard) |
+| First renewal rate | % of subscribers renewing at first term end | Annual ≥ 35% at first renewal (RevenueCat 2026 medians: 23–40% first annual renewal by category†; the widely quoted 83.4% is the *aggregate across all renewal events* and must not be used for year-1 planning — see correction log COR-04) |
 | Cancellation timing | Distribution of cancellations across term | Watch month-1 cluster (35% of annual cancels occur in month 1†) |
 | Refund rate | Store refunds / purchases | < 3%; spike = paywall honesty failure |
 | ARPPU (year 1) | Revenue per paying user, 12 months | Modelled at Stage 2 pricing work; NA median LTV/payer ≈ $32† is the sobering floor context |

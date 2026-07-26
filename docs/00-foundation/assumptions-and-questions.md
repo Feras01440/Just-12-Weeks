@@ -46,7 +46,7 @@ Page 5 of your brief. Plausible readings: (a) a second set of 12 user-requested 
 
 ## Q5. The countdown-limited launch offer: keep, modify, or drop?
 
-Your brief specifies a discounted offer at first launch that expires after *n* hours. Direct professional advice: **as written, this is the single most dangerous idea in the brief.** It is (i) a recognised dark pattern ("false urgency"): a repeating countdown is a *per se banned practice* under the UK DMCC Act's Schedule 20 (CMA-enforceable since April 2025, fines up to 10% of global turnover — and the CMA's first eight investigations, opened November 2025, target exactly this), while Apple treats promoting a false price as grounds for removal *and developer-account termination* (Guideline 2.3.1(a)); (ii) corrosive to the trust positioning of a premium, evidence-based brand; and (iii) placed *before* the user has received any value — the exact flow that collapsed Her 75's store ranking in May 2026. Full citations: [synthesis §5.1](concept-synthesis.md) and [Annex A](../02-research/annex-a-store-policy-and-consumer-law.md).
+Your brief specifies a discounted offer at first launch that expires after *n* hours. Direct professional advice: **as written, this is the single most dangerous idea in the brief.** It is (i) a recognised dark pattern ("false urgency"): a repeating countdown is a *per se banned practice* under the UK DMCC Act's Schedule 20 (CMA-enforceable since April 2025, fines up to £300,000 or 10% of annual worldwide turnover, whichever is greater — and the CMA's first eight investigations, opened November 2025, target exactly this), while Apple treats promoting a false price as grounds for removal *and developer-account termination* (Guideline 2.3.1(a), verified primary); (ii) corrosive to the trust positioning of a premium, evidence-based brand; and (iii) placed *before* the user has received any value — the flow that one industry report links to Her 75's 67-place ranking fall in May 2026 (single source; see correction log COR-01). Full citations: [synthesis §5.1](concept-synthesis.md), [Annex A](../02-research/annex-a-store-policy-and-consumer-law.md), [source audit](../02-research/source-audit.md).
 
 | Option | Advantages | Disadvantages |
 |--------|------------|---------------|
@@ -63,10 +63,10 @@ The brief implies everything meaningful is paid ("full access to all features").
 
 | Option | Advantages | Disadvantages |
 |--------|------------|---------------|
-| (a) Hard paywall (nothing free beyond a tour) | Simple; filters for intent; converts ~10.7% of installs vs ~2.1% freemium in benchmark data | User pays before experiencing the product's actual differentiator; ~70% higher refund rates for hard-gated apps; the Her 75 case shows the ranking damage |
-| (b) Free first week of any programme, then paid | User experiences real value (day-1 action, first measurement) before paying; paywall lands when motivation is highest | Requires week 1 to be genuinely excellent; slightly more complex entitlement logic |
+| (a) Hard paywall (nothing free beyond a tour) | Simple; filters for intent; converts ~10.7% of downloads vs ~2.1% freemium (median day-35, RevenueCat 2026) | User pays before experiencing the product's actual differentiator; refunds ~70% higher for hard-gated apps (Adapty: 5.8% vs 3.4%); the Her 75 report (single-source) illustrates the ranking damage |
+| (b) Free first week of any programme, then paid | User experiences real value (day-1 guided action) before paying; paywall lands when motivation is highest | Requires week 1 to be genuinely excellent; slightly more complex entitlement logic |
 | (c) One full free programme forever + paid catalogue | Generous; big top-of-funnel | Undermines "one meaningful goal" economics — many users only ever need one programme |
-| (d) Free trial via store mechanics (7-day trial on subscription) | Standard, store-native; trial-originated subscribers show ~64% higher LTV in health & fitness | "Forgot to cancel" resentment unless handled with reminders; trial abuse |
+| (d) Free trial via store mechanics (7-day trial on subscription) | Standard, store-native; trial-originated subscribers show ~64% higher LTV in health & fitness (Adapty 2026) | "Forgot to cancel" resentment unless handled with reminders; trial abuse |
 
 **Recommendation:** (b), possibly combined with (d) — experience week 1, subscribe to continue the journey. Worth testing alongside a **quarterly (12-week) plan**: it is the natural native unit of this product and almost nobody in the category sells it as the headline plan — a differentiation opportunity, though annual plans are where category revenue concentrates (~68% in health & fitness). Decide after Stage 1 pricing interviews.
 **Basis:** Benchmark data in [Annex B §2/§5](../02-research/annex-b-market-landscape.md); activation logic; to be validated.
@@ -113,7 +113,7 @@ The earlier "on-device by default at MVP" recommendation is **withdrawn as prema
 
 ## Q13. What happens at week 13?
 
-The product's promise *ends* — that is its integrity and its structural business risk. A subscription whose narrative completes in one quarter has negative built-in retention unless week 13 is designed deliberately (95% of annual subscribers who cancel never return, per category benchmark data).
+The product's promise *ends* — that is its integrity and its structural business risk. A subscription whose narrative completes in one quarter has negative built-in retention unless week 13 is designed deliberately (95% of cancelled annual subscribers never return — all categories, within RevenueCat's 2026 observation window; and median *first* annual renewals run only 23–40% by category).
 
 | Option | Advantages | Disadvantages |
 |--------|------------|---------------|
