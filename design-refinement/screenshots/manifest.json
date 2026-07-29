@@ -1,0 +1,14 @@
+[
+  {
+    "world": "strength",
+    "state": "motif-study",
+    "variant": "light",
+    "file": "motif-study--light.png"
+  },
+  {
+    "world": "strength",
+    "state": "motif-study",
+    "variant": "dark",
+    "file": "motif-study--dark.png"
+  }
+]

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>12 Weeks — Experience Lab</title>
+<link rel="stylesheet" href="fonts.css" />
+<link rel="stylesheet" href="lab.css" />
+<link rel="stylesheet" href="../directions/a/direction-a.css" />
+<link rel="stylesheet" href="../directions/b/direction-b.css" />
+<link rel="stylesheet" href="../directions/c/direction-c.css" />
+</head>
+<body>
+<div id="lab" class="lab">
+  <header class="lab-top" id="lab-top">
+    <div class="lab-brand">
+      <span class="lab-brand-mark">12W</span>
+      <span class="lab-brand-name">Experience Lab</span>
+      <span class="lab-brand-note">exploratory · non-production</span>
+    </div>
+    <nav class="lab-controls" aria-label="Laboratory controls">
+      <div class="lab-seg" role="group" aria-label="Direction" id="ctl-dir"></div>
+      <div class="lab-seg" role="group" aria-label="Programme world" id="ctl-world"></div>
+      <div class="lab-seg" role="group" aria-label="Theme" id="ctl-theme"></div>
+      <div class="lab-seg" role="group" aria-label="Text size" id="ctl-scale"></div>
+      <div class="lab-seg" role="group" aria-label="Motion" id="ctl-motion"></div>
+      <div class="lab-seg" role="group" aria-label="Viewport" id="ctl-vp"></div>
+    </nav>
+  </header>
+  <div class="lab-body">
+    <aside class="lab-nav" id="lab-nav" aria-label="Experience states"></aside>
+    <main class="lab-stagearea" id="lab-stagearea">
+      <!-- stage(s) injected here -->
+    </main>
+  </div>
+</div>
+<div aria-live="polite" class="visually-hidden" id="lab-announcer"></div>
+<script type="module" src="lab.js"></script>
+</body>
+</html>

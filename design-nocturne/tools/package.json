@@ -1,0 +1,11 @@
+{
+  "name": "twelve-weeks-nocturne-tools",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Evidence tooling (screenshots + axe audit + live probe) for the Nocturne prototype. Not production code.",
+  "type": "module",
+  "devDependencies": {
+    "axe-core": "^4.10.0",
+    "playwright": "1.62.0"
+  }
+}

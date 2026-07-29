@@ -1,0 +1,17 @@
+{
+  "name": "twelve-weeks-design-refinement",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Refined single-direction (Atelier) executable prototype for the 12 Weeks product. Evidence tooling included. Not production code.",
+  "type": "module",
+  "scripts": {
+    "start": "node tools/serve.mjs 4174",
+    "shots": "node tools/screenshot.mjs",
+    "a11y": "node tools/a11y.mjs",
+    "probe": "node tools/probe.mjs"
+  },
+  "devDependencies": {
+    "axe-core": "^4.10.0",
+    "playwright": "^1.49.0"
+  }
+}
